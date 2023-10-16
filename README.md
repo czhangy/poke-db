@@ -2,25 +2,25 @@
 
 <!-- Title -->
 
-<img src="public/assets/images/next.webp" alt="logo" width="200" height="auto" />
-<h1>Next Personal Starter</h1>
+<img src="assets/images/logo.webp" alt="logo" width="200" height="auto" />
+<h1>PokéDB</h1>
 
 <!-- Badges -->
 
 <p>
     <a href="">
-        <img src="https://img.shields.io/github/last-commit/czhangy/next-personal-starter" alt="last update" />
+        <img src="https://img.shields.io/github/last-commit/czhangy/poke-db" alt="last update" />
     </a>
-    <a href="https://github.com/czhangy/next-personal-starter/stargazers">
-        <img src="https://img.shields.io/github/stars/czhangy/next-personal-starter" alt="stars" />
+    <a href="https://github.com/czhangy/poke-db/stargazers">
+        <img src="https://img.shields.io/github/stars/czhangy/poke-db" alt="stars" />
     </a>
-    <a href="https://github.com/czhangy/next-personal-starter/issues/">
-        <img src="https://img.shields.io/github/issues/czhangy/next-personal-starter" alt="open issues" />
+    <a href="https://github.com/czhangy/poke-db/issues/">
+        <img src="https://img.shields.io/github/issues/czhangy/poke-db" alt="open issues" />
 </p>
 <h4>
-    <a href="https://github.com/czhangy/next-personal-starter">Documentation</a>
+    <a href="https://github.com/czhangy/poke-db">Documentation</a>
     <span> · </span>
-    <a href="https://github.com/czhangy/next-personal-starter/issues">Report Bug</a>
+    <a href="https://github.com/czhangy/poke-db/issues">Report Bug</a>
 </h4>
 
 </div>
@@ -32,14 +32,8 @@
 # Table of Contents
 
 -   [About the Project](#about-the-project)
-    -   [Summary](#summary)
     -   [Tech Stack](#tech-stack)
-    -   [Features](#features)
     -   [Environment Variables](#environment-variables)
--   [Getting Started](#getting-started)
-    -   [Prerequisites](#prerequisites)
-    -   [Run Locally](#run-locally)
--   [Roadmap](#roadmap)
 -   [License](#license)
 -   [Contact](#contact)
 -   [Acknowledgements](#acknowledgements)
@@ -48,37 +42,41 @@
 
 ## About the Project
 
-<!-- Summary -->
+<!-- Tech Stack -->
 
-### Summary
+### Tech Stack
 
-This is my personal starter for TypeScript/Next.js applications. As of now, it comes pre-setup with a README template, `src` folder, path aliasing, SASS support, Prettier config, Jest/Testing Library, Husky pre-commit hooks, and Prisma config, although other technologies may be added in the future.
+<!-- Shields.io Badges: https://github.com/Ileriayo/markdown-badges -->
 
-<!-- Getting Started -->
+<details>
+    <summary>Server</summary>
+    <br />
+    <a href="https://www.typescriptlang.org/">
+        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://nextjs.org/">
+        <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="NextJS" />
+    </a>
+    <a href="https://www.prisma.io/">
+        <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white" alt="Prisma" />
+    </a>
+</details>
 
-## Getting Started
+<details>
+    <summary>Database</summary>
+    <br />
+    <a href="https://www.mongodb.com/">
+        <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+    </a>
+</details>
 
-<!-- Prerequisites -->
+<!-- Env Variables -->
 
-### Prerequisites
+### Environment Variables
 
-This project uses NPM as a package manager
+To run this project, you will need to add the following environment variables to your `.env` file
 
-<!-- Run Locally -->
-
-### Run Locally
-
-Create a Next app with this starter
-
-```bash
-npx create-next-app [project-name] -e https://github.com/czhangy/next-personal-starter
-```
-
-Start the application
-
-```bash
-npm run dev
-```
+-   `DATABASE_URL`
 
 ## License
 
@@ -105,4 +103,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgements
 
 -   [Awesome README](https://github.com/matiassingers/awesome-readme)
+-   [PokéAPI](https://pokeapi.co/)
+-   [Pokémon Database](https://pokemondb.net/)
+-   [Pokémon Showdown](https://play.pokemonshowdown.com/)
+-   [pokenode-ts](https://github.com/Gabb-c/pokenode-ts)
+-   [Serebii](https://www.serebii.net/)
 -   [Shields.io](https://shields.io/)
