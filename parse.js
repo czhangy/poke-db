@@ -87,13 +87,8 @@ const saveBattle = (battleKey, row, team) => {
 
     // If the battle uses items, parse/set items
     if (attrs[ITEMS]) {
-        const item = toSlug(
-            attrs[ITEMS].substring(attrs[ITEMS].indexOf(" ") + 1)
-        );
-        const count = attrs[ITEMS].substring(
-            attrs[ITEMS].indexOf("[") + 1,
-            attrs[ITEMS].indexOf("]")
-        );
+        const item = toSlug(attrs[ITEMS].substring(attrs[ITEMS].indexOf(" ") + 1));
+        const count = attrs[ITEMS].substring(attrs[ITEMS].indexOf("[") + 1, attrs[ITEMS].indexOf("]"));
         battle.items[item] = parseInt(count);
     }
 
@@ -178,11 +173,7 @@ const parse = () => {
     }
 
     handleRepeatFights();
-    fs.writeFileSync(
-        OUT_FILE,
-        JSON.stringify(battleData).replace(/"\{\[|\]\}"/g, ""),
-        "utf-8"
-    );
+    fs.writeFileSync(OUT_FILE, JSON.stringify(battleData).replace(/"\{\[|\]\}"/g, ""), "utf-8");
 };
 
 parse();
