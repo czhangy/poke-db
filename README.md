@@ -2,7 +2,7 @@
 
 <!-- Title -->
 
-<img src="assets/images/logo.webp" alt="logo" width="200" height="auto" />
+<img src="public/assets/images/logo.webp" alt="logo" width="200" height="auto" />
 <h1>PokéDB</h1>
 
 <!-- Badges -->
