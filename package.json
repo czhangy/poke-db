@@ -4,10 +4,9 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "npx prisma db push --schema=./src/prisma/schema.prisma && next build",
-        "start": "next start",
-        "lint": "next lint",
-        "db": "npx prisma db push --schema=./src/prisma/schema.prisma && npx prisma studio --schema=./src/prisma/schema.prisma"
+        "db": "npx prisma db push --schema=./src/prisma/schema.prisma && npx prisma studio --schema=./src/prisma/schema.prisma",
+        "install": "pip install -r requirements.txt",
+        "update": "python3 update.py"
     },
     "dependencies": {
         "@prisma/client": "^5.4.2",
