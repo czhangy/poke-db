@@ -1,4 +1,4 @@
-const OUT_FILE = "./data/out.json";
+const OUT_FILE = "data/out.json";
 const TRAINER = 0;
 const NAME = 1;
 const LOCATION = 2;
