@@ -1,5 +1,5 @@
 Trainer,Name,Location,Items,Required,Double,Pokemon,Ability,Held Item,Level,Attack 1,Attack 2,Attack 3,Attack 4,IV
-519,519,519,,,,979,979,,979,979,979,979,978,979
+519,519,519,,,,979,979,,979,979,979,979,979,979
 rse_hiker,Sawyer,Mt. Chimney,,,,Geodude,Rock Head,,21,Mud Sport,Rock Throw,Magnitude,Self-Destruct,0
 rse_team_aqua_m,Grunt,Aqua Hideout (1F),,,,Poochyena,Run Away,,32,Odor Sleuth,Roar,Swagger,Scary Face,0
 rse_team_aqua_m,Grunt,Aqua Hideout (B1F),,y,,Zubat,Inner Focus,,31,Bite,Wing Attack,Confuse Ray,Air Cutter,0
@@ -714,7 +714,7 @@ rse_lass,Haley,Route 104,,,,Lotad,Swift Swim,,6,Astonish,Growl,~,~,0
 rse_lass,Janice,Route 116,,,,Marill,Thick Fat,,9,Tackle,Defense Curl,Tail Whip,~,0
 rse_winstrate_vivi,Vivi,Winstrate House,,,,Marill,Thick Fat,,15,Defense Curl,Tail Whip,Water Gun,Rollout,100
 ,,,,,,Shroomish,Effect Spore,,15,Absorb,Tackle,Stun Spore,Leech Seed,100
-,,,,,,Numel,Oblivious,,15,Growl,Tackle,Ember,,100
+,,,,,,Numel,Oblivious,,15,Growl,Tackle,Ember,~,100
 rse_lass,Sally,Trick House 1,,,,Oddish,Chlorophyll,,16,Absorb,Sweet Scent,Poison Powder,~,0
 rse_lass,Robin,Trick House 1,,,,Skitty,Cute Charm,,14,Tackle,Tail Whip,Attract,Sing,0
 ,,,,,,Shroomish,Effect Spore,,14,Absorb,Tackle,Stun Spore,Leech Seed,0
