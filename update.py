@@ -8,14 +8,16 @@ import time
 SERVER_URL = "http://localhost:3000/api/data"
 OK = 200
 ABILITIES = "abilities"
+BATTLES = "battles"
 ITEMS = "items"
 MOVES = "moves"
 POKEMON = "pokemon"
 TRAINERS = "trainers"
 CLEAR = "clear"
+VALID_GAMES = ["ruby_sapphire", "emerald"]
 
 # Lists
-COLLECTIONS = [ABILITIES, ITEMS, MOVES, POKEMON, TRAINERS, CLEAR]
+COLLECTIONS = [ABILITIES, BATTLES, ITEMS, MOVES, POKEMON, TRAINERS, CLEAR]
 STARTS = [ABILITIES, MOVES, POKEMON, TRAINERS]
 ENDS = [POKEMON]
 
@@ -32,6 +34,7 @@ toggled = None
 toggles = [False] * len(COLLECTIONS)
 starts = [None] * len(STARTS)
 ends = [None] * len(ENDS)
+game = None
 while selection != "":
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -72,6 +75,10 @@ while selection != "":
                         ends[ENDS.index(collection)] = end
                     else:
                         break
+                if collection == BATTLES:
+                    game = input("Pick a game to parse: ")
+                    if game not in VALID_GAMES:
+                        break
             toggles[idx] = not toggles[idx]
             toggled = collection
             break
@@ -85,6 +92,8 @@ for idx, collection in enumerate(COLLECTIONS):
             params.append(f"{collection}_start={starts[STARTS.index(collection)]}")
         if collection in ENDS and ends[ENDS.index(collection)]:
             params.append(f"{collection}_end={ends[ENDS.index(collection)]}")
+        if collection == BATTLES and game:
+            params.append(f"game={game}")
 
 query = SERVER_URL + "?" + "&".join(params)
 print()

@@ -5,14 +5,10 @@ import { Description } from "@prisma/client";
 import { AbilityFlavorText, MoveFlavorText, Name, NamedAPIResource, VersionGroupFlavorText } from "pokenode-ts";
 
 // Removes adjacent duplicates from array
-export const removeDuplicates = (arr: object[], property: string): any[] => {
+export const removeDuplicates = (arr: { [key: string]: any }[], property: string): any[] => {
     return arr.filter(
-        (obj1: object, i: number, arr: object[]) =>
-            arr.findIndex(
-                (obj2: object) =>
-                    JSON.stringify(obj1[property as keyof typeof obj1]) ===
-                    JSON.stringify(obj2[property as keyof typeof obj2])
-            ) === i
+        (obj: { [key: string]: any }, i: number) =>
+            JSON.stringify(arr[i - 1][property]) !== JSON.stringify(obj[property])
     );
 };
 

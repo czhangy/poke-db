@@ -1,14 +1,23 @@
 import { createAbilities } from "@/utils/abilities";
-import { ABILITIES, CLEAR, ITEMS, MOVES, OK, POKEMON, RESET, SUCCESS, TRAINERS, UPDATE } from "@/utils/constants";
+import {
+    ABILITIES,
+    BATTLES,
+    CLEAR,
+    ITEMS,
+    MOVES,
+    OK,
+    POKEMON,
+    RESET,
+    SUCCESS,
+    TRAINERS,
+    UPDATE,
+} from "@/utils/constants";
 import { createItems } from "@/utils/items";
 import { createMoves } from "@/utils/moves";
+import { parse } from "@/utils/parse";
 import { createPokemon } from "@/utils/pokemon";
 import { createTrainers } from "@/utils/trainers";
 import { NextApiRequest, NextApiResponse } from "next";
-
-// ---------------------------------------------------------------------------------------------------------------------
-// MAIN
-// ---------------------------------------------------------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
     const modified: string[] = [];
@@ -17,6 +26,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (ABILITIES in req.query) {
         await createAbilities(clear, parseInt(req.query.abilities_start as string));
         modified.push(ABILITIES);
+    }
+
+    if (BATTLES in req.query) {
+        console.log(parse(req.query.game as string));
+        modified.push(BATTLES);
     }
 
     if (ITEMS in req.query) {
