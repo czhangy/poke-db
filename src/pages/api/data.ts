@@ -1,4 +1,5 @@
 import { createAbilities } from "@/utils/abilities";
+import { createBattles } from "@/utils/battles";
 import {
     ABILITIES,
     BATTLES,
@@ -29,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     if (BATTLES in req.query) {
-        console.log(parse(req.query.game as string));
+        await createBattles(clear, parse(req.query.game as string));
         modified.push(BATTLES);
     }
 

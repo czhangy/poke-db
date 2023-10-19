@@ -90,6 +90,18 @@ export const logError = (target: string, slug: string): void => {
     console.log(`${ERROR}Error when finding ${target} for ${slug}${RESET}`);
 };
 
+// Formatted log for progress
+export const logProgress = (done: number, total: number): void => {
+    const progress: number = Math.round((done / total) * 100);
+    if (progress > 0) {
+        process.stdout.moveCursor(0, -1);
+        process.stdout.clearLine(1);
+    }
+
+    const segments = Math.floor(progress / 5);
+    console.log(`${BEGIN}${progress}% [${"=".repeat(segments)}${" ".repeat(20 - segments)}]${RESET}`);
+};
+
 // Clears a specified collection of all data if requested
 export const clearCollection = async (collection: string, clear: boolean) => {
     if (clear) {
