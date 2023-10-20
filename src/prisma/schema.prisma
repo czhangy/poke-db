@@ -74,6 +74,7 @@ type PokemonSet {
     level   Int
     ability String
     moves   String[]
+    item    String
     iv      Int
     ev      Int
 }
@@ -101,14 +102,15 @@ model Abilities {
 }
 
 model Battles {
-    id        String       @id @default(auto()) @map("_id") @db.ObjectId
-    slug      String       @unique
-    name      String
-    trainer   Trainers     @relation(fields: [trainerID], references: [id])
-    trainerID String       @db.ObjectId
-    team      PokemonSet[]
-    items     BattleItems
-    tags      BattleTags
+    id          String       @id @default(auto()) @map("_id") @db.ObjectId
+    slug        String       @unique
+    name        String
+    trainer     Trainers     @relation(fields: [trainerSlug], references: [slug])
+    trainerSlug String
+    location    String
+    team        PokemonSet[]
+    items       BattleItems?
+    tags        BattleTags[]
 }
 
 model Items {

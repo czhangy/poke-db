@@ -4,16 +4,8 @@ import changedStats from "@/data/changed_stats";
 import groups from "@/data/groups";
 import unusedForms from "@/data/unused_forms";
 import prisma from "@/lib/prisma";
-import { DEFAULT, LEVEL_UP, POKEMON, STAT_ORDER } from "@/utils/constants";
-import {
-    clearCollection,
-    getEnglishName,
-    logCreate,
-    logError,
-    logFinish,
-    logStart,
-    removeDuplicates,
-} from "@/utils/global";
+import { DEFAULT, POKEMON } from "@/utils/constants";
+import { clearCollection, getEnglishName, logFinish, logProgress, logStart, removeDuplicates } from "@/utils/global";
 import { Learnset, LearnsetMove, PokemonAbilities, Pokemon as PokemonModel, PokemonType, Stats } from "@prisma/client";
 import {
     ChainLink,
@@ -29,7 +21,7 @@ import {
 } from "pokenode-ts";
 
 // ---------------------------------------------------------------------------------------------------------------------
-// CONSTANT
+// CONSTANTS
 // ---------------------------------------------------------------------------------------------------------------------
 
 const GEN_IDXS: { [generation: string]: number } = {
@@ -40,6 +32,8 @@ const GEN_IDXS: { [generation: string]: number } = {
     "generation-vii": 13,
     "generation-viii": 18,
 };
+const LEVEL_UP: string = "level-up";
+const STAT_ORDER: string[] = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"];
 
 // ---------------------------------------------------------------------------------------------------------------------
 // PROPERTIES
@@ -50,15 +44,11 @@ const getTypes = (pokemon: Pokemon | PokemonForm): PokemonType[] => {
     let currentGroup: number = DEFAULT;
 
     if ("past_types" in pokemon && pokemon.past_types.length > 0) {
-        if (!(pokemon.past_types[0].generation.name in GEN_IDXS)) {
-            logError("past type", pokemon.name);
-        } else {
-            types.push({
-                types: pokemon.past_types[0].types.map((type: Type) => type.type.name),
-                group: DEFAULT,
-            });
-            currentGroup = GEN_IDXS[pokemon.past_types[0].generation.name];
-        }
+        types.push({
+            types: pokemon.past_types[0].types.map((type: Type) => type.type.name),
+            group: DEFAULT,
+        });
+        currentGroup = GEN_IDXS[pokemon.past_types[0].generation.name];
     }
 
     types.push({
@@ -183,19 +173,22 @@ type NewPokemon = Omit<PokemonModel, "id">;
 const handleCreatePokemon = async (
     evolutionAPI: EvolutionClient,
     species: PokemonSpecies,
-    pokemon: Pokemon
+    pokemon: Pokemon,
+    warnings: { [warning: string]: string[] }
 ): Promise<void> => {
     if (!pokemon.sprites.front_default) {
-        logError("sprite", pokemon.name);
+        if (!warnings.missing_sprite) {
+            warnings.missing_sprite = [];
+        }
+        warnings.missing_sprite.push(pokemon.name);
     } else {
         const slug: string = pokemon.name;
         const evos: (string[] | undefined)[] =
             slug in changedEvos ? changedEvos[slug] : await getEvos(evolutionAPI, species);
-        logCreate(slug, pokemon.id);
 
         const newPokemon: NewPokemon = {
             slug: slug,
-            name: getEnglishName(species.names),
+            name: getEnglishName(species.names, slug, warnings),
             types: getTypes(pokemon),
             sprite: pokemon.sprites.front_default,
             prevEvolutions: evos[0] ? evos[0] : [],
@@ -218,19 +211,22 @@ const handleCreateForm = async (
     evolutionAPI: EvolutionClient,
     species: PokemonSpecies,
     form: PokemonForm,
-    pokemon: Pokemon
+    pokemon: Pokemon,
+    warnings: { [warning: string]: string[] }
 ): Promise<void> => {
     if (!form.sprites.front_default) {
-        logError("sprite", form.name);
+        if (!warnings.missing_sprite) {
+            warnings.missing_sprite = [];
+        }
+        warnings.missing_sprite.push(form.name);
     } else {
         const slug: string = form.name;
         const evos: [string[] | undefined, string[] | undefined] =
             slug in changedEvos ? changedEvos[slug] : await getEvos(evolutionAPI, species);
-        logCreate(slug, pokemon.id);
 
         const newPokemon: NewPokemon = {
             slug: slug,
-            name: getEnglishName(species.names),
+            name: getEnglishName(species.names, slug, warnings),
             types: getTypes(form),
             sprite: form.sprites.front_default,
             prevEvolutions: evos[0] ? evos[0] : [],
@@ -253,38 +249,69 @@ const handleCreateForm = async (
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createPokemon = async (clear: boolean, start: number, end: number): Promise<void> => {
+export const createPokemon = async (
+    clear: boolean,
+    start: number,
+    end: number,
+    warnings: { [warning: string]: string[] }
+): Promise<void> => {
     logStart(POKEMON, start, end);
-    clearCollection(POKEMON, clear);
+    await clearCollection(POKEMON, clear);
 
     const pokemonAPI: PokemonClient = new PokemonClient();
     const evolutionAPI: EvolutionClient = new EvolutionClient();
 
+    const promises: Promise<void>[] = [];
+    let progress: number = 0;
     for (let i = start; i <= end; i++) {
-        const species: PokemonSpecies = await pokemonAPI.getPokemonSpeciesById(i);
-        for (const variety of species.varieties) {
-            if (!unusedForms.some((affix: string) => variety.pokemon.name.includes(affix))) {
-                const pokemon: Pokemon = await pokemonAPI.getPokemonByName(variety.pokemon.name);
-                if (pokemon.forms.length === 1) {
-                    await handleCreatePokemon(evolutionAPI, species, pokemon);
-                } else {
-                    for (const form of pokemon.forms) {
-                        if (
-                            !unusedForms.some((affix: string) => form.name.includes(affix)) &&
-                            (variety.pokemon.name !== "unown" || form.name === "unown-question")
-                        ) {
-                            await handleCreateForm(
-                                evolutionAPI,
-                                species,
-                                await pokemonAPI.getPokemonFormByName(form.name),
-                                pokemon
+        promises.push(
+            pokemonAPI
+                .getPokemonSpeciesById(i)
+                .then(async (species: PokemonSpecies) => {
+                    const varietyPromises: Promise<void>[] = [];
+                    for (const variety of species.varieties) {
+                        if (!unusedForms.some((affix: string) => variety.pokemon.name.includes(affix))) {
+                            varietyPromises.push(
+                                pokemonAPI.getPokemonByName(variety.pokemon.name).then(async (pokemon: Pokemon) => {
+                                    if (pokemon.forms.length === 1) {
+                                        await handleCreatePokemon(evolutionAPI, species, pokemon, warnings);
+                                    } else {
+                                        const formPromises: Promise<void>[] = [];
+                                        for (const form of pokemon.forms) {
+                                            if (
+                                                !unusedForms.some((affix: string) => form.name.includes(affix)) &&
+                                                (variety.pokemon.name !== "unown" || form.name === "unown-question")
+                                            ) {
+                                                formPromises.push(
+                                                    pokemonAPI
+                                                        .getPokemonFormByName(form.name)
+                                                        .then(async (form: PokemonForm) => {
+                                                            await handleCreateForm(
+                                                                evolutionAPI,
+                                                                species,
+                                                                form,
+                                                                pokemon,
+                                                                warnings
+                                                            );
+                                                        })
+                                                );
+                                            }
+                                        }
+                                        await Promise.all(formPromises);
+                                    }
+                                })
                             );
                         }
                     }
-                }
-            }
-        }
+                    await Promise.all(varietyPromises);
+                })
+                .then(() => {
+                    progress++;
+                    logProgress(progress, end - start + 1);
+                })
+        );
     }
+    await Promise.all(promises);
 
     logFinish(POKEMON);
 };

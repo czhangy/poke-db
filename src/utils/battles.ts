@@ -1,20 +1,21 @@
-import trainers from "@/data/trainers";
 import prisma from "@/lib/prisma";
-import Trainer from "@/models/Trainer";
-import { TRAINERS } from "@/utils/constants";
+import { BATTLES } from "@/utils/constants";
 import { clearCollection, logFinish, logProgress, logStart } from "@/utils/global";
+import { Battles } from "@prisma/client";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // API CALLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-const handleCreateTrainer = async (trainer: Trainer): Promise<void> => {
-    const slug: string = trainer.slug;
+type NewBattle = Omit<Battles, "id">;
 
-    await prisma.trainers.upsert({
+const handleCreateBattle = async (battle: NewBattle): Promise<void> => {
+    const slug: string = battle.slug;
+
+    await prisma.battles.upsert({
         where: { slug: slug },
-        update: trainer,
-        create: trainer,
+        update: battle,
+        create: battle,
     });
 };
 
@@ -22,21 +23,21 @@ const handleCreateTrainer = async (trainer: Trainer): Promise<void> => {
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createTrainers = async (clear: boolean): Promise<void> => {
-    logStart(TRAINERS);
-    await clearCollection(TRAINERS, clear);
+export const createBattles = async (clear: boolean, battles: NewBattle[]): Promise<void> => {
+    logStart(BATTLES);
+    await clearCollection(BATTLES, clear);
 
     const promises: Promise<void>[] = [];
     let progress: number = 0;
-    for (const trainer of trainers) {
+    for (const battle of battles) {
         promises.push(
-            handleCreateTrainer(trainer).then(() => {
+            handleCreateBattle(battle).then(() => {
                 progress++;
-                logProgress(progress, trainers.length);
+                logProgress(progress, battles.length);
             })
         );
     }
     await Promise.all(promises);
 
-    logFinish(TRAINERS);
+    logFinish(BATTLES);
 };

@@ -1,0 +1,981 @@
+Trainer,Name,Location,Items,Required,Double,Pokemon,Ability,Held Item,Level,Attack 1,Attack 2,Attack 3,Attack 4,IV
+519,519,519,,,,979,979,,979,979,979,979,979,979
+rse_hiker,Sawyer,Mt. Chimney,,,,Geodude,Rock Head,,21,Mud Sport,Rock Throw,Magnitude,Self-Destruct,0
+rse_team_aqua_m,Grunt,Aqua Hideout (1F),,,,Poochyena,Run Away,,32,Odor Sleuth,Roar,Swagger,Scary Face,0
+rse_team_aqua_m,Grunt,Aqua Hideout (B1F),,y,,Zubat,Inner Focus,,31,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+,,,,,,Carvanha,Rough Skin,,31,Scary Face,Crunch,Screech,Take Down,0
+rse_team_aqua_m,Grunt,Mt. Pyre,,,,Zubat,Inner Focus,,32,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+rse_team_aqua_m,Grunt,Mt. Pyre,,,,Carvanha,Rough Skin,,32,Scary Face,Crunch,Screech,Take Down,0
+rse_team_aqua_m,Grunt,Seafloor Cavern (Room 1),,,,Poochyena,Run Away,,36,Roar,Swagger,Scary Face,Take Down,0
+rse_team_aqua_m,Grunt,Seafloor Cavern (Room 1),,,,Carvanha,Rough Skin,,36,Scary Face,Crunch,Screech,Take Down,0
+rse_team_aqua_m,Grunt,Seafloor Cavern (Room 3),,,,Zubat,Inner Focus,,36,Wing Attack,Confuse Ray,Air Cutter,Mean Look,0
+rse_pokemon_breeder_f,Gabrielle,Mt. Pyre (3F),,,,Skitty,Cute Charm,,26,Sing,Double Slap,Assist,Charm,0
+,,,,,,Poochyena,Run Away,,26,Bite,Odor Sleuth,Roar,Swagger,0
+,,,,,,Zigzagoon,Pickup,,26,Sand Attack,Odor Sleuth,Mud Sport,Pin Missile,0
+,,,,,,Lotad,Swift Swim,,26,Growl,Absorb,Nature Power,Mist,0
+,,,,,,Seedot,Chlorophyll,,26,Harden,Growth,Nature Power,Synthesis,0
+,,,,,,Taillow,Guts,,26,Quick Attack,Wing Attack,Double Team,Endeavor,0
+rse_team_aqua_m,Grunt,Petalburg Woods,,y,,Poochyena,Run Away,,9,Tackle,Howl,Sand Attack,~,0
+rse_cool_trainer_m,Marcel,Route 121,[1] Hyper Potion,,,Manectric,Static,,29,Howl,Quick Attack,Spark,Odor Sleuth,100
+,,,,,,Shiftry,Chlorophyll,,29,Pound,Harden,Growth,Nature Power,100
+rse_bird_keeper,Alberto,Route 123,,,,Pelipper,Keen Eye,,30,Supersonic,Wing Attack,Mist,Protect,0
+,,,,,,Xatu,Synchronize,,30,Peck,Leer,Night Shade,Teleport,0
+rse_collector,Ed,Route 123,,,,Zangoose,Immunity,,30,Swords Dance,Fury Cutter,Slash,Pursuit,0
+,,,,,,Seviper,Shed Skin,,30,Poison Tail,Screech,Glare,Crunch,0
+rse_team_aqua_f,Grunt,Seafloor Cavern (Room 3),,,,Carvanha,Rough Skin,,36,Scary Face,Crunch,Screech,Take Down,0
+rse_swimmer_m,Declan,Route 124,,y,,Gyarados,Intimidate,,34,Thrash,Bite,Dragon Rage,Leer,0
+rse_team_aqua_m,Grunt,Rusturf Tunnel,,y,,Poochyena,Run Away,,11,Tackle,Howl,Sand Attack,~,0
+rse_team_aqua_m,Grunt,Weather Institute (1F),,,,Zubat,Inner Focus,,27,Astonish,Bite,Wing Attack,Confuse Ray,0
+,,,,,,Poochyena,Run Away,,27,Bite,Odor Sleuth,Roar,Swagger,0
+rse_team_aqua_m,Grunt,Weather Institute (2F),,,,Poochyena,Run Away,,27,Bite,Odor Sleuth,Roar,Swagger,0
+,,,,,,Carvanha,Rough Skin,,27,Rage,Focus Energy,Scary Face,Crunch,0
+rse_team_aqua_m,Grunt,Weather Institute (2F),,,,Poochyena,Run Away,,26,Bite,Odor Sleuth,Roar,Swagger,0
+,,,,,,Zubat,Inner Focus,,26,Astonish,Bite,Wing Attack,Confuse Ray,0
+,,,,,,Carvanha,Rough Skin,,26,Rage,Focus Energy,Scary Face,Crunch,0
+rse_team_aqua_m,Grunt,Oceanic Museum,,,,Carvanha,Rough Skin,,15,Bite,Leer,Rage,Focus Energy,0
+rse_team_aqua_m,Grunt,Oceanic Museum,,,,Zubat,Inner Focus,,14,Leech Life,Supersonic,Astonish,~,0
+,,,,,,Carvanha,Rough Skin,,14,Bite,Leer,Rage,Focus Energy,0
+rse_team_magma_m,Grunt,Mossdeep Space Center (1F),,,,Numel,Oblivious,,32,Magnitude,Focus Energy,Take Down,Amnesia,0
+rse_team_aqua_m,Grunt,Aqua Hideout (B1F),,,,Zubat,Inner Focus,,32,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+rse_team_aqua_m,Grunt,Aqua Hideout (B2F),,,,Carvanha,Rough Skin,,32,Scary Face,Crunch,Screech,Take Down,0
+rse_team_aqua_grunts,Grunts,Mt. Pyre,,y,y,Wailmer,Water Veil,,30,Rollout,Whirlpool,Astonish,Water Pulse,0
+,,,,,,Zubat,Inner Focus,,30,Astonish,Bite,Wing Attack,Confuse Ray,0
+,,,,,,Poochyena,Run Away,,30,Odor Sleuth,Roar,Swagger,Scary Face,0
+,,,,,,Carvanha,Rough Skin,,30,Focus Energy,Scary Face,Crunch,Screech,0
+rse_team_aqua_f,Grunt,Weather Institute (1F),,,,Carvanha,Rough Skin,,28,Focus Energy,Scary Face,Crunch,Screech,0
+rse_team_aqua_f,Grunt,Aqua Hideout (B1F),,,,Carvanha,Rough Skin,,32,Scary Face,Crunch,Screech,Take Down,0
+rse_team_aqua_f,Grunt,Aqua Hideout (B2F),,y,,Zubat,Inner Focus,,32,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+rse_expert_m,Fredrick,Route 123,,,,Makuhita,Thick Fat,,30,Vital Throw,Fake Out,Whirlwind,Knock Off,100
+,,,,,,Machoke,Guts,,30,Karate Chop,Seismic Toss,Foresight,Revenge,100
+rse_matt,Matt,Aqua Hideout,[1] Super Potion,y,,Mightyena,Intimidate,,34,Odor Sleuth,Roar,Swagger,Scary Face,50
+,,,,,,Golbat,Inner Focus,,34,Astonish,Bite,Wing Attack,Confuse Ray,50
+rse_black_belt,Zander,Mt. Pyre (2F),,,,Hariyama,Thick Fat,,31,Vital Throw,Fake Out,Whirlwind,Knock Off,0
+rse_shelly,Shelly,Weather Institute (2F),,y,,Carvanha,Rough Skin,,28,Focus Energy,Scary Face,Crunch,Screech,50
+,,,,,,Mightyena,Intimidate,,28,Bite,Odor Sleuth,Roar,Swagger,50
+rse_shelly,Shelly,Seafloor Cavern,,,,Sharpedo,Rough Skin,,37,Scary Face,Crunch,Screech,Slash,100
+,,,,,,Mightyena,Intimidate,,37,Roar,Swagger,Scary Face,Take Down,100
+rse_archie,Archie,Seafloor Cavern,,y,,Mightyena,Intimidate,,41,Roar,Swagger,Scary Face,Take Down,150
+,,,,,,Crobat,Inner Focus,,41,Bite,Wing Attack,Confuse Ray,Air Cutter,150
+,,,,,,Sharpedo,Rough Skin,,43,Screech,Slash,Taunt,Swagger,150
+rse_hex_maniac,Leah,Mt. Pyre (2F),,,,Spoink,Thick Fat,,31,Psybeam,Psych Up,Confuse Ray,Magic Coat,0
+rse_aroma_lady,Daisy,Route 103,,,,Shroomish,Effect Spore,,14,Absorb,Tackle,Stun Spore,Leech Seed,0
+,,,,,,Roselia,Natural Cure,,14,Absorb,Growth,Poison Sting,Stun Spore,0
+rse_aroma_lady,Rose,Route 118,,,,Roselia,Natural Cure,,14,Absorb,Growth,Poison Sting,Stun Spore,0
+,,,,,,Shroomish,Effect Spore,,14,Absorb,Tackle,Stun Spore,Leech Seed,0
+,,,,,,Roselia,Natural Cure,,14,Absorb,Growth,Poison Sting,Stun Spore,0
+rse_cool_trainer_m,Felix,Victory Road (B2F),[1] Full Restore,,,Medicham,Pure Power,,43,Psychic,Calm Mind,High Jump Kick,Psych Up,0
+,,,,,,Claydol,Levitate,,43,Skill Swap,Earthquake,Hyper Beam,Cosmic Power,0
+rse_aroma_lady,Violet,Route 123,,,,Roselia,Natural Cure,,26,Stun Spore,Mega Drain,Leech Seed,Magical Leaf,0
+,,,,,,Gloom,Chlorophyll,,26,Poison Powder,Stun Spore,Sleep Powder,Acid,0
+rse_ruin_maniac,Dusty,Route 111,,,,Sandslash,Sand Veil,,23,Dig,Slash,Sand Attack,Poison Sting,50
+rse_ruin_maniac,Chip,Route 120,,,,Baltoy,Levitate,,27,Psybeam,Self-Destruct,Sandstorm,Ancient Power,50
+,,,,,,Sandshrew,Sand Veil,,27,Dig,Slash,Sand Attack,Poison Sting,50
+,,,,,,Sandslash,Sand Veil,,27,Dig,Slash,Sand Attack,Poison Sting,50
+rse_ruin_maniac,Foster,Route 105,,,,Sandshrew,Sand Veil,,25,Dig,Slash,Sand Attack,Poison Sting,100
+,,,,,,Sandslash,Sand Veil,,25,Dig,Slash,Sand Attack,Poison Sting,100
+rse_interviewers,Gabby & Ty,Route 111,,,y,Magnemite,Magnet Pull,,17,Tackle,Thunder Shock,Supersonic,Sonic Boom,50
+,,,,,,Whismur,Soundproof,,17,Pound,Uproar,Astonish,Howl,50
+rse_interviewers,Gabby & Ty,Route 118,,,y,Magnemite,Magnet Pull,,27,Supersonic,Sonic Boom,Thunder Wave,Spark,100
+,,,,,,Loudred,Soundproof,,27,Uproar,Astonish,Howl,Supersonic,100
+rse_interviewers,Gabby & Ty,Route 120,,,y,Magneton,Magnet Pull,,30,Supersonic,Sonic Boom,Thunder Wave,Spark,150
+,,,,,,Loudred,Soundproof,,30,Astonish,Howl,Supersonic,Stomp,150
+rse_tuber_f,Lola,Route 109,,,,Azurill,Thick Fat,,12,Splash,Charm,Tail Whip,Bubble,10
+,,,,,,Azurill,Thick Fat,,12,Splash,Charm,Tail Whip,Bubble,10
+rse_tuber_f,Austina,Route 109,,,,Marill,Thick Fat,,26,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_tuber_f,Gwen,Route 109,,,,Marill,Thick Fat,,26,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_tuber_m,Ricky,Route 109,,,,Zigzagoon,Pickup,,13,Sand Attack,Headbutt,Tail Whip,Surf,10
+rse_tuber_m,Simon,Seashore House,,,,Azurill,Thick Fat,,12,Splash,Charm,Tail Whip,Bubble,0
+,,,,,,Marill,Thick Fat,,12,Tackle,Defense Curl,Tail Whip,Water Gun,0
+rse_tuber_m,Charlie,Abandoned Ship (1F),,,,Marill,Thick Fat,,26,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_cool_trainer_m,Randall,Speed Room,[1] Hyper Potion,,,Swellow,Guts,,26,Quick Attack,Agility,Wing Attack,Double Team,255
+rse_cool_trainer_m,Parker,Confusion Room,[1] Hyper Potion,,,Spinda,Own Tempo,,26,Teeter Dance,Dizzy Punch,Focus Punch,Hypnosis,255
+rse_cool_trainer_m,George,Recovery Room,[1] Hyper Potion,,,Slakoth,Truant,Sitrus Berry,26,Slack Off,Counter,Shadow Ball,Amnesia,255
+rse_cool_trainer_m,Berke,One-Hit KO Room,[1] Hyper Potion,,,Vigoroth,Vital Spirit,,26,Focus Energy,Slash,Fury Swipes,Endure,255
+rse_cool_trainer_m,Braxton,Route 123,[1] Hyper Potion,,,Swellow,Guts,,28,Focus Energy,Quick Attack,Wing Attack,Endeavor,100
+,,,,,,Trapinch,Hyper Cutter,,28,Bite,Dig,Feint Attack,Sand Tomb,100
+,,,,,,Wailmer,Water Veil,,28,Rollout,Whirlpool,Astonish,Water Pulse,100
+,,,,,,Magneton,Magnet Pull,,28,Thunderbolt,Supersonic,Thunder Wave,Sonic Boom,100
+,,,,,,Shiftry,Chlorophyll,,28,Giga Drain,Feint Attack,Double Team,Swagger,100
+rse_cool_trainer_m,Wilton,Route 111,[1] Super Potion,,,Electrike,Static,,17,Thunder Wave,Leer,Howl,Quick Attack,100
+,,,,,,Wailmer,Water Veil,,17,Splash,Growl,Water Gun,Rollout,100
+,,,,,,Makuhita,Thick Fat,,17,Focus Energy,Sand Attack,Arm Thrust,Vital Throw,100
+rse_cool_trainer_m,Edgar,Victory Road (1F),[1] Full Restore,y,,Cacturne,Sand Veil,,43,Ingrain,Feint Attack,Spikes,Needle Arm,100
+,,,,,,Pelipper,Keen Eye,,43,Mist,Protect,Stockpile,Swallow,100
+rse_cool_trainer_m,Albert,Victory Road (1F),[1] Full Restore,,,Magneton,Magnet Pull,,43,Sonic Boom,Thunder Wave,Spark,Lock-On,100
+,,,,,,Muk,Stench,,43,Sludge,Minimize,Screech,Acid Armor,100
+rse_cool_trainer_m,Samuel,Victory Road (B1F),[1] Full Restore,,,Swellow,Guts,,42,Wing Attack,Double Team,Endeavor,Aerial Ace,100
+,,,,,,Mawile,Hyper Cutter,,42,Feint Attack,Baton Pass,Crunch,Iron Defense,100
+,,,,,,Kadabra,Synchronize,,42,Recover,Future Sight,Role Play,Psychic,100
+rse_cool_trainer_m,Vito,Victory Road (B2F),[1] Full Restore,,,Dodrio,Run Away,,42,Fury Attack,Tri Attack,Rage,Uproar,100
+,,,,,,Kadabra,Synchronize,,42,Recover,Future Sight,Role Play,Psychic,100
+,,,,,,Electrode,Soundproof,,42,Spark,Self-Destruct,Rollout,Light Screen,100
+,,,,,,Shiftry,Chlorophyll,,42,Pound,Harden,Growth,Nature Power,100
+rse_cool_trainer_m,Owen,Victory Road (B2F),[1] Full Restore,,,Kecleon,Color Change,,42,Psybeam,Screech,Slash,Substitute,100
+,,,,,,Graveler,Rock Head,,42,Magnitude,Self-Destruct,Rollout,Rock Blast,100
+,,,,,,Wailord,Water Veil,,42,Astonish,Water Pulse,Mist,Rest,100
+rse_cool_trainer_m,Warren,Route 133,[1] Full Restore,,,Graveler,Rock Head,,33,Rock Throw,Magnitude,Self-Destruct,Rollout,100
+,,,,,,Ludicolo,Swift Swim,,33,Astonish,Growl,Absorb,Nature Power,100
+rse_cool_trainer_f,Mary,Accuracy Room,[1] Hyper Potion,,,Delcatty,Cute Charm,,26,Feint Attack,Shock Wave,Sing,Double Slap,255
+rse_cool_trainer_f,Alexia,Defense Room,[1] Hyper Potion,,,Wigglytuff,Cute Charm,,26,Defense Curl,Double-Edge,Shadow Ball,Double Slap,255
+rse_cool_trainer_f,Jody,Strength Room,[1] Hyper Potion,,,Zangoose,Immunity,,26,Swords Dance,Slash,Fury Cutter,Pursuit,255
+rse_cool_trainer_f,Wendy,Route 123,[1] Full Restore,,,Mawile,Hyper Cutter,,29,Baton Pass,Feint Attack,Fake Tears,Bite,100
+,,,,,,Roselia,Natural Cure,,29,Mega Drain,Magical Leaf,Grass Whistle,Leech Seed,100
+,,,,,,Pelipper,Keen Eye,,29,Fly,Water Gun,Mist,Protect,100
+rse_cool_trainer_f,Brooke,Route 111,[1] Super Potion,,,Wingull,Keen Eye,,17,Growl,Water Gun,Supersonic,Wing Attack,100
+,,,,,,Numel,Oblivious,,17,Growl,Tackle,Ember,~,100
+,,,,,,Roselia,Natural Cure,,17,Growth,Poison Sting,Stun Spore,Mega Drain,100
+rse_cool_trainer_f,Jennifer,Route 120,[1] Full Restore,,,Sableye,Keen Eye,,30,Fury Swipes,Fake Out,Detect,Feint Attack,200
+rse_cool_trainer_f,Hope,Victory Road (1F),[1] Full Restore,y,,Roselia,Natural Cure,,45,Giga Drain,Sweet Scent,Ingrain,Toxic,100
+rse_cool_trainer_f,Shannon,Victory Road (B1F),[1] Full Restore,,,Claydol,Levitate,,45,Ancient Power,Sandstorm,Hyper Beam,Cosmic Power,100
+rse_cool_trainer_f,Michelle,Victory Road (B2F),[1] Full Restore,,,Torkoal,White Smoke,,42,Protect,Flamethrower,Iron Defense,Amnesia,100
+,,,,,,Medicham,Pure Power,,42,Mind Reader,Calm Mind,High Jump Kick,Psych Up,100
+,,,,,,Ludicolo,Swift Swim,,42,Astonish,Growl,Absorb,Nature Power,100
+rse_cool_trainer_f,Caroline,Victory Road (B2F),[1] Full Restore,,,Skarmory,Keen Eye,,43,Fury Attack,Air Cutter,Steel Wing,Spikes,100
+,,,,,,Sableye,Keen Eye,,43,Feint Attack,Knock Off,Confuse Ray,Shadow Ball,100
+rse_cool_trainer_f,Julie,Victory Road (B2F),[1] Full Restore,y,,Sandslash,Sand Veil,,42,Poison Sting,Slash,Swift,Fury Swipes,100
+,,,,,,Ninetales,Flash Fire,,42,Ember,Quick Attack,Confuse Ray,Safeguard,100
+,,,,,,Tropius,Chlorophyll,,42,Whirlwind,Magical Leaf,Body Slam,Solar Beam,100
+rse_hex_maniac,Kindra,Route 123,,,,Duskull,Levitate,,30,Foresight,Astonish,Confuse Ray,Pursuit,0
+,,,,,,Shuppet,Insomnia,,30,Screech,Night Shade,Curse,Spite,0
+rse_hex_maniac,Tammy,Route 121,,,,Duskull,Levitate,,29,Foresight,Astonish,Confuse Ray,Pursuit,0
+,,,,,,Shuppet,Insomnia,,29,Screech,Night Shade,Curse,Spite,0
+rse_hex_maniac,Valerie,Mt. Pyre (6F),,,,Sableye,Keen Eye,,32,Fury Swipes,Fake Out,Detect,Feint Attack,0
+rse_hex_maniac,Tasha,Mt. Pyre (4F),,,,Shuppet,Insomnia,,32,Night Shade,Curse,Spite,Will-O-Wisp,50
+rse_lady,Cindy,Route 104,[1] Full Restore,,,Zigzagoon,Pickup,Nugget,7,Tackle,Growl,Tail Whip,~,0
+rse_lady,Daphne,Sootopolis Gym (2F),[1] Full Restore,,,Luvdisc,Swift Swim,Nugget,39,Attract,Sweet Kiss,Flail,Water Pulse,100
+,,,,,,Luvdisc,Swift Swim,Nugget,39,Attract,Safeguard,Take Down,Water Pulse,100
+rse_team_magma_m,Grunt,Mossdeep Space Center (1F),,y,,Mightyena,Intimidate,,26,Sand Attack,Bite,Odor Sleuth,Roar,0
+,,,,,,Mightyena,Intimidate,,28,Bite,Odor Sleuth,Roar,Swagger,0
+,,,,,,Numel,Oblivious,,30,Ember,Magnitude,Focus Energy,Take Down,0
+rse_lady,Brianna,Sootopolis Gym (3F),[1] Full Restore,,,Seaking,Swift Swim,Nugget,40,Supersonic,Horn Attack,Flail,Fury Attack,150
+rse_beauty,Melissa,Mt. Chimney,,,,Marill,Thick Fat,,21,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_beauty,Sheila,Mt. Chimney,,,,Shroomish,Effect Spore,,21,Tackle,Stun Spore,Leech Seed,Mega Drain,0
+rse_beauty,Shirley,Mt. Chimney,,,,Numel,Oblivious,,21,Growl,Tackle,Ember,Magnitude,0
+rse_beauty,Jessica,Route 121,,,,Kecleon,Color Change,,29,Bind,Lick,Fury Swipes,Feint Attack,0
+,,,,,,Seviper,Shed Skin,,29,Poison Tail,Screech,Glare,Crunch,0
+rse_beauty,Connie,Sootopolis Gym (1F),,,,Goldeen,Swift Swim,,40,Horn Attack,Flail,Fury Attack,Waterfall,100
+rse_beauty,Bridget,Sootopolis Gym (3F),,,,Azumarill,Thick Fat,,40,Water Gun,Rollout,Bubble Beam,Double-Edge,150
+rse_beauty,Olivia,Sootopolis Gym (3F),,,,Clamperl,Shell Armor,,35,Iron Defense,Whirlpool,Rain Dance,Water Pulse,100
+,,,,,,Corphish,Hyper Cutter,,37,Taunt,Crabhammer,Water Pulse,Knock Off,100
+,,,,,,Lombre,Swift Swim,,39,Uproar,Fury Swipes,Fake Out,Water Pulse,100
+rse_beauty,Tiffany,Sootopolis Gym (3F),,,,Carvanha,Rough Skin,,39,Crunch,Screech,Take Down,Swagger,100
+,,,,,,Sharpedo,Rough Skin,,39,Crunch,Screech,Slash,Taunt,100
+rse_rich_boy,Winston,Route 104,[1] Full Restore,,,Zigzagoon,Pickup,Nugget,7,Tackle,Growl,Tail Whip,~,0
+rse_expert_f,Mollie,Route 133,,,,Whiscash,Oblivious,,33,Magnitude,Amnesia,Rest,Snore,0
+,,,,,,Meditite,Pure Power,,33,Swagger,Mind Reader,Calm Mind,High Jump Kick,200
+rse_pokemaniac,Steve,Route 114,,,,Aron,Sturdy,,19,Mud-Slap,Headbutt,Metal Claw,Iron Defense,0
+rse_beauty,Thalia,Abandoned Ship (1F),,,,Wailmer,Water Veil,,25,Water Gun,Rollout,Whirlpool,Astonish,0
+,,,,,,Horsea,Swift Swim,,25,Bubble,Smokescreen,Leer,Water Gun,0
+rse_pokemaniac,Mark,Mt. Pyre (2F),,,,Rhyhorn,Lightning Rod,,31,Stomp,Fury Attack,Scary Face,Rock Blast,0
+rse_team_magma_f,Grunt,Mt. Chimney,,y,,Numel,Oblivious,,20,Growl,Tackle,Ember,Magnitude,0
+rse_swimmer_m,Luis,Route 105,,,,Carvanha,Rough Skin,,26,Rage,Focus Energy,Scary Face,Crunch,0
+rse_swimmer_m,Dominik,Route 105,,,,Tentacool,Clear Body,,26,Supersonic,Constrict,Acid,Bubble Beam,0
+rse_swimmer_m,Douglas,Route 106,,,,Tentacool,Clear Body,,24,Poison Sting,Supersonic,Constrict,Acid,10
+,,,,,,Tentacool,Clear Body,,24,Poison Sting,Supersonic,Constrict,Acid,10
+rse_swimmer_m,Darrin,Route 107,,,,Tentacool,Clear Body,,24,Poison Sting,Supersonic,Constrict,Acid,10
+,,,,,,Wingull,Keen Eye,,24,Water Gun,Supersonic,Wing Attack,Mist,10
+,,,,,,Tentacool,Clear Body,,24,Poison Sting,Supersonic,Constrict,Acid,10
+rse_swimmer_m,Tony,Route 107,,,,Carvanha,Rough Skin,,26,Rage,Focus Energy,Scary Face,Crunch,0
+rse_swimmer_m,Jerome,Route 108,,,,Tentacool,Clear Body,,26,Supersonic,Constrict,Acid,Bubble Beam,0
+rse_swimmer_m,Matthew,Route 108,,,,Carvanha,Rough Skin,,26,Rage,Focus Energy,Scary Face,Crunch,0
+rse_swimmer_m,David,Route 109,,,,Tentacool,Clear Body,,25,Supersonic,Constrict,Acid,Bubble Beam,0
+,,,,,,Carvanha,Rough Skin,,25,Rage,Focus Energy,Scary Face,Crunch,0
+rse_swimmer_m,Spencer,Route 124,,,,Tentacool,Clear Body,,33,Constrict,Acid,Bubble Beam,Wrap,0
+,,,,,,Wingull,Keen Eye,,33,Supersonic,Wing Attack,Mist,Quick Attack,0
+rse_swimmer_m,Roland,Route 124,,,,Carvanha,Rough Skin,,34,Scary Face,Crunch,Screech,Take Down,0
+rse_swimmer_m,Nolen,Route 125,,,,Tentacruel,Clear Body,,34,Constrict,Acid,Bubble Beam,Wrap,0
+rse_swimmer_m,Stan,Route 125,,,,Horsea,Swift Swim,,34,Smokescreen,Leer,Water Gun,Twister,0
+rse_swimmer_m,Barry,Route 126,,,,Gyarados,Intimidate,,34,Thrash,Bite,Dragon Rage,Leer,0
+rse_swimmer_m,Dean,Route 126,,,,Carvanha,Rough Skin,,31,Scary Face,Crunch,Screech,Take Down,0
+,,,,,,Wingull,Keen Eye,,31,Supersonic,Wing Attack,Mist,Quick Attack,0
+,,,,,,Carvanha,Rough Skin,,31,Scary Face,Crunch,Screech,Take Down,0
+rse_swimmer_m,Rodney,Route 130,,,,Gyarados,Intimidate,,34,Thrash,Bite,Dragon Rage,Leer,0
+rse_swimmer_m,Richard,Route 131,,,,Pelipper,Keen Eye,,34,Mist,Protect,Stockpile,Swallow,0
+rse_swimmer_m,Herman,Route 131,,,,Wingull,Keen Eye,,33,Supersonic,Wing Attack,Mist,Quick Attack,0
+,,,,,,Tentacruel,Clear Body,,33,Constrict,Acid,Bubble Beam,Wrap,0
+rse_swimmer_m,Santiago,Route 130,,,,Tentacruel,Clear Body,,33,Constrict,Acid,Bubble Beam,Wrap,0
+,,,,,,Wailmer,Water Veil,,33,Whirlpool,Astonish,Water Pulse,Mist,0
+rse_swimmer_m,Gilbert,Route 132,,,,Sharpedo,Rough Skin,,34,Scary Face,Crunch,Screech,Slash,0
+rse_swimmer_m,Franklin,Route 133,,,,Sealeo,Thick Fat,,34,Ice Ball,Body Slam,Aurora Beam,Hail,0
+rse_swimmer_m,Kevin,Route 131,,,,Spheal,Thick Fat,,34,Ice Ball,Body Slam,Aurora Beam,Hail,0
+rse_swimmer_m,Jack,Route 134,,,,Gyarados,Intimidate,,34,Thrash,Bite,Dragon Rage,Leer,0
+rse_swimmer_m,Chad,Route 124,,,,Tentacool,Clear Body,,33,Constrict,Acid,Bubble Beam,Wrap,0
+,,,,,,Wailmer,Water Veil,,33,Whirlpool,Astonish,Water Pulse,Mist,0
+rse_black_belt,Takao,Dewford Gym,,,,Machop,Guts,,13,Low Kick,Leer,Focus Energy,Karate Chop,127
+rse_black_belt,Hitoshi,Route 134,,,,Machop,Guts,,32,Seismic Toss,Foresight,Revenge,Vital Throw,50
+,,,,,,Machoke,Guts,,32,Karate Chop,Seismic Toss,Foresight,Revenge,200
+rse_black_belt,Kiyo,Route 132,,,,Hariyama,Thick Fat,,34,Fake Out,Whirlwind,Knock Off,Smelling Salts,100
+rse_black_belt,Koichi,Route 115,,,,Machop,Guts,,24,Focus Energy,Karate Chop,Seismic Toss,Foresight,100
+,,,,,,Machoke,Guts,,28,Karate Chop,Seismic Toss,Foresight,Revenge,150
+rse_black_belt,Nob,Route 115,,,,Machop,Guts,,19,Leer,Focus Energy,Karate Chop,Seismic Toss,100
+rse_black_belt,Yuji,Trick House 4,,,,Makuhita,Thick Fat,,26,Arm Thrust,Vital Throw,Fake Out,Whirlwind,100
+,,,,,,Machoke,Guts,,26,Karate Chop,Seismic Toss,Foresight,Revenge,100
+rse_black_belt,Daisuke,Route 111,,,,Machop,Guts,,19,Leer,Focus Energy,Karate Chop,Seismic Toss,100
+rse_black_belt,Atsushi,Mt. Pyre (5F),,,,Hariyama,Thick Fat,,32,Vital Throw,Fake Out,Whirlwind,Knock Off,100
+rse_guitarist,Kirk,Mauville Gym,,,,Electrike,Static,,17,Quick Attack,Thunder Wave,Spark,Leer,100
+,,,,,,Voltorb,Soundproof,,17,Charge,Shock Wave,Screech,Sonic Boom,100
+rse_team_aqua_f,Grunt,Aqua Hideout (B1F),,y,,Poochyena,Run Away,,31,Odor Sleuth,Roar,Swagger,Scary Face,0
+,,,,,,Zubat,Inner Focus,,31,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+rse_team_aqua_m,Grunt,Aqua Hideout (B2F),,y,,Carvanha,Rough Skin,,32,Scary Face,Crunch,Screech,Take Down,0
+rse_guitarist,Shawn,Mauville Gym,,,,Voltorb,Soundproof,,17,Charge,Shock Wave,Screech,Sonic Boom,100
+,,,,,,Magnemite,Magnet Pull,,17,Tackle,Thunder Shock,Supersonic,Sonic Boom,100
+rse_guitarist,Fernando,Route 123,,,,Electrike,Static,,30,Quick Attack,Spark,Odor Sleuth,Roar,0
+,,,,,,Loudred,Soundproof,,30,Astonish,Howl,Supersonic,Stomp,0
+rse_guitarist,Dalton,Route 118,,,,Magnemite,Magnet Pull,,15,Tackle,Thunder Shock,Supersonic,~,0
+,,,,,,Whismur,Soundproof,,15,Pound,Uproar,Astonish,Howl,0
+rse_kindler,Cole,Route 114,,,,Numel,Oblivious,,23,Growl,Tackle,Ember,Magnitude,100
+rse_kindler,Jeff,Lavaridge Gym,,,,Slugma,Magma Armor,,22,Smog,Ember,Rock Throw,Harden,100
+,,,,,,Slugma,Magma Armor,,22,Smog,Ember,Rock Throw,Harden,100
+rse_kindler,Axle,Lavaridge Gym,,,,Numel,Oblivious,,23,Growl,Tackle,Ember,Magnitude,100
+rse_kindler,Jace,Lavaridge Gym,,y,,Slugma,Magma Armor,,23,Smog,Ember,Rock Throw,Harden,100
+rse_kindler,Keegan,Lavaridge Gym,,,,Slugma,Magma Armor,,23,Smog,Ember,Rock Throw,Harden,120
+rse_kindler,Bernie,Route 114,,,,Slugma,Magma Armor,,18,Yawn,Smog,Ember,Rock Throw,0
+,,,,,,Wingull,Keen Eye,,18,Growl,Water Gun,Supersonic,Wing Attack,0
+rse_camper,Drew,Route 111,,,,Sandshrew,Sand Veil,,23,Dig,Sand Attack,Poison Sting,Slash,0
+rse_camper,Beau,Route 111,,,,Baltoy,Levitate,,21,Rapid Spin,Mud-Slap,Psybeam,Rock Tomb,0
+,,,,,,Sandshrew,Sand Veil,,21,Poison Sting,Sand Attack,Scratch,Dig,0
+,,,,,,Baltoy,Levitate,,21,Rapid Spin,Mud-Slap,Psybeam,Rock Tomb,0
+rse_camper,Larry,Route 112,,,,Nuzleaf,Chlorophyll,,18,Pound,Harden,Growth,Nature Power,0
+rse_camper,Shane,Route 114,,,,Sandshrew,Sand Veil,,18,Scratch,Defense Curl,Sand Attack,Poison Sting,0
+,,,,,,Nuzleaf,Chlorophyll,,18,Pound,Harden,Growth,Nature Power,0
+rse_camper,Justin,Trick House 3,,,,Kecleon,Color Change,,24,Feint Attack,Fury Swipes,Psybeam,Screech,0
+rse_camper,Ethan,Jagged Pass,,,,Zigzagoon,Pickup,,20,Tail Whip,Headbutt,Sand Attack,Odor Sleuth,0
+,,,,,,Taillow,Guts,,20,Focus Energy,Quick Attack,Wing Attack,Double Team,0
+rse_picnicker,Autumn,Jagged Pass,,,,Shroomish,Effect Spore,,21,Tackle,Stun Spore,Leech Seed,Mega Drain,0
+rse_camper,Travis,Route 111,,,,Sandshrew,Sand Veil,,18,Scratch,Defense Curl,Sand Attack,Poison Sting,0
+rse_bug_maniac,Brent,Route 119,,,,Surskit,Swift Swim,,26,Quick Attack,Sweet Scent,Water Sport,Bubble Beam,100
+rse_bug_maniac,Donald,Route 119,,,,Wurmple,Shield Dust,,24,Tackle,String Shot,Poison Sting,~,100
+,,,,,,Silcoon,Shed Skin,,24,Harden,~,~,~,100
+,,,,,,Beautifly,Swarm,,24,Gust,Stun Spore,Morning Sun,Mega Drain,100
+rse_bug_maniac,Taylor,Route 119,,,,Wurmple,Shield Dust,,27,Tackle,String Shot,Poison Sting,~,100
+,,,,,,Cascoon,Shed Skin,,27,Harden,~,~,~,100
+,,,,,,Dustox,Shield Dust,,27,Protect,Moonlight,Psybeam,Whirlwind,100
+rse_bug_maniac,Jeffrey,Route 120,,,,Surskit,Swift Swim,,27,Quick Attack,Sweet Scent,Water Sport,Bubble Beam,0
+,,,,,,Surskit,Swift Swim,,27,Quick Attack,Sweet Scent,Water Sport,Bubble Beam,0
+,,,,,,Surskit,Swift Swim,,27,Quick Attack,Sweet Scent,Water Sport,Bubble Beam,0
+rse_bug_maniac,Derek,Route 117,,,,Dustox,Shield Dust,,16,Confusion,Gust,~,~,150
+,,,,,,Beautifly,Swarm,,16,Absorb,Gust,~,~,150
+rse_psychic_m,Edward,Route 110,,y,,Abra,Synchronize,,15,Hidden Power,Teleport,~,~,0
+rse_psychic_m,Preston,Mossdeep Gym (Entrance),,y,,Kirlia,Synchronize,,36,Teleport,Calm Mind,Psychic,Imprison,100
+rse_psychic_m,Virgil,Mossdeep Gym (Northwest),,,,Ralts,Synchronize,,36,Calm Mind,Psychic,Imprison,Future Sight,100
+rse_psychic_m,Blake,Mossdeep Gym (West),,,,Girafarig,Inner Focus,,36,Confusion,Stomp,Odor Sleuth,Agility,100
+rse_psychic_m,William,Mt. Pyre (3F),,,,Ralts,Synchronize,,26,Double Team,Teleport,Calm Mind,Psychic,0
+,,,,,,Ralts,Synchronize,,26,Double Team,Teleport,Calm Mind,Psychic,0
+,,,,,,Kirlia,Synchronize,,26,Double Team,Teleport,Calm Mind,Psychic,0
+rse_psychic_and_hex_maniac,Joshua & Patricia,Trick House 7,,,y,Kadabra,Synchronize,,41,Recover,Future Sight,Role Play,Psychic,0
+,,,,,,Solrock,Levitate,,41,Fire Spin,Psywave,Cosmic Power,Rock Slide,0
+,,,,,,Banette,Insomnia,,41,Curse,Spite,Will-O-Wisp,Feint Attack,0
+,,,,,,Lunatone,Levitate,,41,Hypnosis,Psywave,Cosmic Power,Psychic,0
+rse_psychic_m,Cameron,Route 123,,,,Solrock,Levitate,,31,Rock Throw,Fire Spin,Psywave,Cosmic Power,0
+rse_psychic_f,Jaclyn,Cycling Road,,,,Abra,Synchronize,,16,Hidden Power,Teleport,~,~,0
+rse_psychic_f,Hannah,Mossdeep Gym (Northwest),,y,,Kirlia,Synchronize,,36,Teleport,Calm Mind,Psychic,Imprison,100
+rse_psychic_f,Samantha,Mossdeep Gym (West),,,,Xatu,Synchronize,,36,Night Shade,Teleport,Wish,Future Sight,100
+rse_psychic_f,Maura,Mossdeep Gym (Entrance),,,,Kadabra,Synchronize,,36,Recover,Future Sight,Role Play,Psychic,100
+rse_psychic_f,Kayla,Mt. Pyre (3F),,,,Wobbuffet,Shadow Tag,,26,Counter,Mirror Coat,Safeguard,Destiny Bond,0
+,,,,,,Natu,Synchronize,,26,Peck,Leer,Night Shade,Teleport,0
+,,,,,,Kadabra,Synchronize,,26,Disable,Psybeam,Reflect,Recover,0
+rse_psychic_f,Alexis,Trick House 7,,,,Kirlia,Synchronize,,41,Calm Mind,Psychic,Imprison,Future Sight,0
+,,,,,,Xatu,Synchronize,,41,Night Shade,Teleport,Wish,Future Sight,0
+rse_psychic_f,Jacki,Route 123,,,,Kadabra,Synchronize,,30,Psybeam,Reflect,Recover,Future Sight,0
+,,,,,,Lunatone,Levitate,,30,Confusion,Rock Throw,Hypnosis,Psywave,0
+rse_gentleman,Walter,Route 121,,,,Manectric,Static,,29,Howl,Quick Attack,Spark,Odor Sleuth,0
+rse_sidney,Sidney,Pokémon League,[2] Full Restore,y,,Mightyena,Intimidate,,46,Roar,Double-Edge,Sand Attack,Crunch,250
+,,,,,,Shiftry,Chlorophyll,,48,Torment,Double Team,Swagger,Extrasensory,250
+,,,,,,Cacturne,Sand Veil,,46,Leech Seed,Feint Attack,Needle Arm,Cotton Spore,250
+,,,,,,Crawdaunt,Hyper Cutter,,48,Surf,Swords Dance,Strength,Facade,250
+,,,,,,Absol,Pressure,Sitrus Berry,49,Aerial Ace,Rock Slide,Swords Dance,Slash,255
+rse_phoebe,Phoebe,Pokémon League,[2] Full Restore,y,,Dusclops,Pressure,,48,Shadow Punch,Confuse Ray,Curse,Protect,250
+,,,,,,Banette,Insomnia,,49,Shadow Ball,Grudge,Will-O-Wisp,Feint Attack,250
+,,,,,,Sableye,Keen Eye,,50,Shadow Ball,Double Team,Night Shade,Feint Attack,250
+,,,,,,Banette,Insomnia,,49,Shadow Ball,Psychic,Thunderbolt,Facade,250
+,,,,,,Dusclops,Pressure,Sitrus Berry,51,Shadow Ball,Ice Beam,Rock Slide,Earthquake,255
+rse_glacia,Glacia,Pokémon League,[2] Full Restore,y,,Sealeo,Thick Fat,,50,Encore,Body Slam,Hail,Ice Ball,250
+,,,,,,Glalie,Inner Focus,,50,Light Screen,Crunch,Icy Wind,Ice Beam,250
+,,,,,,Sealeo,Thick Fat,,52,Attract,Double-Edge,Hail,Blizzard,250
+,,,,,,Glalie,Inner Focus,,52,Shadow Ball,Explosion,Hail,Ice Beam,250
+,,,,,,Walrein,Thick Fat,Sitrus Berry,53,Surf,Body Slam,Ice Beam,Sheer Cold,255
+rse_drake,Drake,Pokémon League,[2] Full Restore,y,,Shelgon,Rock Head,,52,Rock Tomb,Dragon Claw,Protect,Double-Edge,250
+,,,,,,Altaria,Natural Cure,,54,Double-Edge,Dragon Breath,Dragon Dance,Aerial Ace,250
+,,,,,,Kingdra,Swift Swim,,53,Smokescreen,Dragon Dance,Surf,Body Slam,250
+,,,,,,Flygon,Levitate,,53,Flamethrower,Crunch,Dragon Breath,Earthquake,250
+,,,,,,Salamence,Intimidate,Sitrus Berry,55,Flamethrower,Dragon Claw,Rock Slide,Crunch,255
+rse_roxanne,Roxanne,Rustboro Gym,[2] Potion,y,,Geodude,Rock Head,,12,Tackle,Defense Curl,Rock Throw,Rock Tomb,100
+,,,,,,Geodude,Rock Head,,12,Tackle,Defense Curl,Rock Throw,Rock Tomb,100
+,,,,,,Nosepass,Sturdy,Oran Berry,15,Block,Harden,Tackle,Rock Tomb,200
+rse_brawly,Brawly,Dewford Gym,[2] Super Potion,y,,Machop,Guts,,16,Karate Chop,Low Kick,Seismic Toss,Bulk Up,100
+,,,,,,Meditite,Pure Power,,16,Focus Punch,Light Screen,Reflect,Bulk Up,100
+,,,,,,Makuhita,Thick Fat,Sitrus Berry,19,Arm Thrust,Vital Throw,Reversal,Bulk Up,200
+rse_wattson,Wattson,Mauville Gym,[2] Super Potion,y,,Voltorb,Soundproof,,20,Rollout,Spark,Self-Destruct,Shock Wave,200
+,,,,,,Electrike,Static,,20,Shock Wave,Leer,Quick Attack,Howl,200
+,,,,,,Magneton,Magnet Pull,,22,Supersonic,Shock Wave,Thunder Wave,Sonic Boom,220
+,,,,,,Manectric,Static,Sitrus Berry,24,Quick Attack,Thunder Wave,Shock Wave,Howl,250
+rse_flannery,Flannery,Lavaridge Gym,[2] Hyper Potion,y,,Numel,Oblivious,,24,Overheat,Take Down,Magnitude,Sunny Day,200
+,,,,,,Slugma,Magma Armor,,24,Overheat,Smog,Light Screen,Sunny Day,200
+,,,,,,Camerupt,Magma Armor,,26,Overheat,Tackle,Sunny Day,Attract,250
+,,,,,,Torkoal,White Smoke,White Herb,29,Overheat,Sunny Day,Body Slam,Attract,250
+rse_norman,Norman,Petalburg Gym,[2] Hyper Potion,y,,Spinda,Own Tempo,,27,Teeter Dance,Psybeam,Facade,Encore,200
+,,,,,,Vigoroth,Vital Spirit,,27,Slash,Facade,Encore,Feint Attack,200
+,,,,,,Linoone,Pickup,,29,Slash,Belly Drum,Facade,Headbutt,200
+,,,,,,Slaking,Truant,Sitrus Berry,31,Counter,Yawn,Facade,Feint Attack,250
+rse_winona,Winona,Fortree Gym,[2] Hyper Potion,y,,Swablu,Natural Cure,,29,Perish Song,Mirror Move,Safeguard,Aerial Ace,210
+,,,,,,Tropius,Chlorophyll,,29,Sunny Day,Aerial Ace,Solar Beam,Synthesis,210
+,,,,,,Pelipper,Keen Eye,,30,Water Gun,Supersonic,Protect,Aerial Ace,210
+,,,,,,Skarmory,Keen Eye,,31,Sand Attack,Fury Attack,Steel Wing,Aerial Ace,220
+,,,,,,Altaria,Natural Cure,Oran Berry,33,Earthquake,Dragon Breath,Dragon Dance,Aerial Ace,255
+rse_tate_and_liza,Tate & Liza,Mossdeep Gym,[4] Hyper Potion,y,y,Claydol,Levitate,,41,Earthquake,Ancient Power,Psychic,Light Screen,250
+,,,,,,Xatu,Synchronize,,41,Psychic,Sunny Day,Confuse Ray,Calm Mind,250
+,,,,,,Lunatone,Levitate,Sitrus Berry,42,Light Screen,Psychic,Hypnosis,Calm Mind,250
+,,,,,,Solrock,Levitate,Sitrus Berry,42,Sunny Day,Solar Beam,Psychic,Flamethrower,250
+rse_juan,Juan,Sootopolis Gym,[2] Hyper Potion,y,,Luvdisc,Swift Swim,,41,Water Pulse,Attract,Sweet Kiss,Flail,200
+,,,,,,Whiscash,Oblivious,,41,Rain Dance,Water Pulse,Amnesia,Earthquake,200
+,,,,,,Sealeo,Thick Fat,,43,Encore,Body Slam,Aurora Beam,Water Pulse,200
+,,,,,,Crawdaunt,Hyper Cutter,,43,Water Pulse,Crabhammer,Taunt,Leer,200
+,,,,,,Kingdra,Swift Swim,Chesto Berry,46,Water Pulse,Double Team,Ice Beam,Rest,250
+rse_school_kid_m,Jerry,Route 116,,,,Ralts,Synchronize,,9,Growl,Confusion,~,~,10
+rse_school_kid_m,Ted,Trick House 2,,,,Ralts,Synchronize,,17,Growl,Confusion,Double Team,Teleport,10
+rse_school_kid_m,Paul,Trick House 2,,,,Numel,Oblivious,,15,Growl,Tackle,Ember,~,10
+,,,,,,Oddish,Chlorophyll,,15,Absorb,Sweet Scent,Poison Powder,~,10
+,,,,,,Wingull,Keen Eye,,15,Growl,Water Gun,Supersonic,Wing Attack,10
+rse_school_kid_f,Karen,Route 116,,,,Shroomish,Effect Spore,,9,Absorb,Tackle,Stun Spore,~,10
+rse_school_kid_f,Georgia,Trick House 2,,,,Shroomish,Effect Spore,,16,Tackle,Stun Spore,Leech Seed,Mega Drain,10
+,,,,,,Beautifly,Swarm,,16,Absorb,Gust,~,~,10
+rse_sr_and_jr,Kate & Joy,Route 121,,,y,Spinda,Own Tempo,,30,Hypnosis,Psybeam,Dizzy Punch,Teeter Dance,0
+,,,,,,Slaking,Truant,,32,Focus Punch,Yawn,Slack Off,Feint Attack,0
+rse_sr_and_jr,Anna & Meg,Route 117,,,y,Zigzagoon,Pickup,,15,Growl,Tail Whip,Headbutt,Odor Sleuth,0
+,,,,,,Makuhita,Thick Fat,,17,Tackle,Focus Energy,Arm Thrust,Vital Throw,0
+rse_winstrate_victor,Victor,Winstrate House,,,,Taillow,Guts,Oran Berry,16,Growl,Focus Energy,Quick Attack,Wing Attack,25
+,,,,,,Zigzagoon,Pickup,Oran Berry,16,Growl,Tail Whip,Headbutt,Sand Attack,25
+rse_pokefan_m,Miguel,Route 103,,,,Skitty,Cute Charm,Oran Berry,15,Tail Whip,Attract,Sing,Double Slap,0
+rse_winstrate_victoria,Victoria,Winstrate House,,,,Roselia,Natural Cure,Oran Berry,17,Growth,Poison Sting,Stun Spore,Mega Drain,50
+rse_pokefan_f,Vanessa,Route 121,,,,Pikachu,Static,Oran Berry,30,Quick Attack,Double Team,Slam,Thunderbolt,0
+rse_pokefan_f,Bethany,Sootopolis Gym (3F),,,,Azurill,Thick Fat,Oran Berry,35,Tail Whip,Bubble,Slam,Water Gun,100
+,,,,,,Marill,Thick Fat,Oran Berry,37,Rollout,Bubble Beam,Double-Edge,Rain Dance,100
+,,,,,,Azumarill,Thick Fat,Oran Berry,39,Water Gun,Rollout,Bubble Beam,Double-Edge,100
+rse_pokefan_f,Isabel,Route 110,,y,,Plusle,Plus,Oran Berry,14,Growl,Thunder Wave,Quick Attack,Helping Hand,0
+,,,,,,Minun,Minus,Oran Berry,14,Growl,Thunder Wave,Quick Attack,Helping Hand,0
+rse_expert_m,Timothy,Route 115,,,,Hariyama,Thick Fat,,27,Arm Thrust,Vital Throw,Fake Out,Whirlwind,200
+rse_winstrate_vicky,Vicky,Winstrate House,,,,Meditite,Pure Power,,18,High Jump Kick,Meditate,Confusion,Detect,200
+rse_expert_f,Shelby,Mt. Chimney,,,,Meditite,Pure Power,,21,Meditate,Confusion,Detect,Hidden Power,200
+,,,,,,Makuhita,Thick Fat,,21,Sand Attack,Arm Thrust,Vital Throw,Fake Out,200
+rse_youngster,Calvin,Route 102,,y,,Poochyena,Run Away,,5,Tackle,Howl,~,~,0
+rse_youngster,Billy,Route 104,,,,Zigzagoon,Pickup,,5,Tackle,Growl,Tail Whip,~,0
+,,,,,,Seedot,Chlorophyll,,7,Bide,Harden,Growth,~,0
+rse_youngster,Josh,Rustboro Gym,,,,Geodude,Rock Head,,10,Tackle,Defense Curl,Mud Sport,~,100
+rse_youngster,Tommy,Rustboro Gym,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,110
+,,,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,120
+rse_youngster,Joey,Route 116,,,,Machop,Guts,,9,Low Kick,Leer,Focus Energy,~,0
+rse_youngster,Ben,Mauville Gym,,,,Zigzagoon,Pickup,,17,Headbutt,Sand Attack,Growl,Thunderbolt,150
+,,,,,,Gulpin,Liquid Ooze,,17,Amnesia,Sludge,Yawn,Pound,150
+rse_cool_trainer_m,Quincy,Victory Road (1F),[1] Full Restore,,,Slaking,Truant,,43,Attract,Ice Beam,Thunderbolt,Flamethrower,100
+,,,,,,Dusclops,Pressure,,43,Skill Swap,Protect,Will-O-Wisp,Toxic,100
+rse_cool_trainer_f,Katelynn,Victory Road (1F),[1] Full Restore,,,Gardevoir,Synchronize,,43,Skill Swap,Psychic,Thunderbolt,Calm Mind,100
+,,,,,,Slaking,Truant,,43,Earthquake,Shadow Ball,Aerial Ace,Brick Break,100
+rse_youngster,Jaylen,Route 113,,,,Trapinch,Hyper Cutter,,19,Bite,Sand Attack,Feint Attack,~,0
+rse_youngster,Dillon,Route 113,,,,Aron,Sturdy,,19,Mud-Slap,Headbutt,Metal Claw,Iron Defense,0
+rse_youngster,Eddie,Trick House 1,,,,Zigzagoon,Pickup,,14,Growl,Tail Whip,Headbutt,Sand Attack,0
+,,,,,,Zigzagoon,Pickup,,16,Growl,Tail Whip,Headbutt,Sand Attack,0
+rse_youngster,Allen,Route 102,,,,Zigzagoon,Pickup,,4,Tackle,Growl,~,~,0
+,,,,,,Taillow,Guts,,3,Peck,Growl,~,~,0
+rse_youngster,Timmy,Route 110,,,,Aron,Sturdy,,15,Harden,Mud-Slap,Headbutt,Metal Claw,0
+,,,,,,Electrike,Static,,13,Tackle,Thunder Wave,Leer,Howl,0
+emerald_wallace,Wallace,Pokémon League,[4] Full Restore,y,,Wailord,Water Veil,,57,Rain Dance,Water Spout,Double-Edge,Blizzard,255
+,,,,,,Tentacruel,Clear Body,,55,Toxic,Hydro Pump,Sludge Bomb,Ice Beam,255
+,,,,,,Ludicolo,Swift Swim,,56,Giga Drain,Surf,Leech Seed,Double Team,255
+,,,,,,Whiscash,Oblivious,,56,Earthquake,Surf,Amnesia,Hyper Beam,255
+,,,,,,Gyarados,Intimidate,,56,Dragon Dance,Earthquake,Hyper Beam,Surf,255
+,,,,,,Milotic,Marvel Scale,Sitrus Berry,58,Recover,Surf,Ice Beam,Toxic,255
+rse_fisherman,Andrew,Route 103,,,,Magikarp,Swift Swim,,5,Splash,~,~,~,0
+,,,,,,Tentacool,Clear Body,,10,Poison Sting,Supersonic,~,~,0
+,,,,,,Magikarp,Swift Swim,,15,Splash,Tackle,~,~,0
+rse_fisherman,Ivan,Route 104,,,,Magikarp,Swift Swim,,5,Splash,~,~,~,0
+,,,,,,Magikarp,Swift Swim,,6,Splash,~,~,~,0
+,,,,,,Magikarp,Swift Swim,,7,Splash,~,~,~,0
+rse_fisherman,Claude,Route 114,,,,Magikarp,Swift Swim,,16,Splash,Tackle,~,~,0
+,,,,,,Goldeen,Swift Swim,,17,Tail Whip,Water Sport,Supersonic,Horn Attack,0
+,,,,,,Barboach,Oblivious,,18,Mud Sport,Water Sport,Water Gun,Magnitude,0
+rse_fisherman,Elliot,Route 106,,,,Magikarp,Swift Swim,,10,Splash,~,~,~,0
+,,,,,,Tentacool,Clear Body,,7,Poison Sting,Supersonic,~,~,0
+,,,,,,Magikarp,Swift Swim,,10,Splash,~,~,~,0
+rse_fisherman,Ned,Route 106,,,,Tentacool,Clear Body,,11,Poison Sting,Supersonic,~,~,10
+rse_fisherman,Dale,Route 110,,,,Tentacool,Clear Body,,11,Poison Sting,Supersonic,~,~,0
+,,,,,,Wailmer,Water Veil,,14,Splash,Growl,Water Gun,Rollout,0
+,,,,,,Tentacool,Clear Body,,11,Poison Sting,Supersonic,~,~,0
+,,,,,,Wailmer,Water Veil,,14,Splash,Growl,Water Gun,Rollout,0
+rse_fisherman,Nolan,Route 114,,,,Barboach,Oblivious,,19,Mud Sport,Water Sport,Water Gun,Magnitude,0
+rse_fisherman,Barny,Route 118,,,,Tentacool,Clear Body,,25,Supersonic,Constrict,Acid,Bubble Beam,0
+,,,,,,Carvanha,Rough Skin,,25,Rage,Focus Energy,Scary Face,Crunch,0
+rse_fisherman,Wade,Route 118,,,,Tentacool,Clear Body,,16,Poison Sting,Supersonic,Constrict,~,0
+rse_fisherman,Carter,Route 109,,,,Wailmer,Water Veil,,25,Water Gun,Rollout,Whirlpool,Astonish,10
+,,,,,,Tentacruel,Clear Body,,25,Supersonic,Constrict,Acid,Bubble Beam,10
+rse_fisherman,Ronald,Route 132,,,,Magikarp,Swift Swim,,19,Splash,Tackle,~,~,0
+,,,,,,Gyarados,Intimidate,,21,Thrash,Bite,~,~,0
+,,,,,,Gyarados,Intimidate,,23,Thrash,Bite,~,~,0
+,,,,,,Gyarados,Intimidate,,26,Thrash,Bite,Dragon Rage,~,0
+,,,,,,Gyarados,Intimidate,,30,Thrash,Bite,Dragon Rage,Leer,0
+,,,,,,Gyarados,Intimidate,,35,Bite,Dragon Rage,Leer,Twister,0
+rse_triathlete_biker_m,Jacob,Cycling Road,,,,Voltorb,Soundproof,,6,Charge,Tackle,~,~,20
+,,,,,,Voltorb,Soundproof,,6,Charge,Tackle,~,~,20
+,,,,,,Magnemite,Magnet Pull,,14,Metal Sound,Tackle,Thunder Shock,Supersonic,200
+rse_triathlete_biker_m,Anthony,Cycling Road,,,,Magnemite,Magnet Pull,,14,Metal Sound,Tackle,Thunder Shock,Supersonic,0
+,,,,,,Magnemite,Magnet Pull,,14,Metal Sound,Tackle,Thunder Shock,Supersonic,0
+rse_triathlete_biker_m,Benjamin,Cycling Road,,,,Magnemite,Magnet Pull,,16,Tackle,Thunder Shock,Supersonic,Sonic Boom,0
+rse_triathlete_biker_f,Abigail,Cycling Road,,,,Magnemite,Magnet Pull,,16,Tackle,Thunder Shock,Supersonic,Sonic Boom,0
+rse_triathlete_biker_f,Jasmine,Cycling Road,,,,Magnemite,Magnet Pull,,14,Metal Sound,Tackle,Thunder Shock,Supersonic,80
+,,,,,,Magnemite,Magnet Pull,,14,Metal Sound,Tackle,Thunder Shock,Supersonic,80
+,,,,,,Voltorb,Soundproof,,6,Charge,Tackle,~,~,0
+rse_triathlete_runner_m,Dylan,Route 117,,,,Doduo,Run Away,,17,Peck,Growl,Pursuit,Fury Attack,0
+rse_triathlete_runner_f,Maria,Route 117,,,,Doduo,Run Away,,17,Peck,Growl,Pursuit,Fury Attack,0
+rse_triathlete_swimmer_m,Camden,Route 127,,,,Staryu,Illuminate,,33,Camouflage,Swift,Bubble Beam,Minimize,0
+,,,,,,Staryu,Illuminate,,33,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_youngster,Demetrius,Abandoned Ship (1F),,,,Zigzagoon,Pickup,,25,Sand Attack,Odor Sleuth,Mud Sport,Pin Missile,0
+,,,,,,Electrike,Static,,25,Howl,Quick Attack,Spark,Odor Sleuth,0
+rse_triathlete_swimmer_m,Isaiah,Route 128,,,,Staryu,Illuminate,,35,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_triathlete_swimmer_m,Pablo,Route 126,,,,Staryu,Illuminate,,33,Camouflage,Swift,Bubble Beam,Minimize,0
+,,,,,,Staryu,Illuminate,,33,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_triathlete_swimmer_m,Chase,Route 129,,,,Wingull,Keen Eye,,26,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Staryu,Illuminate,,34,Camouflage,Swift,Bubble Beam,Minimize,80
+rse_triathlete_swimmer_f,Isobel,Route 126,,,,Staryu,Illuminate,,34,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_triathlete_swimmer_f,Donny,Route 127,,,,Wingull,Keen Eye,,26,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Staryu,Illuminate,,34,Camouflage,Swift,Bubble Beam,Minimize,160
+rse_triathlete_swimmer_f,Talia,Route 131,,,,Staryu,Illuminate,,34,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_triathlete_swimmer_f,Katelyn,Route 128,,,,Staryu,Illuminate,,35,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_triathlete_swimmer_f,Allison,Route 129,,,,Wingull,Keen Eye,,27,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Staryu,Illuminate,,33,Camouflage,Swift,Bubble Beam,Minimize,240
+rse_dragon_tamer,Nicolas,Meteor Falls,,,,Altaria,Natural Cure,,37,Safeguard,Mist,Take Down,Dragon Breath,100
+,,,,,,Altaria,Natural Cure,,37,Safeguard,Mist,Take Down,Dragon Breath,100
+rse_dragon_tamer,Aaron,Route 134,,,,Bagon,Rock Head,,34,Dragon Breath,Headbutt,Focus Energy,Ember,255
+rse_bird_keeper,Perry,Route 118,,,,Wingull,Keen Eye,,26,Water Gun,Supersonic,Wing Attack,Mist,0
+rse_bird_keeper,Hugh,Route 119,,,,Wingull,Keen Eye,,25,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Tropius,Chlorophyll,,25,Growth,Razor Leaf,Stomp,Sweet Scent,0
+rse_bird_keeper,Phil,Route 119,,,,Swellow,Guts,,26,Focus Energy,Quick Attack,Wing Attack,Double Team,0
+rse_bird_keeper,Jared,Fortree Gym,,,,Doduo,Run Away,,27,Pursuit,Fury Attack,Tri Attack,Rage,100
+,,,,,,Skarmory,Keen Eye,,27,Sand Attack,Swift,Agility,Fury Attack,100
+,,,,,,Tropius,Chlorophyll,,27,Razor Leaf,Stomp,Sweet Scent,Whirlwind,100
+rse_bird_keeper,Humberto,Fortree Gym,,,,Skarmory,Keen Eye,,30,Swift,Agility,Fury Attack,Air Cutter,250
+rse_bird_keeper,Presley,Route 125,,,,Tropius,Chlorophyll,,33,Stomp,Sweet Scent,Whirlwind,Magical Leaf,0
+,,,,,,Xatu,Synchronize,,33,Peck,Leer,Night Shade,Teleport,0
+rse_bird_keeper,Colin,Route 120,,,,Wingull,Keen Eye,,28,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Natu,Synchronize,,28,Peck,Leer,Night Shade,Teleport,0
+rse_bird_keeper,Robert,Route 120,,,,Swablu,Natural Cure,,29,Sing,Fury Attack,Safeguard,Mist,0
+rse_bird_keeper,Benny,Trick House 6,,,,Swellow,Guts,,36,Quick Attack,Wing Attack,Double Team,Endeavor,0
+,,,,,,Pelipper,Keen Eye,,36,Mist,Protect,Stockpile,Swallow,0
+,,,,,,Xatu,Synchronize,,36,Night Shade,Teleport,Wish,Future Sight,0
+rse_bird_keeper,Chester,Route 118,,,,Taillow,Guts,,25,Focus Energy,Quick Attack,Wing Attack,Double Team,0
+,,,,,,Swellow,Guts,,25,Focus Energy,Quick Attack,Wing Attack,Double Team,0
+rse_bird_keeper,Alex,Route 134,,,,Natu,Synchronize,,33,Night Shade,Teleport,Wish,Future Sight,150
+,,,,,,Swellow,Guts,,33,Quick Attack,Wing Attack,Wing Attack,Double Team,150
+rse_bird_keeper,Beck,Route 133,,,,Tropius,Synchronize,,34,Stomp,Sweet Scent,Whirlwind,Magical Leaf,0
+rse_ninja_boy,Yasu,Route 119,,,,Ninjask,Speed Boost,,26,Double Team,Fury Cutter,Screech,Swords Dance,0
+rse_ninja_boy,Takashi,Route 119,,,,Ninjask,Speed Boost,,25,Double Team,Fury Cutter,Screech,Swords Dance,0
+,,,,,,Koffing,Levitate,,25,Smog,Self-Destruct,Sludge,Smokescreen,0
+rse_cool_trainer_f,Dianne,Victory Road (B2F),[1] Full Restore,,,Claydol,Levitate,,43,Skill Swap,Earthquake,Hyper Beam,Cosmic Power,0
+,,,,,,Lanturn,Volt Absorb,,43,Thunderbolt,Earthquake,Confuse Ray,Take Down,0
+rse_tuber_f,Jani,Abandoned Ship (1F),,,,Marill,Thick Fat,,26,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_ninja_boy,Lao,Route 113,,,,Koffing,Levitate,,17,Poison Gas,Tackle,Smog,Self-Destruct,0
+,,,,,,Koffing,Levitate,,17,Poison Gas,Tackle,Smog,Self-Destruct,0
+,,,,,,Koffing,Levitate,,17,Poison Gas,Tackle,Sludge,Self-Destruct,0
+rse_ninja_boy,Lung,Route 113,,,,Koffing,Levitate,,18,Poison Gase,Tackle,Smog,Self-Destruct,0
+,,,,,,Ninjask,Speed Boost,,18,Harden,Leech Life,Sand Attack,Fury Swipes,0
+rse_battle_girl,Jocelyn,Dewford Gym,,,,Meditite,Pure Power,,13,Bide,Meditate,Confusion,Detect,127
+rse_battle_girl,Laura,Dewford Gym,,,,Meditite,Pure Power,,13,Bide,Meditate,Confusion,Detect,150
+rse_battle_girl,Cyndy,Route 115,,,,Meditite,Pure Power,,18,Meditate,Confusion,Detect,Hidden Power,100
+,,,,,,Makuhita,Thick Fat,,18,Focus Energy,Sand Attack,Arm Thrust,Vital Throw,100
+rse_battle_girl,Cora,Trick House 4,,,,Meditite,Pure Power,,27,Confusion,Detect,Hidden Power,Mind Reader,100
+rse_battle_girl,Paula,Trick House 4,,,,Breloom,Effect Spore,,27,Leech Seed,Mega Drain,Headbutt,Mach Punch,100
+rse_parasol_lady,Madeline,Route 113,,,,Numel,Oblivious,,19,Ember,Tackle,Magnitude,Sunny Day,0
+rse_parasol_lady,Clarissa,Route 120,,,,Roselia,Natural Cure,,28,Stun Spore,Mega Drain,Leech Seed,Magical Leaf,0
+,,,,,,Wailmer,Water Veil,,28,Rollout,Whirlpool,Astonish,Water Pulse,0
+rse_parasol_lady,Angelica,Route 120,,,,Castform,Forecast,,30,Rain Dance,Weather Ball,Thunder,Water Pulse,50
+rse_swimmer_f,Beverly,Route 105,,,,Wingull,Keen Eye,,25,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Wailmer,Water Veil,,25,Water Gun,Rollout,Whirlpool,Astonish,0
+rse_swimmer_f,Imani,Route 105,,,,Marill,Thick Fat,,26,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_swimmer_f,Kyla,Route 106,,,,Wailmer,Water Veil,,26,Water Gun,Rollout,Whirlpool,Astonish,0
+rse_swimmer_f,Denise,Route 107,,,,Wingull,Keen Eye,,25,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Goldeen,Swift Swim, ,25,Water Sport,Supersonic,Horn Attack,Flail,0
+rse_swimmer_f,Beth,Route 107,,,,Goldeen,Swift Swim,,26,Water Sport,Supersonic,Horn Attack,Flail,0
+rse_swimmer_f,Tara,Route 108,,,,Horsea,Swift Swim,,25,Bubble,Smokescreen,Leer,Water Gun,0
+,,,,,,Marill,Thick Fat,,25,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+rse_swimmer_f,Missy,Route 108,,,,Goldeen,Swift Swim,,26,Water Sport,Supersonic,Horn Attack,Flail,0
+rse_swimmer_f,Alice,Route 109,,,,Goldeen,Swift Swim,,24,Water Sport,Supersonic,Horn Attack,Flail,0
+,,,,,,Wingull,Keen Eye,,24,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Goldeen,Swift Swim,,24,Water Sport,Supersonic,Horn Attack,Flail,0
+rse_swimmer_f,Jenny,Route 124,,,,Wailmer,Water Veil,,34,Whirlpool,Astonish,Water Pulse,Mist,0
+rse_swimmer_f,Grace,Route 124,,,,Marill,Thick Fat,,34,Water Gun,Rollout,Bubble Beam,Double-Edge,0
+rse_swimmer_f,Tanya,Route 125,,,,Luvdisc,Swift Swim,,34,Water Gun,Agility,Take Down,Attract,0
+rse_swimmer_f,Sharon,Route 125,,,,Seaking,Swift Swim,,34,Supersonic,Horn Attack,Flail,Fury Attack,0
+rse_swimmer_f,Nikki,Route 126,,,,Marill,Thick Fat,,33,Water Gun,Rollout,Bubble Beam,Double-Edge,0
+,,,,,,Spheal,Thick Fat,,33,Ice Ball,Body Slam,Aurora Beam,Hail,0
+rse_swimmer_f,Brenda,Route 126,,,,Goldeen,Swift Swim,,34,Supersonic,Horn Attack,Flail,Fury Attack,0
+rse_swimmer_f,Katie,Route 130,,,,Goldeen,Swift Swim,,33,Supersonic,Horn Attack,Flail,Fury Attack,0
+,,,,,,Spheal,Thick Fat,,33,Ice Ball,Body Slam,Aurora Beam,Hail,0
+rse_swimmer_f,Susie,Route 131,,,,Luvdisc,Swift Swim,,34,Water Gun,Agility,Take Down,Attract,0
+rse_swimmer_f,Kara,Route 131,,,,Seaking,Swift Swim,,34,Supersonic,Horn Attack,Flail,Fury Attack,0
+rse_swimmer_f,Dana,Route 132,,,,Azumarill,Thick Fat,,34,Water Gun,Rollout,Bubble Beam,Double-Edge,0
+rse_swimmer_f,Sienna,Route 126,,,,Luvdisc,Swift Swim,,33,Water Gun,Agility,Take Down,Attract,0
+,,,,,,Luvdisc,Swift Swim,,33,Water Gun,Agility,Take Down,Attract,0
+rse_swimmer_f,Debra,Route 133,,,,Seaking,Swift Swim,,34,Supersonic,Horn Attack,Flail,Fury Attack,0
+rse_swimmer_f,Linda,Route 133,,,,Horsea,Swift Swim,,33,Smokescreen,Leer,Water Gun,Twister,0
+,,,,,,Seadra,Swift Swim,,33,Smokescreen,Leer,Water Gun,Twister,0
+rse_swimmer_f,Laurel,Route 134,,,,Luvdisc,Swift Swim,,33,Water Gun,Agility,Take Down,Attract,0
+,,,,,,Luvdisc,Swift Swim,,33,Water Gun,Agility,Take Down,Attract,0
+rse_swimmer_f,Carlee,Route 128,,,,Seaking,Swift Swim,,35,Supersonic,Horn Attack,Flail,Fury Attack,0
+rse_picnicker,Heidi,Route 111,,,,Sandshrew,Sand Veil,,22,Dig,Sand Attack,Poison Sting,Slash,0
+,,,,,,Baltoy,Levitate,,22,Rapid Spin,Mud-Slap,Psybeam,Rock Tomb,0
+rse_picnicker,Becky,Route 111,,,,Sandshrew,Sand Veil,,22,Sand Attack,Poison Sting,Slash,Dig,0
+,,,,,,Marill,Thick Fat,,22,Rollout,Bubble Beam,Tail Whip,Defense Curl,0
+rse_picnicker,Carol,Route 112,,,,Taillow,Guts,,17,Growl,Focus Energy,Quick Attack,Wing Attack,0
+,,,,,,Lombre,Swift Swim,,17,Astonish,Growl,Absorb,Nature Power,0
+rse_picnicker,Nancy,Route 114,,,,Marill,Thick Fat,,18,Defense Curl,Tail Whip,Water Gun,Rollout,0
+,,,,,,Lombre,Swift Swim,,18,Astonish,Growl,Absorb,Nature Power,0
+rse_picnicker,Martha,Trick House 3,,,,Skitty,Cute Charm,,23,Attract,Sing,Double Slap,Assist,0
+,,,,,,Swablu,Natural Cure,,23,Astonish,Sing,Fury Attack,Safeguard,0
+rse_picnicker,Diana,Jagged Pass,,,,Shroomish,Effect Spore,,19,Tackle,Stun Spore,Leech Seed,Mega Drain,0
+,,,,,,Oddish,Chlorophyll,,19,Sweet Scent,Poison Powder,Stun Spore,Sleep Powder,0
+,,,,,,Swablu,Natural Cure,,19,Growl,Astonish,Sing,Fury Attack,0
+rse_psychic_m,Cedric,Mt. Pyre (6F),,,,Wobbuffet,Shadow Tag,,32,Destiny Bond,Safeguard,Counter,Mirror Coat,0
+rse_picnicker,Irene,Route 111,,,,Shroomish,Effect Spore,,17,Tackle,Stun Spore,Leech Seed,Mega Drain,0
+,,,,,,Marill,Thick Fat,,17,Defense Curl,Tail Whip,Water Gun,Rollout,0
+rse_twins,Amy & Liv,Route 103,,,y,Plusle,Plus,,15,Growl,Thunder Wave,Quick Attack,Helping Hand,0
+,,,,,,Minun,Minus,,15,Growl,Thunder Wave,Quick Attack,Helping Hand,0
+rse_twins,Gina & Mia,Route 104,,y,y,Seedot,Chlorophyll,,6,Bide,Harden,~,~,0
+,,,,,,Lotad,Swift Swim,,6,Astonish,Growl,~,~,0
+rse_twins,Miu & Yuki,Route 123,,,y,Beautifly,Swarm,,26,Gust,Stun Spore,Morning Sun,Mega Drain,0
+,,,,,,Dustox,Shield Dust,,26,Gust,Protect,Moonlight,Psybeam,0
+rse_sailor,Huey,Route 109,,,,Wingull,Keen Eye,,12,Growl,Water Gun,Supersonic,~,10
+,,,,,,Machop,Guts,,12,Low Kick,Leer,Focus Energy,~,10
+rse_sailor,Edmond,Route 109,,,,Wingull,Keen Eye,,13,Growl,Water Gun,Supersonic,Wing Attack,0
+rse_sailor,Ernest,Route 125,,,,Wingull,Keen Eye,,33,Supersonic,Wing Attack,Mist,Quick Attack,0
+,,,,,,Machoke,Guts,,33,Seismic Toss,Foresight,Revenge,Vital Throw,0
+rse_sailor,Dwayne,Seashore House,,,,Wingull,Keen Eye,,11,Growl,Water Gun,Supersonic,~,0
+,,,,,,Machop,Guts,,11,Low Kick,Leer,Focus Energy,~,0
+,,,,,,Tentacool,Clear Body,,11,Poison Sting,Supersonic,~,~,0
+rse_sailor,Duncan,Abandoned Ship (1F),,,,Spheal,Thick Fat,,25,Encore,Ice Ball,Body Slam,Aurora Beam,0
+,,,,,,Machoke,Guts,,25,Karate Chop,Seismic Toss,Foresight,Revenge,0
+rse_hiker,Eli,Lavaridge Gym,,y,,Numel,Oblivious,,23,Growl,Tackle,Ember,Magnitude,100
+rse_pokefan_f,Annika,Sootopolis Gym (2F),,,,Feebas,Swift Swim,Oran Berry,39,Flail,Water Pulse,Return,Attract,100
+,,,,,,Feebas,Swift Swim,Oran Berry,39,Flail,Water Pulse,Return,Attract,100
+rse_cool_trainer_f,Jazmyn,Route 123,[1] Hyper Potion,,,Absol,Pressure,,27,Quick Attack,Razor Wind,Bite,Swords Dance,0
+rse_ninja_boy_and_parasol_lady,Jonas & Kayley,Route 123,,,y,Koffing,Levitate,,31,Toxic,Thunder,Self-Destruct,Sludge Bomb,0
+,,,,,,Castform,Forecast,,31,Sunny Day,Weather Ball,Flamethrower,Solar Beam,0
+rse_expert_m,Auron,Route 125,,,,Manectric,Static,,33,Quick Attack,Spark,Odor Sleuth,Roar,0
+,,,,,,Machamp,Guts,,33,Seismic Toss,Foresight,Revenge,Vital Throw,0
+rse_sailor,Kelvin,Route 134,,,,Machoke,Guts,,33,Seismic Toss,Foresight,Revenge,Vital Throw,150
+,,,,,,Spheal,Thick Fat,,33,Ice Ball,Body Slam,Aurora Beam,Hail,150
+rse_cool_trainer_f,Marley,Route 134,[1] Hyper Potion,,,Manectric,Static,,34,Bite,Roar,Thunder Wave,Thunderbolt,255
+rse_battle_girl,Reyna,Route 134,,,,Meditite,Pure Power,,33,Hidden Power,Mind Reader,Calm Mind,High Jump Kick,50
+,,,,,,Hariyama,Thick Fat,,33,Fake Out,Whirlwind,Knock Off,Smelling Salts,200
+rse_sailor,Hudson,Route 134,,,,Wailmer,Water Veil,,34,Whirlpool,Astonish,Water Pulse,Mist,0
+rse_expert_m,Conor,Route 133,,,,Chinchou,Volt Absorb,,33,Flail,Water Gun,Spark,Confuse Ray,0
+,,,,,,Hariyama,Thick Fat,,33,Fake Out,Whirlwind,Knock Off,Smelling Salts,200
+rse_collector,Edwin,Route 110,,,,Lombre,Swift Swim,,14,Astonish,Growl,Absorb,Nature Power,0
+,,,,,,Nuzleaf,Chlorophyll,,14,Pound,Harden,Growth,Nature Power,0
+rse_collector,Hector,Route 115,,,,Zangoose,Immunity,,18,Leer,Quick Attack,Swords Dance,Fury Cutter,0
+,,,,,,Seviper,Shed Skin,,18,Wrap,Lick,Bite,Poison Tail,0
+rse_wally,Wally,Victory Road (1F),[2] Full Restore,y,,Altaria,Natural Cure,,44,Aerial Ace,Safeguard,Dragon Breath,Dragon Dance,150
+,,,,,,Delcatty,Cute Charm,,43,Sing,Assist,Charm,Feint Attack,150
+,,,,,,Roselia,Natural Cure,,44,Magical Leaf,Leech Seed,Giga Drain,Toxic,150
+,,,,,,Magneton,Magnet Pull,,41,Supersonic,Thunderbolt,Tri Attack,Screech,150
+,,,,,,Gardevoir,Synchronize,,45,Double Team,Calm Mind,Psychic,Future Sight,250
+emerald_brendan,Brendan {Mudkip},Route 103 (West),,y,,Treecko,Overgrow,,5,Pound,Leer,~,~,0
+emerald_brendan,Brendan {Mudkip},Route 110,,y,,Slugma,Magma Armor,,18,Yawn,Smog,Ember,Rock Throw,50
+,,,,,,Wingull,Keen Eye,,18,Growl,Water Gun,Supersonic,Wing Attack,50
+,,,,,,Grovyle,Overgrow,,20,Absorb,Quick Attack,Fury Cutter,Pursuit,100
+emerald_brendan,Brendan {Mudkip},Route 119 (North),,y,,Slugma,Magma Armor,,29,Ember,Rock Throw,Harden,Amnesia,100
+,,,,,,Pelipper,Keen Eye,,29,Supersonic,Wing Attack,Mist,Protect,100
+,,,,,,Grovyle,Overgrow,,31,Fury Cutter,Pursuit,Screech,Leaf Blade,150
+emerald_brendan,Brendan {Treecko},Route 103 (West),,y,,Torchic,Blaze,,5,Scratch,Growl,~,~,0
+emerald_brendan,Brendan {Treecko},Route 110,,y,,Wingull,Keen Eye,,18,Growl,Water Gun,Supersonic,Wing Attack,50
+,,,,,,Lombre,Swift Swim,,18,Astonish,Growl,Absorb,Nature Power,50
+,,,,,,Combusken,Blaze,,20,Focus Energy,Ember,Double Kick,Peck,100
+emerald_brendan,Brendan {Treecko},Route 119 (North),,y,,Pelipper,Keen Eye,,29,Supersonic,Wing Attack,Mist,Protect,100
+,,,,,,Lombre,Swift Swim,,29,Absorb,Nature Power,Fake Out,Fury Swipes,100
+,,,,,,Combusken,Blaze,,31,Double Kick,Peck,Sand Attack,Bulk Up,150
+emerald_brendan,Brendan {Torchic},Route 103 (West),,y,,Mudkip,Torrent,,5,Tackle,Growl,~,~,0
+emerald_brendan,Brendan {Torchic},Route 110,,y,,Lombre,Swift Swim,,18,Astonish,Growl,Absorb,Nature Power,50
+,,,,,,Slugma,Magma Armor,,18,Yawn,Smog,Ember,Rock Throw,50
+,,,,,,Marshtomp,Torrent,,20,Water Gun,Bide,Mud Shot,Foresight,100
+emerald_brendan,Brendan {Torchic},Route 119 (North),,y,,Lombre,Swift Swim,,29,Absorb,Nature Power,Fake Out,Fury Swipes,100
+,,,,,,Slugma,Magma Armor,,29,Ember,Rock Throw,Harden,Amnesia,100
+,,,,,,Marshtomp,Torrent,,31,Mud Shot,Foresight,Mud Sport,Take Down,150
+emerald_may,May {Mudkip},Route 103 (West),,y,,Treecko,Overgrow,,5,Pound,Leer,~,~,0
+emerald_may,May {Mudkip},Route 110,,y,,Wingull,Keen Eye,,18,Growl,Water Gun,Supersonic,Wing Attack,50
+,,,,,,Slugma,Magma Armor,,18,Yawn,Smog,Ember,Rock Throw,50
+,,,,,,Grovyle,Overgrow,,20,Absorb,Quick Attack,Fury Cutter,Pursuit,100
+emerald_may,May {Mudkip},Route 119 (North),,y,,Slugma,Magma Armor,,29,Ember,Rock Throw,Harden,Amnesia,100
+,,,,,,Lombre,Swift Swim,,29,Absorb,Nature Power,Fake Out,Fury Swipes,100
+,,,,,,Grovyle,Overgrow,,31,Fury Cutter,Pursuit,Screech,Leaf Blade,150
+emerald_may,May {Treecko},Route 103 (West),,y,,Torchic,Blaze,,5,Scratch,Growl,~,~,0
+emerald_may,May {Treecko},Route 110,,y,,Wingull,Keen Eye,,18,Growl,Water Gun,Supersonic,Wing Attack,50
+,,,,,,Lombre,Swift Swim,,18,Astonish,Growl,Absorb,Nature Power,50
+,,,,,,Combusken,Blaze,,20,Focus Energy,Ember,Double Kick,Peck,100
+emerald_may,May {Treecko},Route 119 (North),,y,,Pelipper,Keen Eye,,29,Supersonic,Wing Attack,Mist,Protect,100
+,,,,,,Lombre,Swift Swim,,29,Absorb,Nature Power,Fake Out,Fury Swipes,100
+,,,,,,Combusken,Blaze,,31,Double Kick,Peck,Sand Attack,Bulk Up,150
+emerald_may,May {Torchic},Route 103 (West),,y,,Mudkip,Torrent,,5,Tackle,Growl,~,~,0
+emerald_may,May {Torchic},Route 110,,y,,Lombre,Swift Swim,,18,Astonish,Growl,Absorb,Nature Power,50
+,,,,,,Slugma,Magma Armor,,18,Yawn,Smog,Ember,Rock Throw,50
+,,,,,,Marshtomp,Torrent,,20,Water Gun,Bide,Mud Shot,Foresight,100
+emerald_may,May {Torchic},Route 119 (North),,y,,Lombre,Swift Swim,,29,Absorb,Nature Power,Fake Out,Fury Swipes,100
+,,,,,,Slugma,Magma Armor,,29,Ember,Rock Throw,Harden,Amnesia,100
+,,,,,,Marshtomp,Torrent,,31,Mud Shot,Foresight,Mud Sport,Take Down,150
+rse_pokemon_breeder_m,Isaac,Route 117,,,,Whismur,Soundproof,,11,Pound,Uproar,Astonish,~,0
+,,,,,,Zigzagoon,Pickup,,11,Tackle,Growl,Tail Whip,Headbutt,0
+,,,,,,Aron,Sturdy,,11,Tackle,Harden,Mud-Slap,Headbutt,0
+,,,,,,Poochyena,Run Away,,11,Tackle,Howl,Sand Attack,~,0
+,,,,,,Taillow,Guts,,11,Peck,Growl,Focus Energy,Quick Attack,0
+,,,,,,Makuhita,Thick Fat,,11,Tackle,Focus Energy,Sand Attack,Arm Thrust,0
+rse_bug_catcher,Davis,Route 123,,,,Pinsir,Hyper Cutter,,27,Bind,Seismic Toss,Harden,Revenge,0
+rse_cool_trainer_m,Mitchell,Victory Road (B2F),,,,Lunatone,Levitate,,43,Explosion,Reflect,Light Screen,Psychic,0
+,,,,,,Solrock,Levitate,,43,Explosion,Reflect,Light Screen,Shadow Ball,0
+rse_pokemon_breeder_f,Lydia,Route 117,,,,Wingull,Keen Eye,,11,Growl,Water Gun,Supersonic,~,0
+,,,,,,Shroomish,Effect Spore,,11,Absorb,Tackle,Stun Spore,Leech Seed,0
+,,,,,,Marill,Thick Fat,,11,Tackle,Defense Curl,Tail Whip,Water Gun,0
+,,,,,,Roselia,Natural Cure,,11,Absorb,Growth,Poison Sting,~,0
+,,,,,,Skitty,Cute Charm,,11,Growl,Tackle,Tail Whip,Attract,0
+,,,,,,Goldeen,Swift Swim,,11,Peck,Tail Whip,Water Sport,Supersonic,0
+rse_cool_trainer_f,Halle,Victory Road (B2F),[1] Full Restore,,,Sableye,Keen Eye,,43,Feint Attack,Knock Off,Confuse Ray,Shadow Ball,0
+,,,,,,Absol,Pressure,,43,Swords Dance,Double Team,Slash,Future Sight,0
+rse_ruin_maniac,Garrison,Abandoned Ship (1F),,,,Sandslash,Sand Veil,,26,Defense Curl,Sand Attack,Poison Sting,Slash,0
+rse_pokemon_ranger_m,Jackson,Route 119,[1] Full Restore,,,Breloom,Effect Spore,,27,Leech Seed,Mega Drain,Headbutt,Mach Punch,50
+rse_pokemon_ranger_m,Lorenzo,Route 120,[1] Full Restore,,,Seedot,Chlorophyll,,28,Harden,Growth,Nature Power,Synthesis,50
+,,,,,,Nuzleaf,Chlorophyll,,28,Growth,Nature Power,Fake Out,Torment,50
+,,,,,,Lombre,Swift Swim,,28,Absorb,Nature Power,Fake Out,Fury Swipes,50
+rse_pokemon_ranger_m,Sebastian,Trick House 6,[1] Full Restore,,,Cacturne,Sand Veil,,39,Pin Missile,Ingrain,Feint Attack,Spikes,50
+rse_pokemon_ranger_f,Catherine,Route 119,[1] Full Restore,,,Gloom,Chlorophyll,,26,Poison Powder,Stun Spore,Sleep Powder,Acid,50
+,,,,,,Roselia,Natural Cure,,26,Stun Spore,Mega Drain,Leech Seed,Magical Leaf,50
+rse_pokemon_ranger_f,Jenna,Route 120,[1] Full Restore,,,Lotad,Swift Swim,,28,Growl,Absorb,Nature Power,Mist,50
+,,,,,,Lombre,Swift Swim,,28,Absorb,Nature Power,Fake Out,Fury Swipes,50
+,,,,,,Nuzleaf,Chlorophyll,,28,Growth,Nature Power,Fake Out,Torment,50
+rse_pokemon_ranger_f,Sophia,Trick House 6,[1] Full Restore,,,Swablu,Natural Cure,,38,Safeguard,Mist,Take Down,Mirror Move,50
+,,,,,,Roselia,Natural Cure,,38,Magical Leaf,Grass Whistle,Giga Drain,Sweet Scent,50
+rse_triathlete_biker_m,Julio,Jagged Pass,,,,Magnemite,Magnet Pull,,21,Thunder Shock,Supersonic,Sonic Boom,Thunder Wave,0
+rse_team_aqua_m,Grunt,Seafloor Cavern (Room 7),,,,Mightyena,Intimidate,,35,Odor Sleuth,Roar,Swagger,Scary Face,50
+,,,,,,Golbat,Inner Focus,,35,Bite,Wing Attack,Confuse Ray,Air Cutter,50
+rse_team_magma_m,Grunt,Jagged Pass,,,,Poochyena,Run Away,,22,Sand Attack,Bite,Odor Sleuth,Roar,50
+,,,,,,Numel,Oblivious,,22,Growl,Tackle,Ember,Magnitude,50
+rse_hiker,Marc,Rustboro Gym,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,120
+,,,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,130
+rse_battle_girl_and_sailor,Lilith & Brenden,Dewford Gym,,,y,Meditite,Pure Power,,13,Bide,Meditate,Confusion,Detect,150
+,,,,,,Machop,Guts,,13,Low Kick,Leer,Focus Energy,Karate Chop,100
+rse_black_belt,Cristian,Dewford Gym,,,,Makuhita,Thick Fat,,13,Focus Energy,Sand Attack,Arm Thrust,Vital Throw,200
+rse_hex_maniac,Sylvia,Mossdeep Gym (Northwest),,y,,Meditite,Pure Power,,36,Hidden Power,Mind Reader,Calm Mind,High Jump Kick,100
+rse_swimmer_m,Leonardo,Route 126,,,,Carvanha,Rough Skin,,34,Scary Face,Crunch,Screech,Take Down,0
+rse_cool_trainer_f,Athena,Route 127,[1] Hyper Potion,,,Manectric,Static,,32,Thunder,Thunder Wave,Quick Attack,Roar,100
+,,,,,,Linoone,Pickup,,32,Surf,Thief,Mud Sport,Fury Swipes,100
+rse_swimmer_m,Harrison,Route 128,,,,Tentacruel,Clear Body,,35,Constrict,Acid,Bubble Beam,Wrap,0
+rse_team_magma_m,Grunt,Mt. Chimney,,y,,Zubat,Inner Focus,,20,Leech Life,Supersonic,Astonish,Bite,0
+rse_swimmer_m,Clarence,Route 129,,,,Sharpedo,Rough Skin,,34,Scary Face,Crunch,Screech,Slash,0
+rse_gentleman,Nate,Mossdeep Gym (Northwest),,,,Spoink,Thick Fat,,36,Psych Up,Confuse Ray,Magic Coat,Psychic,100
+rse_hex_maniac,Kathleen,Mossdeep Gym (Southeast),,,,Kadabra,Synchronize,,36,Recover,Future Sight,Role Play,Psychic,100
+rse_gentleman,Clifford,Mossdeep Gym (Southeast),,,,Girafarig,Inner Focus,,36,Confusion,Stomp,Odor Sleuth,Agility,0
+rse_psychic_m,Nicholas,Mossdeep Gym (Southeast),,,,Wobbuffet,Shadow Tag,,36,Counter,Mirror Coat,Safeguard,Destiny Bond,0
+rse_team_magma_f,Grunt,Mossdeep Space Center (1F),,,,Zubat,Inner Focus,,31,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+,,,,,,Poochyena,Run Away,,31,Odor Sleuth,Roar,Swagger,Scary Face,0
+rse_team_magma_m,Grunt,Mossdeep Space Center (1F),,y,,Baltoy,Levitate,,32,Rock Tomb,Self-Destruct,Ancient Power,Sandstorm,0
+rse_team_magma_m,Grunt,Mossdeep Space Center (2F),,y,,Zubat,Inner Focus,,32,Bite,Wing Attack,Confuse Ray,Air Cutter,0
+rse_team_magma_m,Grunt,Mossdeep Space Center (2F),,y,,Mightyena,Intimidate,,32,Odor Sleuth,Roar,Swagger,Scary Face,0
+rse_team_magma_m,Grunt,Mossdeep Space Center (2F),,y,,Baltoy,Levitate,,32,Night Shade,Teleport,Wish,Future Sight,0
+rse_psychic_f,Macey,Mossdeep Gym (Southeast),,y,,Natu,Synchronize,,36,Rock Tomb,Self-Destruct,Ancient Power,Sandstorm,0
+emerald_brendan,Brendan {Treecko},Rustboro City,,,,Lotad,Swift Swim,,13,Astonish,Growl,Absorb,Nature Power,25
+,,,,,,Torchic,Blaze,,15,Scratch,Growl,Focus Energy,Ember,50
+emerald_brendan,Brendan {Mudkip},Rustboro City,,,,Wingull,Keen Eye,,13,Growl,Water Gun,Supersonic,Wing Attack,25
+,,,,,,Treecko,Overgrow,,15,Pound,Leer,Absorb,Quick Attack,50
+rse_expert_m,Paxton,Route 132,,,,Swellow,Guts,,33,Quick Attack,Wing Attack,Double Team,Endeavor,0
+,,,,,,Breloom,Effect Spore,,33,Mega Drain,Headbutt,Mach Punch,Counter,0
+rse_triathlete_swimmer_f,Isabella,Route 124,,,,Staryu,Illuminate,,34,Camouflage,Swift,Bubble Beam,Minimize,0
+rse_team_aqua_f,Grunt,Weather Institute (2F),,,,Zubat,Inner Focus,,27,Astonish,Bite,Wing Attack,Confuse Ray,0
+,,,,,,Poochyena,Run Away,,27,Bite,Odor Sleuth,Roar,Swagger,0
+rse_tabitha,Tabitha,Mt. Chimney,,y,,Numel,Oblivious,,18,Growl,Tackle,Ember,~,50
+,,,,,,Poochyena,Run Away,,20,Howl,Sand Attack,Bite,Odor Sleuth,50
+,,,,,,Numel,Oblivious,,22,Growl,Tackle,Ember,Magnitude,50
+,,,,,,Zubat,Inner Focus,,22,Supersonic,Astonish,Bite,Wing Attack,50
+rse_cool_trainer_m,Jonathan,Route 132,[1] Hyper Potion,,,Kecleon,Color Change,,33,Fury Swipes,Psybeam,Screech,Slash,0
+,,,,,,Loudred,Soundproof,,33,Astonish,Howl,Supersonic,Stomp,0
+emerald_brendan,Brendan {Torchic},Rustboro City,,,,Slugma,Magma Armor,,13,Yawn,Smog,Ember,~,25
+,,,,,,Mudkip,Torrent,,15,Growl,Mud-Slap,Water Gun,Bide,50
+emerald_may,May {Mudkip},Rustboro City,,,,Wingull,Keen Eye,,13,Growl,Water Gun,Supersonic,Wing Attack,25
+,,,,,,Treecko,Overgrow,,15,Pound,Leer,Absorb,Quick Attack,50
+rse_maxie_and_tabitha,Maxie & Tabitha,Mossdeep Space Center (2F),,y,y,Mightyena,Intimidate,,42,Swagger,Scary Face,Take Down,Taunt,150
+,,,,,,Crobat,Inner Focus,,43,Wing Attack,Confuse Ray,Air Cutter,Mean Look,150
+,,,,,,Camerupt,Magma Armor,,44,Take Down,Amnesia,Rock Slide,Earthquake,150
+,,,,,,Camerupt,Magma Armor,,36,Focus Energy,Take Down,Amnesia,Rock Slide,100
+,,,,,,Mightyena,Intimidate,,38,Roar,Swagger,Scary Face,Take Down,100
+,,,,,,Golbat,Inner Focus,,40,Bite,Wing Attack,Confuse Ray,Air Cutter,100
+rse_maxie,Maxie,Magma Hideout (4F),[2] Super Potion,y,,Mightyena,Intimidate,,37,Roar,Swagger,Scary Face,Take Down,150
+,,,,,,Crobat,Inner Focus,,38,Bite,Wing Attack,Confuse Ray,Air Cutter,150
+,,,,,,Camerupt,Magma Armor,,39,Take Down,Amnesia,Rock Slide,Earthquake,150
+rse_maxie,Maxie,Mt. Chimney,[2] Super Potion,y,,Mightyena,Intimidate,,24,Sand Attack,Bite,Odor Sleuth,Roar,150
+,,,,,,Zubat,Inner Focus,,24,Supersonic,Astonish,Bite,Wing Attack,150
+,,,,,,Camerupt,Magma Armor,,25,Tackle,Ember,Magnitude,Focus Energy,150
+rse_lass,Tiana,Route 102,,,,Zigzagoon,Pickup,,4,Tackle,Growl,~,~,0
+,,,,,,Shroomish,Effect Spore,,4,Absorb,Tackle,~,~,0
+rse_lass,Haley,Route 104,,,,Lotad,Swift Swim,,6,Astonish,Growl,~,~,0
+,,,,,,Shroomish,Effect Spore,,6,Absorb,Tackle,~,~,0
+rse_lass,Janice,Route 116,,,,Marill,Thick Fat,,9,Tackle,Defense Curl,Tail Whip,~,0
+rse_winstrate_vivi,Vivi,Winstrate House,,,,Marill,Thick Fat,,15,Defense Curl,Tail Whip,Water Gun,Rollout,100
+,,,,,,Shroomish,Effect Spore,,15,Absorb,Tackle,Stun Spore,Leech Seed,100
+,,,,,,Numel,Oblivious,,15,Growl,Tackle,Ember,~,100
+rse_lass,Sally,Trick House 1,,,,Oddish,Chlorophyll,,16,Absorb,Sweet Scent,Poison Powder,~,0
+rse_lass,Robin,Trick House 1,,,,Skitty,Cute Charm,,14,Tackle,Tail Whip,Attract,Sing,0
+,,,,,,Shroomish,Effect Spore,,14,Absorb,Tackle,Stun Spore,Leech Seed,0
+,,,,,,Marill,Thick Fat,,14,Tackle,Defense Curl,Tail Whip,Water Gun,0
+rse_lass,Andrea,Sootopolis Gym (1F),,,,Luvdisc,Swift Swim,,40,Take Down,Attract,Sweet Kiss,Flail,100
+rse_lass,Crissy,Sootopolis Gym (3F),,,,Goldeen,Swift Swim,,39,Horn Attack,Flail,Fury Attack,Waterfall,100
+,,,,,,Wailmer,Water Veil,,39,Astonish,Water Pulse,Mist,Rest,100
+rse_bug_catcher,Rick,Route 102,,,,Wurmple,Shield Dust,,4,Tackle,String Shot,~,~,0
+,,,,,,Wurmple,Shield Dust,,4,Tackle,String Shot,~,~,0
+rse_bug_catcher,Lyle,Petalburg Woods,,,,Wurmple,Shield Dust,,3,Tackle,String Shot,~,~,0
+,,,,,,Wurmple,Shield Dust,,3,Tackle,String Shot,~,~,0
+,,,,,,Wurmple,Shield Dust,,3,Tackle,String Shot,~,~,0
+,,,,,,Wurmple,Shield Dust,,3,Tackle,String Shot,~,~,0
+rse_bug_catcher,Jose,Route 116,,,,Wurmple,Shield Dust,,8,Tackle,String Shot,Poison Sting,~,50
+,,,,,,Nincada,Compound Eyes,,8,Scratch,Harden,Leech Life,~,50
+rse_bug_catcher,Doug,Route 119,,,,Nincada,Compound Eyes,,28,Sand Attack,Fury Swipes,Mind Reader,False Swipe,0
+,,,,,,Ninjask,Speed Boost,,28,Double Team,Fury Cutter,Screech,Swords Dance,0
+rse_bug_catcher,Greg,Route 119,,,,Volbeat,Illuminate,,25,Moonlight,Quick Attack,Tail Glow,Signal Beam,0
+,,,,,,Illumise,Oblivious,,25,Moonlight,Quick Attack,Wish,Encore,0
+rse_bug_catcher,Kent,Route 119,,,,Ninjask,Speed Boost,,25,Double Team,Fury Cutter,Screech,Swords Dance,0
+rse_bug_catcher,James,Petalburg Woods,,,,Nincada,Compound Eyes,,6,Scratch,Harden,Leech Life,~,0
+,,,,,,Nincada,Compound Eyes,,6,Scratch,Harden,Leech Life,~,0
+rse_hiker,Brice,Route 112,,,,Numel,Oblivious,,17,Growl,Tackle,Ember,~,0
+,,,,,,Machop,Guts,,17,Low Kick,Leer,Focus Energy,Karate Chop,0
+rse_hiker,Trent,Route 112,,,,Geodude,Rock Head,,16,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Geodude,Rock Head,,17,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Geodude,Rock Head,,16,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+rse_hiker,Lenny,Route 114,,,,Geodude,Rock Head,,18,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Machop,Guts,,18,Low Kick,Leer,Focus Energy,Karate Chop,0
+rse_hiker,Lucas,Route 114,,,,Geodude,Rock Head,,18,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Numel,Oblivious,,18,Growl,Tackle,Ember,~,0
+rse_hiker,Alan,Trick House 3,,,,Geodude,Rock Head,,22,Mud Sport,Rock Throw,Magnitude,Self-Destruct,0
+,,,,,,Nosepass,Sturdy,,22,Harden,Rock Throw,Block,Thunder Wave,0
+,,,,,,Graveler,Rock Head,,22,Mud Sport,Rock Throw,Magnitude,Self-Destruct,0
+rse_hiker,Clark,Route 116,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,0
+rse_hiker,Eric,Jagged Pass,,,,Geodude,Rock Head,,20,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Baltoy,Levitate,,20,Mud-Slap,Psybeam,Rock Tomb,Self-Destruct,0
+rse_hiker,Mike,Rusturf Tunnel,,y,,Geodude,Rock Head,,16,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Geodude,Rock Head,,16,Defense Curl,Mud Sport,Rock Throw,Magnitude,0
+,,,,,,Machop,Guts,,16,Low Kick,Leer,Focus Energy,Karate Chop,0
+rse_young_couple,Dez & Luke,Mt. Pyre (2F),,,y,Delcatty,Cute Charm,,31,Growl,Attract,Sing,Double Slap,0
+,,,,,,Manectric,Static,,31,Quick Attack,Spark,Odor Sleuth,Roar,0
+rse_young_couple,Kira & Dan,Abandoned Ship (1F),,,y,Volbeat,Illuminate,,25,Moonlight,Quick Attack,Tail Glow,Signal Beam,0
+,,,,,,Illumise,Oblivious,,25,Moonlight,Quick Attack,Wish,Encore,0
+rse_beauty,Johanna,Seashore House,,,,Goldeen,Swift Swim,,13,Peck,Tail Whip,Water Sport,Supersonic,0
+rse_cool_trainer_m,Gerald,Lavaridge Gym,[1] Hyper Potion,,,Kecleon,Color Change,,23,Flamethrower,Fury Swipes,Feint Attack,Bind,100
+rse_battle_girl,Vivian,Mauville Gym,,,,Meditite,Pure Power,,17,Bide,Detect,Confusion,Thunder Punch,100
+,,,,,,Meditite,Pure Power,,17,Thunder Punch,Detect,Confusion,Meditate,100
+rse_battle_girl,Danielle,Lavaridge Gym,,,,Meditite,Pure Power,,23,Bide,Detect,Confusion,Fire Punch,100
+rse_ninja_boy,Hideo,Route 119,,,,Koffing,Levitate,,25,Tackle,Self-Destruct,Sludge,Smokescreen,0
+,,,,,,Koffing,Levitate,,25,Tackle,Poison Gas,Sludge,Smokescreen,0
+rse_ninja_boy,Keigo,Route 120,,,,Koffing,Levitate,,28,Poison Gas,Self-Destruct,Sludge,Smokescreen,0
+,,,,,,Ninjask,Speed Boost,,28,Sand Attack,Double Team,Fury Cutter,Swords Dance,0
+rse_ninja_boy,Riley,Route 120,,,,Nincada,Compound Eyes,,28,Leech Life,Fury Swipes,Mind Reader,Dig,0
+,,,,,,Koffing,Levitate,,28,Tackle,Self-Destruct,Sludge,Smokescreen,0
+rse_camper_and_bird_keeper,Flint & Edwardo,Fortree Gym,,y,y,Swellow,Guts,,29,Quick Attack,Wing Attack,Double Team,Endeavor,150
+,,,,,,Xatu,Synchronize,,29,Peck,Leer,Night Shade,Teleport,150
+,,,,,,Doduo,Run Away,,29,Pursuit,Fury Attack,Tri Attack,Rage,150
+,,,,,,Pelipper,Keen Eye,,29,Supersonic,Wing Attack,Mist,Protect,150
+rse_picnicker,Ashley,Fortree Gym,,,,Swablu,Natural Cure,,27,Astonish,Sing,Fury Attack,Safeguard,100
+,,,,,,Swablu,Natural Cure,,27,Astonish,Sing,Fury Attack,Safeguard,100
+,,,,,,Swablu,Natural Cure,,27,Astonish,Sing,Fury Attack,Safeguard,100
+rse_wally,Wally,Mauville City,,y,,Ralts,Synchronize,,16,Growl,Confusion,Double Team,Teleport,30
+emerald_brendan,Brendan {Mudkip},Lilycove City,,,,Tropius,Chlorophyll,,31,Stomp,Sweet Scent,Whirlwind,Magical Leaf,150
+,,,,,,Slugma,Magma Armor,,32,Ember,Rock Throw,Harden,Amnesia,150
+,,,,,,Pelipper,Keen Eye,,32,Supersonic,Wing Attack,Mist,Protect,150
+,,,,,,Grovyle,Overgrow,,34,Fury Cutter,Pursuit,Screech,Leaf Blade,200
+emerald_brendan,Brendan {Treecko},Lilycove City,,,,Tropius,Chlorophyll,,31,Stomp,Sweet Scent,Whirlwind,Magical Leaf,150
+,,,,,,Pelipper,Keen Eye,,32,Supersonic,Wing Attack,Mist,Protect,150
+,,,,,,Ludicolo,Swift Swim,,32,Astonish,Growl,Absorb,Nature Power,150
+,,,,,,Combusken,Blaze,,34,Peck,Sand Attack,Bulk Up,Quick Attack,200
+emerald_brendan,Brendan {Torchic},Lilycove City,,,,Tropius,Chlorophyll,,31,Stomp,Sweet Scent,Whirlwind,Magical Leaf,150
+,,,,,,Ludicolo,Swift Swim,,32,Astonish,Growl,Absorb,Nature Power,150
+,,,,,,Slugma,Magma Armor,,32,Ember,Rock Throw,Harden,Amnesia,150
+,,,,,,Marshtomp,Torrent,,34,Mud Shot,Foresight,Mud Sport,Take Down,200
+emerald_may,May {Mudkip},Lilycove City,,,,Tropius,Chlorophyll,,31,Stomp,Sweet Scent,Whirlwind,Magical Leaf,150
+,,,,,,Slugma,Magma Armor,,32,Ember,Rock Throw,Harden,Amnesia,150
+,,,,,,Pelipper,Keen Eye,,32,Supersonic,Wing Attack,Mist,Protect,150
+,,,,,,Grovyle,Overgrow,,34,Fury Cutter,Pursuit,Screech,Leaf Blade,200
+emerald_may,May {Treecko},Lilycove City,,,,Tropius,Chlorophyll,,31,Stomp,Sweet Scent,Whirlwind,Magical Leaf,150
+,,,,,,Pelipper,Keen Eye,,32,Supersonic,Wing Attack,Mist,Protect,150
+,,,,,,Ludicolo,Swift Swim,,32,Astonish,Growl,Absorb,Nature Power,150
+,,,,,,Combusken,Blaze,,34,Peck,Sand Attack,Bulk Up,Quick Attack,200
+emerald_may,May {Torchic},Lilycove City,,,,Tropius,Chlorophyll,,31,Stomp,Sweet Scent,Whirlwind,Magical Leaf,150
+,,,,,,Ludicolo,Swift Swim,,32,Astonish,Growl,Absorb,Nature Power,150
+,,,,,,Slugma,Magma Armor,,32,Ember,Rock Throw,Harden,Amnesia,150
+,,,,,,Marshtomp,Torrent,,34,Mud Shot,Foresight,Mud Sport,Take Down,200
+rse_fisherman,Jonah,Route 127,,,,Wailmer,Water Veil,,30,Rollout,Whirlpool,Astonish,Water Pulse,0
+,,,,,,Tentacool,Clear Body,,31,Constrict,Acid,Bubble Beam,Wrap,0
+,,,,,,Sharpedo,Rough Skin,,32,Focus Energy,Scary Face,Crunch,Screech,0
+rse_fisherman,Henry,Route 127,,,,Carvanha,Rough Skin,,31,Scary Face,Crunch,Screech,Take Down,0
+,,,,,,Tentacruel,Clear Body,,34,Constrict,Acid,Bubble Beam,Wrap,0
+rse_fisherman,Roger,Route 127,,,,Magikarp,Swift Swim,,15,Splash,Tackle,~,~,0
+,,,,,,Magikarp,Swift Swim,,25,Splash,Tackle,~,~,0
+,,,,,,Gyarados,Intimidate,,35,Bite,Dragon Rage,Leer,Twister,0
+rse_cool_trainer_f,Alexa,Route 128,[1] Full Restore,,,Gloom,Chlorophyll,,34,Poison Powder,Stun Spore,Sleep Powder,Acid,100
+,,,,,,Azumarill,Thick Fat,,34,Water Gun,Rollout,Bubble Beam,Double-Edge,100
+rse_cool_trainer_m,Ruben,Route 128,[1] Hyper Potion,,,Shiftry,Chlorophyll,,34,Pound,Harden,Growth,Nature Power,100
+,,,,,,Nosepass,Sturdy,,34,Block,Thunder Wave,Rock Slide,Sandstorm,100
+rse_black_belt,Koji,Route 127,,,,Machoke,Guts,,34,Seismic Toss,Foresight,Revenge,Vital Throw,0
+rse_fisherman,Wayne,Route 128,,,,Tentacool,Clear Body,,31,Constrict,Acid,Bubble Beam,Wrap,0
+,,,,,,Tentacool,Clear Body,,31,Constrict,Acid,Bubble Beam,Wrap,0
+,,,,,,Wailmer,Water Veil,,36,Whirlpool,Astonish,Water Pulse,Mist,0
+rse_bird_keeper,Aidan,Route 127,,,,Swellow,Guts,,32,Quick Attack,Wing Attack,Double Team,Endeavor,0
+,,,,,,Skarmory,Keen Eye,,32,Agility,Fury Attack,Air Cutter,Steel Wing,0
+rse_swimmer_m,Reed,Route 129,,,,Spheal,Thick Fat,,33,Ice Ball,Body Slam,Aurora Beam,Hail,0
+,,,,,,Sharpedo,Rough Skin,,33,Scary Face,Crunch,Screech,Slash,0
+rse_swimmer_f,Tisha,Route 129,,,,Chinchou,Volt Absorb,,34,Flail,Water Gun,Spark,Confuse Ray,0
+rse_twins,Tori & Tia,Route 113,,,y,Spinda,Own Tempo,,19,Tackle,Uproar,Feint Attack,Psybeam,0
+,,,,,,Spinda,Own Tempo,,19,Tackle,Uproar,Feint Attack,Psybeam,0
+rse_sr_and_jr,Kim & Iris,Route 125,,,y,Swablu,Natural Cure,,32,Sing,Fury Attack,Safeguard,Aerial Ace,0
+,,,,,,Numel,Oblivious,,35,Flamethrower,Take Down,Rest,Earthquake,0
+rse_sr_and_jr,Tyra & Ivy,Route 114,,,y,Roselia,Natural Cure,,18,Growth,Stun Spore,Mega Drain,Leech Seed,0
+,,,,,,Graveler,Rock Head,,20,Defense Curl,Rollout,Mud Sport,Rock Throw,0
+rse_young_couple,Mel & Paul,Route 109,,,y,Dustox,Shield Dust,,27,Gust,Psybeam,Toxic,Protect,0
+,,,,,,Beautifly,Swarm,,27,Gust,Mega Drain,Attract,Stun Spore,0
+rse_old_couple,John & Jay,Meteor Falls,,,y,Medicham,Pure Power,,39,Psychic,Fire Punch,Psych Up,Protect,200
+,,,,,,Hariyama,Thick Fat,,39,Focus Punch,Rock Tomb,Rest,Belly Drum,200
+rse_sis_and_bro,Reli & Ian,Route 131,,,y,Azumarill,Thick Fat,,35,Water Gun,Rollout,Bubble Beam,Double-Edge,0
+,,,,,,Wingull,Keen Eye,,33,Supersonic,Wing Attack,Mist,Quick Attack,0
+rse_sis_and_bro,Lila & Roy,Route 124,,,y,Chinchou,Volt Absorb,,34,Flail,Water Gun,Spark,Confuse Ray,0
+,,,,,,Carvanha,Rough Skin,,33,Scary Face,Crunch,Screech,Take Down,0
+rse_sis_and_bro,Lisa & Ray,Route 107,,,y,Goldeen,Swift Swim,,27,Water Sport,Supersonic,Horn Attack,Flail,0
+,,,,,,Tentacool,Clear Body,,25,Supersonic,Constrict,Acid,Bubble Beam,0
+rse_fisherman,Chris,Route 119,,,,Magikarp,Swift Swim,,29,Splash,Tackle,~,~,0
+,,,,,,Tentacool,Clear Body,,20,Poison Sting,Supersonic,Constrict,Acid,0
+,,,,,,Feebas,Swift Swim,,26,Splash,Tackle,~,~,0
+,,,,,,Carvanha,Rough Skin,,23,Rage,Focus Energy,Scary Face,Crunch,0
+rse_rich_boy,Dawson,Route 116,,,,Zigzagoon,Pickup,Nugget,8,Tackle,Growl,Tail Whip,~,0
+,,,,,,Poochyena,Run Away,,8,Tackle,Howl,~,~,0
+rse_lady,Sarah,Route 116,[1] Full Restore,,,Lotad,Swift Swim,,8,Astonish,Growl,Absorb,~,0
+,,,,,,Zigzagoon,Pickup,Nugget,8,Tackle,Growl,Tail Whip,~,0
+rse_fisherman,Darian,Route 104,,,,Magikarp,Swift Swim,,9,Splash,~,~,~,0
+rse_tuber_f,Hailey,Route 109,,,,Marill,Thick Fat,,13,Tackle,Defense Curl,Tail Whip,Water Gun,0
+rse_tuber_m,Chandler,Route 109,,,,Tentacool,Clear Body,,12,Poison Sting,Supersonic,Constrict,~,0
+,,,,,,Tentacool,Clear Body,,12,Poison Sting,Supersonic,Constrict,~,0
+rse_pokefan_m,Kaleb,Route 110,,y,,Minun,Minus,Oran Berry,14,Growl,Thunder Wave,Quick Attack,Helping Hand,0
+,,,,,,Plusle,Plus,Oran Berry,14,Growl,Thunder Wave,Quick Attack,Helping Hand,0
+rse_guitarist,Joseph,Route 110,,,,Electrike,Static,,14,Tackle,Thunder Wave,Leer,Howl,0
+,,,,,,Voltorb,Soundproof,,14,Charge,Tackle,Screech,~,0
+rse_triathlete_biker_f,Alyssa,Route 110,,y,,Magnemite,Magnet Pull,,15,Metal Sound,Tackle,Thunder Shock,Supersonic,0
+rse_guitarist,Marcos,Route 103,,,,Voltorb,Soundproof,,15,Charge,Tackle,Screech,Sonic Boom,100
+rse_black_belt,Rhett,Route 103,,,,Makuhita,Thick Fat,,15,Focus Energy,Sand Attack,Arm Thrust,Vital Throw,100
+rse_camper,Tyron,Route 111,,,,Sandshrew,Sand Veil,,19,Scratch,Defense Curl,Sand Attack,Poison Sting,0
+rse_aroma_lady,Celina,Route 111,,,,Roselia,Natural Cure,,18,Growth,Poison Sting,Stun Spore,Mega Drain,0
+rse_picnicker,Bianca,Route 111,,,,Shroomish,Effect Spore,,18,Tackle,Stun Spore,Leech Seed,Mega Drain,0
+rse_kindler,Hayden,Route 111,,,,Numel,Oblivious,,18,Growl,Tackle,Ember,~,0
+rse_picnicker,Sophie,Route 113,,,,Marill,Thick Fat,,17,Defense Curl,Tail Whip,Water Gun,Rollout,0
+,,,,,,Lombre,Swift Swim,,19,Growl,Absorb,Nature Power,Fake Out,0
+rse_bird_keeper,Coby,Route 113,,,,Skarmory,Keen Eye,,17,Peck,Sand Attack,Swift,Agility,0
+,,,,,,Swellow,Guts,,19,Focus Energy,Quick Attack,Wing Attack,Double Team,0
+rse_camper,Lawrence,Route 113,,,,Baltoy,Levitate,,18,Rapid Spin,Mud-Slap,Psybeam,Rock Tomb,0
+,,,,,,Sandshrew,Sand Veil,,18,Scratch,Defense Curl,Sand Attack,Poison Sting,0
+rse_pokemaniac,Wyatt,Route 113,,,,Aron,Sturdy,,18,Mud-Slap,Headbutt,Metal Claw,Iron Defense,0
+,,,,,,Aron,Sturdy,,18,Mud-Slap,Headbutt,Metal Claw,Iron Defense,0
+rse_picnicker,Angelina,Route 114,,,,Lombre,Swift Swim,,18,Astonish,Growl,Absorb,Nature Power,0
+,,,,,,Marill,Thick Fat,,18,Defense Curl,Tail Whip,Water Gun,Rollout,0
+rse_fisherman,Kai,Route 114,,,,Barboach,Oblivious,,19,Mud Sport,Water Sport,Water Gun,Magnitude,0
+rse_picnicker,Charlotte,Route 114,,,,Nuzleaf,Chlorophyll,,19,Harden,Growth,Nature Power,Fake Out,0
+rse_youngster,Deandre,Route 118,,,,Zigzagoon,Pickup,,14,Growl,Tail Whip,Headbutt,Sand Attack,0
+,,,,,,Aron,Sturdy,,14,Harden,Mud-Slap,Headbutt,Metal Claw,0
+,,,,,,Electrike,Static,,14,Tackle,Thunder Wave,Leer,Howl,0
+rse_team_magma_m,Grunt,Magma Hideout (1F),,,,Zubat,Inner Focus,,29,Astonish,Bite,Wing Attack,Confuse Ray,0
+rse_team_magma_m,Grunt,Magma Hideout (1F),,y,,Poochyena,Run Away,,29,Odor Sleuth,Roar,Swagger,Scary Face,0
+rse_team_magma_m,Grunt,Magma Hideout (2F),,y,,Numel,Oblivious,,29,Ember,Magnitude,Focus Energy,Take Down,0
+rse_team_magma_m,Grunt,Magma Hideout (2F),,,,Baltoy,Levitate,,28,Psybeam,Rock Tomb,Self-Destruct,Ancient Power,0
+,,,,,,Zubat,Inner Focus,,28,Astonish,Bite,Wing Attack,Confuse Ray,0
+rse_team_magma_m,Grunt,Magma Hideout (2F),,,,Baltoy,Levitate,,28,Psybeam,Rock Tomb,Self-Destruct,Ancient Power,0
+,,,,,,Numel,Oblivious,,28,Tackle,Ember,Magnitude,Focus Energy,0
+rse_team_magma_grunts,Grunts,Magma Hideout (8F),,,y,Mightyena,Intimidate,,29,Bite,Odor Sleuth,Roar,Swagger,0
+,,,,,,Numel,Oblivious,,29,Ember,Magnitude,Focus Energy,Take Down,0
+rse_team_magma_m,Grunt,Magma Hideout (8F),,,,Zubat,Inner Focus,,29,Astonish,Bite,Wing Attack,Confuse Ray,0
+rse_team_magma_m,Grunt,Magma Hideout (8F),,,,Poochyena,Run Away,,29,Odor Sleuth,Roar,Swagger,Scary Face,0
+rse_team_magma_m,Grunt,Magma Hideout (3F),,y,,Zubat,Inner Focus,,29,Astonish,Bite,Wing Attack,Confuse Ray,0
+rse_team_magma_m,Grunt,Magma Hideout (7F),,,,Mightyena,Intimidate,,29,Bite,Odor Sleuth,Roar,Swagger,0
+rse_team_magma_m,Grunt,Magma Hideout (4F),,y,,Baltoy,Levitate,,29,Psybeam,Rock Tomb,Self-Destruct,Ancient Power,0
+rse_team_magma_m,Grunt,Magma Hideout (4F),,y,,Numel,Oblivious,,29,Ember,Magnitude,Focus Energy,Take Down,0
+rse_team_magma_m,Grunt,Magma Hideout (4F),,y,,Zubat,Inner Focus,,29,Astonish,Bite,Wing Attack,Confuse Ray,0
+rse_team_magma_f,Grunt,Magma Hideout (2F),,,,Mightyena,Intimidate,,29,Bite,Odor Sleuth,Roar,Swagger,0
+rse_team_magma_f,Grunt,Magma Hideout (3F),,y,,Baltoy,Levitate,,29,Psybeam,Rock Tomb,Self-Destruct,Ancient Power,0
+rse_tabitha,Tabitha,Magma Hideout (4F),,y,,Numel,Oblivious,,26,Tackle,Ember,Magnitude,Focus Energy,75
+,,,,,,Mightyena,Intimidate,,28,Bite,Odor Sleuth,Roar,Swagger,75
+,,,,,,Zubat,Inner Focus,,30,Astonish,Bite,Wing Attack,Confuse Ray,75
+,,,,,,Camerupt,Magma Armor,,33,Magnitude,Focus Energy,Take Down,Amnesia,75
+rse_cool_trainer_f,Darcy,Route 132,[1] Hyper Potion,,,Pelipper,Keen Eye,,33,Mist,Protect,Stockpile,Swallow,0
+,,,,,,Camerupt,Magma Armor,,33,Magnitude,Focus Energy,Take Down,Amnesia,0
+rse_swimmer_m,Pete,Route 103,,,,Tentacool,Clear Body,,15,Poison Sting,Supersonic,Constrict,~,0
+rse_swimmer_f,Isabelle,Route 103,,,,Marill,Thick Fat,,15,Defense Curl,Tail Whip,Water Gun,Rollout,0
+rse_ruin_maniac,Andres,Route 105,,,,Sandshrew,Sand Veil,,25,Defense Curl,Sand Attack,Poison Sting,Slash,50
+,,,,,,Sandshrew,Sand Veil,,25,Defense Curl,Sand Attack,Poison Sting,Slash,50
+rse_bird_keeper,Josue,Route 105,,,,Taillow,Guts,,25,Focus Energy,Quick Attack,Wing Attack,Double Team,50
+,,,,,,Wingull,Keen Eye,,25,Water Gun,Supersonic,Wing Attack,Mist,50
+rse_triathlete_swimmer_m,Camron,Route 107,,,,Staryu,Illuminate,,26,Rapid Spin,Recover,Camouflage,Swift,0
+rse_sailor,Cory,Route 108,,,,Wingull,Keen Eye,,24,Water Gun,Supersonic,Wing Attack,Mist,0
+,,,,,,Machop,Guts,,24,Focus Energy,Karate Chop,Seismic Toss,Foresight,0
+,,,,,,Tentacool,Clear Body,,24,Poison Sting,Supersonic,Constrict,Acid,0
+rse_cool_trainer_f,Carolina,Route 108,[1] Hyper Potion,,,Manectric,Static,,24,Leer,Howl,Quick Attack,Spark,50
+,,,,,,Swellow,Guts,,24,Focus Energy,Quick Attack,Wing Attack,Double Team,50
+,,,,,,Manectric,Static,,24,Leer,Howl,Quick Attack,Spark,50
+rse_bird_keeper,Elijah,Route 109,,,,Skarmory,Keen Eye,,25,Peck,Sand Attack,Swift,Agility,0
+,,,,,,Skarmory,Keen Eye,,25,Peck,Sand Attack,Swift,Agility,0
+rse_picnicker,Celia,Route 111,,,,Marill,Thick Fat,,22,Tail Whip,Water Gun,Rollout,Bubble Beam,0
+,,,,,,Lombre,Swift Swim,,22,Growl,Absorb,Nature Power,Fake Out,0
+rse_ruin_maniac,Bryan,Route 111,,,,Sandshrew,Sand Veil,,22,Scratch,Defense Curl,Sand Attack,Poison Sting,0
+,,,,,,Sandslash,Sand Veil,,22,Scratch,Defense Curl,Sand Attack,Poison Sting,0
+rse_camper,Branden,Route 111,,,,Taillow,Guts,,22,Focus Energy,Quick Attack,Wing Attack,Double Team,0
+,,,,,,Nuzleaf,Chlorophyll,,22,Harden,Growth,Nature Power,Fake Out,0
+rse_kindler,Bryant,Route 112,,,,Numel,Oblivious,,18,Growl,Tackle,Ember,~,0
+,,,,,,Slugma,Magma Armor,,18,Yawn,Smog,Ember,Rock Throw,0
+rse_aroma_lady,Shayla,Route 112,,,,Shroomish,Effect Spore,,18,Tackle,Stun Spore,Leech Seed,Mega Drain,0
+,,,,,,Roselia,Natural Cure,,18,Growth,Poison Sting,Stun Spore,Mega Drain,0
+rse_triathlete_runner_f,Kyra,Route 115,,,,Doduo,Run Away,,26,Pursuit,Fury Attack,Tri Attack,Rage,0
+,,,,,,Dodrio,Run Away,,26,Pursuit,Fury Attack,Tri Attack,Rage,0
+rse_ninja_boy,Jaiden,Route 115,,,,Ninjask,Speed Boost,,26,Double Team,Fury Cutter,Screech,Swords Dance,0
+,,,,,,Gulpin,Liquid Ooze,,26,Posion Gas,Sludge,Amnesia,Encore,0
+rse_psychic_f,Alix,Route 115,,,,Kadabra,Synchronize,,26,Disable,Psybeam,Reflect,Recover,0
+,,,,,,Kirlia,Synchronize,,26,Double Team,Teleport,Calm Mind,Psychic,0
+rse_battle_girl,Helene,Route 115,,,,Meditite,Pure Power,,26,Confusion,Detect,Hidden Power,Mind Reader,0
+,,,,,,Makuhita,Thick Fat,,26,Arm Thrust,Vital Throw,Fake Out,Whirlwind,0
+rse_psychic_f,Marlene,Route 115,,,,Meditite,Pure Power,,18,Meditate,Confusion,Detect,Hidden Power,0
+,,,,,,Spoink,Thick Fat,,18,Splash,Psywave,Odor Sleuth,Psybeam,0
+rse_hiker,Devan,Route 116,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,0
+,,,,,,Geodude,Rock Head,,8,Tackle,Defense Curl,Mud Sport,~,0
+rse_youngster,Johnson,Route 116,,,,Shroomish,Effect Spore,,8,Absorb,Tackle,Stun Spore,~,0
+,,,,,,Lotad,Swift Swim,,8,Astonish,Growl,Absorb,~,0
+rse_triathlete_runner_f,Melina,Route 117,,,,Doduo,Run Away,,17,Peck,Growl,Pursuit,Fury Attack,0
+rse_psychic_f,Brandi,Route 117,,,,Ralts,Synchronize,,17,Growl,Confusion,Double Team,Teleport,0
+rse_battle_girl,Aisha,Route 117,,,,Meditite,Pure Power,,17,Bide,Meditate,Confusion,Detect,0
+rse_expert_f,Makayla,Route 132,[1] Hyper Potion,,,Roselia,Natural Cure,,33,Leech Seed,Magical Leaf,Grass Whistle,Giga Drain,0
+,,,,,,Medicham,Pure Power,,33,Hidden Power,Mind Reader,Calm Mind,High Jump Kick,0
+rse_guitarist,Fabian,Route 119,,,,Manectric,Static,,26,Howl,Quick Attack,Spark,Odor Sleuth,0
+rse_kindler,Dayton,Route 119,,,,Slugma,Magma Armor,,25,Smog,Ember,Rock Throw,Harden,0
+,,,,,,Numel,Oblivious,,25,Tackle,Ember,Magnitude,Focus Energy,0
+rse_parasol_lady,Rachel,Route 119,,,,Goldeen,Swift Swim,,26,Water Sport,Supersonic,Horn Attack,Flail,0
+rse_cool_trainer_m,Leonel,Route 120,[1] Hyper Potion,,,Manectric,Static,,30,Thunder,Quick Attack,Thunder Wave,Odor Sleuth,100
+rse_battle_girl,Callie,Route 120,,,,Meditite,Pure Power,,28,Detect,Hidden Power,Mind Reader,Calm Mind,0
+,,,,,,Makuhita,Thick Fat,,28,Vital Throw,Fake Out,Whirlwind,Knock Off,0
+rse_bug_maniac,Cale,Route 121,,,,Dustox,Shield Dust,,29,Protect,Moonlight,Psybeam,Whirlwind,0
+,,,,,,Beautifly,Swarm,,29,Stun Spore,Morning Sun,Mega Drain,Whirlwind,0
+rse_pokemon_breeder_m,Myles,Route 121,,,,Makuhita,Thick Fat,,25,Arm Thrust,Vital Throw,Fake Out,Whirlwind,10
+,,,,,,Wingull,Keen Eye,,25,Water Gun,Supersonic,Wing Attack,Mist,10
+,,,,,,Tropius,Chlorophyll,,25,Growth,Razor Leaf,Stomp,Sweet Scent,10
+,,,,,,Zigzagoon,Pickup,,25,Sand Attack,Odor Sleuth,Mud Sport,Pin Missile,10
+,,,,,,Electrike,Static,,25,Howl,Quick Attack,Spark,Odor Sleuth,10
+,,,,,,Numel,Oblivious,,25,Tackle,Ember,Magnitude,Focus Energy,10
+rse_pokemon_breeder_f,Pat,Route 121,,,,Poochyena,Run Away,,25,Bite,Odor Sleuth,Roar,Swagger,10
+,,,,,,Shroomish,Effect Spore,,25,Stun Spore,Leech Seed,Mega Drain,Headbutt,10
+,,,,,,Electrike,Static,,25,Howl,Quick Attack,Spark,Odor Sleuth,10
+,,,,,,Marill,Thick Fat,,25,Tail Whip,Water Gun,Rollout,Bubble Beam,10
+,,,,,,Sandshrew,Sand Veil,,25,Defense Curl,Sand Attack,Poison Sting,Slash,10
+,,,,,,Gulpin,Liquid Ooze,,25,Posion Gas,Sludge,Amnesia,Encore,10
+rse_cool_trainer_f,Cristin,Route 121,[1] Hyper Potion,,,Loudred,Soundproof,,29,Astonish,Howl,Supersonic,Stomp,100
+,,,,,,Vigoroth,Vital Spirit,,29,Encore,Uproar,Fury Swipes,Endure,100
+emerald_may,May {Treecko},Rustboro City,,,,Lotad,Swift Swim,,13,Astonish,Growl,Absorb,Nature Power,25
+,,,,,,Torchic,Blaze,,15,Scratch,Growl,Focus Energy,Ember,50
+emerald_may,May {Torchic},Rustboro City,,,,Torkoal,White Smoke,,13,Ember,Smog,Curse,~,25
+,,,,,,Mudkip,Torrent,,15,Growl,Mud-Slap,Water Gun,Bide,50
+rse_bug_maniac,Angelo,Mauville Gym,,,,Illumise,Oblivious,,17,Shock Wave,Quick Attack,Charm,Moonlight,100
+,,,,,,Volbeat,Swarm,,17,Shock Wave,Quick Attack,Confuse Ray,Moonlight,100
+rse_bird_keeper,Darius,Fortree Gym,,y,,Tropius,Chlorophyll,,30,Razor Leaf,Stomp,Sweet Scent,Whirlwind,200
+rse_psychic_and_gentleman,Mariela & Everett,Trick House 7,,,y,Chimecho,Levitate,,41,Psywave,Double-Edge,Heal Bell,Safeguard,0
+,,,,,,Wobbuffet,Shadow Tag,,41,Counter,Mirror Coat,Safeguard,Destiny Bond,0
+rse_psychic_m,Alvaro,Trick House 7,,,,Banette,Insomnia,,41,Curse,Spite,Will-O-Wisp,Feint Attack,0
+,,,,,,Kadabra,Synchronize,,41,Recover,Future Sight,Role Play,Psychic,0

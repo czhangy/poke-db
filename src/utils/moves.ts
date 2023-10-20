@@ -1,16 +1,7 @@
 import groups from "@/data/groups";
 import prisma from "@/lib/prisma";
-import { DEFAULT, ENGLISH, MOVES, PHYSICAL, SPECIAL } from "@/utils/constants";
-import {
-    clearCollection,
-    fetchByPage,
-    getDescriptions,
-    getEnglishName,
-    logCreate,
-    logError,
-    logFinish,
-    logStart,
-} from "@/utils/global";
+import { DEFAULT, ENGLISH, MOVES } from "@/utils/constants";
+import { clearCollection, fetchByPage, getDescriptions, getEnglishName, logFinish, logStart } from "@/utils/global";
 import { MoveClass, MoveNum, MoveType, Moves } from "@prisma/client";
 import { Move, MoveClient, MoveFlavorText } from "pokenode-ts";
 
@@ -21,6 +12,8 @@ import { Move, MoveClient, MoveFlavorText } from "pokenode-ts";
 const GEN_4_IDX: number = 3;
 const PHYSICAL_TYPES: string[] = ["normal", "fighting", "poison", "ground", "flying", "bug", "rock", "ghost", "steel"];
 const PRE_SPLIT_GENS: string[] = ["generation-i", "generation-ii", "generation-iii"];
+const PHYSICAL: "physical" = "physical";
+const SPECIAL: "special" = "special";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // PROPERTIES
@@ -44,12 +37,15 @@ const getTypes = (move: Move): MoveType[] => {
     return types;
 };
 
-const getClass = (move: Move): MoveClass[] => {
+const getClass = (move: Move, warnings: { [warning: string]: string[] }): MoveClass[] => {
     const classes: MoveClass[] = [];
     let currentGroup = DEFAULT;
 
     if (!move.damage_class) {
-        logError("damage class", move.name);
+        if (!warnings.missing_damage_class) {
+            warnings.missing_damage_class = [];
+        }
+        warnings.missing_damage_class.push(move.name);
         return [];
     }
 
@@ -88,9 +84,17 @@ const getBP = (move: Move): MoveNum[] => {
     return bp;
 };
 
-const getPP = (move: Move): MoveNum[] => {
+const getPP = (move: Move, warnings: { [warning: string]: string[] }): MoveNum[] => {
     const pp: MoveNum[] = [];
     let currentGroup: number = DEFAULT;
+
+    if (!move.pp) {
+        if (!warnings.missing_pp) {
+            warnings.missing_pp = [];
+        }
+        warnings.missing_pp.push(move.name);
+        return [];
+    }
 
     for (const pastValue of move.past_values) {
         if (pastValue.pp) {
@@ -99,12 +103,7 @@ const getPP = (move: Move): MoveNum[] => {
         }
     }
 
-    if (!move.pp) {
-        logError("PP", move.name);
-        return [];
-    }
-
-    pp.push({ num: move.pp!, group: currentGroup });
+    pp.push({ num: move.pp, group: currentGroup });
 
     return pp;
 };
@@ -115,22 +114,25 @@ const getPP = (move: Move): MoveNum[] => {
 
 type NewMove = Omit<Moves, "id">;
 
-const handleCreateMove = async (moveAPI: MoveClient, id: number): Promise<void> => {
+const handleCreateMove = async (
+    moveAPI: MoveClient,
+    id: number,
+    warnings: { [warning: string]: string[] }
+): Promise<void> => {
     const move: Move = await moveAPI.getMoveById(id);
     const slug: string = move.name;
 
-    logCreate(slug, id);
-
     const newMove: NewMove = {
         slug: slug,
-        name: getEnglishName(move.names),
+        name: getEnglishName(move.names, slug, warnings),
         type: getTypes(move),
-        class: getClass(move),
+        class: getClass(move, warnings),
         bp: getBP(move),
-        pp: getPP(move),
+        pp: getPP(move, warnings),
         desc: getDescriptions(
             move.flavor_text_entries.filter((mft: MoveFlavorText) => mft.language.name === ENGLISH),
-            move.name
+            move.name,
+            warnings
         ),
     };
 
@@ -145,13 +147,13 @@ const handleCreateMove = async (moveAPI: MoveClient, id: number): Promise<void> 
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createMoves = async (clear: boolean, start: number): Promise<void> => {
-    logStart(MOVES, start);
-    clearCollection(MOVES, clear);
+export const createMoves = async (clear: boolean, warnings: { [warning: string]: string[] }): Promise<void> => {
+    logStart(MOVES);
+    await clearCollection(MOVES, clear);
 
     const moveAPI: MoveClient = new MoveClient();
     const count: number = (await moveAPI.listMoves()).count;
-    fetchByPage(moveAPI, start - 1, count, "listMoves", handleCreateMove);
+    await fetchByPage(moveAPI, count, "listMoves", handleCreateMove, warnings);
 
     logFinish(MOVES);
 };
