@@ -1,4 +1,5 @@
 from colorama import Fore, Style
+import json
 import os
 import requests
 import sys
@@ -18,8 +19,6 @@ VALID_GAMES = ["ruby_sapphire", "emerald"]
 
 # Lists
 COLLECTIONS = [ABILITIES, BATTLES, ITEMS, MOVES, POKEMON, TRAINERS, CLEAR]
-STARTS = [ABILITIES, MOVES, POKEMON, TRAINERS]
-ENDS = [POKEMON]
 
 # Check if server is reachable
 try:
@@ -32,8 +31,8 @@ except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
 selection = None
 toggled = None
 toggles = [False] * len(COLLECTIONS)
-starts = [None] * len(STARTS)
-ends = [None] * len(ENDS)
+start = None
+end = None
 game = None
 while selection != "":
     os.system("cls" if os.name == "nt" else "clear")
@@ -63,17 +62,12 @@ while selection != "":
     for idx, collection in enumerate(COLLECTIONS):
         if collection[0] == selection:
             if not toggles[idx]:
-                if collection in STARTS:
+                if collection == POKEMON:
                     start = input("Start at #: ")
-                    if start.isdigit():
-                        starts[STARTS.index(collection)] = start
-                    else:
+                    if not start.isdigit():
                         break
-                if collection in ENDS:
                     end = input("End at #: ")
-                    if end.isdigit():
-                        ends[ENDS.index(collection)] = end
-                    else:
+                    if not end.isdigit():
                         break
                 if collection == BATTLES:
                     game = input("Pick a game to parse: ")
@@ -88,11 +82,11 @@ params = []
 for idx, collection in enumerate(COLLECTIONS):
     if toggles[idx]:
         params.append(f"{collection}=true")
-        if collection in STARTS and starts[STARTS.index(collection)]:
-            params.append(f"{collection}_start={starts[STARTS.index(collection)]}")
-        if collection in ENDS and ends[ENDS.index(collection)]:
-            params.append(f"{collection}_end={ends[ENDS.index(collection)]}")
-        if collection == BATTLES and game:
+        if collection == POKEMON:
+            params.append(f"pokemon_start={start}")
+        if collection == POKEMON:
+            params.append(f"pokemon_end={end}")
+        if collection == BATTLES:
             params.append(f"game={game}")
 
 query = SERVER_URL + "?" + "&".join(params)
@@ -104,9 +98,9 @@ start_time = time.perf_counter()
 print(f"{Fore.YELLOW}{Style.BRIGHT}Running update...{Style.RESET_ALL}\n")
 try:
     r = requests.get(query)
-    print(f"{Fore.GREEN}{r.json()}")
+    print(f"{Fore.MAGENTA}{json.dumps(json.loads(r.text), indent=2)}")
     print(
-        f"Update took {round(time.perf_counter() - start_time, 2)} seconds to complete!{Style.RESET_ALL}\n"
+        f"Update took {round(time.perf_counter() - start_time, 1)} seconds to complete!{Style.RESET_ALL}\n"
     )
 except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
     print(f"{Fore.RED}Update failed!{Style.RESET_ALL}\n")

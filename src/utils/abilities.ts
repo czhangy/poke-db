@@ -1,15 +1,7 @@
 import changedAbilities from "@/data/changed_abilities";
 import prisma from "@/lib/prisma";
 import { ABILITIES, ENGLISH } from "@/utils/constants";
-import {
-    clearCollection,
-    fetchByPage,
-    getDescriptions,
-    getEnglishName,
-    logCreate,
-    logFinish,
-    logStart,
-} from "@/utils/global";
+import { clearCollection, fetchByPage, getDescriptions, getEnglishName, logFinish, logStart } from "@/utils/global";
 import { Abilities } from "@prisma/client";
 import { Ability, AbilityFlavorText, PokemonClient } from "pokenode-ts";
 
@@ -33,17 +25,21 @@ const GEN_IDXS: { [generation: string]: number } = {
 
 type NewAbility = Omit<Abilities, "id">;
 
-const handleCreateAbility = async (pokemonAPI: PokemonClient, id: number): Promise<void> => {
+const handleCreateAbility = async (
+    pokemonAPI: PokemonClient,
+    id: number,
+    warnings: { [warning: string]: string[] }
+): Promise<void> => {
     const ability: Ability = await pokemonAPI.getAbilityById(id);
     const slug: string = ability.name;
-    logCreate(slug, id);
 
     const newAbility: NewAbility = {
         slug: slug,
-        name: slug in changedAbilities ? changedAbilities[slug] : getEnglishName(ability.names),
+        name: slug in changedAbilities ? changedAbilities[slug] : getEnglishName(ability.names, slug, warnings),
         desc: getDescriptions(
             ability.flavor_text_entries.filter((aft: AbilityFlavorText) => aft.language.name === ENGLISH),
-            slug
+            slug,
+            warnings
         ),
         group: GEN_IDXS[ability.generation.name],
     };
@@ -59,13 +55,13 @@ const handleCreateAbility = async (pokemonAPI: PokemonClient, id: number): Promi
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createAbilities = async (clear: boolean, start: number): Promise<void> => {
-    logStart(ABILITIES, start);
+export const createAbilities = async (clear: boolean, warnings: { [warning: string]: string[] }): Promise<void> => {
+    logStart(ABILITIES);
     clearCollection(ABILITIES, clear);
 
     const pokemonAPI: PokemonClient = new PokemonClient();
     const count: number = (await pokemonAPI.listAbilities()).count;
-    await fetchByPage(pokemonAPI, start - 1, count, "listAbilities", handleCreateAbility);
+    await fetchByPage(pokemonAPI, count, "listAbilities", handleCreateAbility, warnings);
 
     logFinish(ABILITIES);
 };

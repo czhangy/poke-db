@@ -1,7 +1,7 @@
 import usedItems from "@/data/used_items";
 import prisma from "@/lib/prisma";
 import { ENGLISH, ITEMS } from "@/utils/constants";
-import { clearCollection, getDescriptions, getEnglishName, logCreate, logFinish, logStart } from "@/utils/global";
+import { clearCollection, getDescriptions, getEnglishName, logFinish, logProgress, logStart } from "@/utils/global";
 import { Items } from "@prisma/client";
 import { Item, ItemClient, VersionGroupFlavorText } from "pokenode-ts";
 
@@ -11,17 +11,21 @@ import { Item, ItemClient, VersionGroupFlavorText } from "pokenode-ts";
 
 type NewItem = Omit<Items, "id">;
 
-const handleCreateItem = async (itemAPI: ItemClient, slug: string): Promise<void> => {
+const handleCreateItem = async (
+    itemAPI: ItemClient,
+    slug: string,
+    warnings: { [warning: string]: string[] }
+): Promise<void> => {
     const item: Item = await itemAPI.getItemByName(slug);
-    logCreate(slug);
 
     const newItem: NewItem = {
         slug: slug,
-        name: getEnglishName(item.names),
+        name: getEnglishName(item.names, slug, warnings),
         sprite: item.sprites.default,
         desc: getDescriptions(
             item.flavor_text_entries.filter((vgft: VersionGroupFlavorText) => vgft.language.name === ENGLISH),
-            item.name
+            item.name,
+            warnings
         ),
     };
 
@@ -36,14 +40,23 @@ const handleCreateItem = async (itemAPI: ItemClient, slug: string): Promise<void
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createItems = async (clear: boolean): Promise<void> => {
+export const createItems = async (clear: boolean, warnings: { [warning: string]: string[] }): Promise<void> => {
     logStart(ITEMS);
     clearCollection(ITEMS, clear);
 
     const itemAPI: ItemClient = new ItemClient();
+
+    const promises: Promise<void>[] = [];
+    let progress: number = 0;
     for (const item of usedItems) {
-        await handleCreateItem(itemAPI, item);
+        promises.push(
+            handleCreateItem(itemAPI, item, warnings).then(() => {
+                progress++;
+                logProgress(progress, usedItems.length);
+            })
+        );
     }
+    await Promise.all(promises);
 
     logFinish(ITEMS);
 };
