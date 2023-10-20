@@ -24,7 +24,7 @@ const handleCreateTrainer = async (trainer: Trainer): Promise<void> => {
 
 export const createTrainers = async (clear: boolean): Promise<void> => {
     logStart(TRAINERS);
-    clearCollection(TRAINERS, clear);
+    await clearCollection(TRAINERS, clear);
 
     const promises: Promise<void>[] = [];
     let progress: number = 0;

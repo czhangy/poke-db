@@ -137,10 +137,11 @@ export const logProgress = (done: number, total: number): void => {
 
     const progress: number = Math.round((done / total) * 100);
     const segments = Math.floor(progress / (100 / MAX_SEGMENTS));
+    const percentage: string = `${String(progress)}%`.padEnd(5);
 
     process.stdout.moveCursor(0, -1);
     process.stdout.clearLine(1);
-    console.log(`${FOCUS}${progress}% [${"=".repeat(segments)}${" ".repeat(MAX_SEGMENTS - segments)}]${RESET}`);
+    console.log(`${FOCUS}${percentage}[${"=".repeat(segments)}${" ".repeat(MAX_SEGMENTS - segments)}]${RESET}`);
 };
 
 // Clears a specified collection of all data if requested

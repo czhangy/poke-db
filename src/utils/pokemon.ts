@@ -256,7 +256,7 @@ export const createPokemon = async (
     warnings: { [warning: string]: string[] }
 ): Promise<void> => {
     logStart(POKEMON, start, end);
-    clearCollection(POKEMON, clear);
+    await clearCollection(POKEMON, clear);
 
     const pokemonAPI: PokemonClient = new PokemonClient();
     const evolutionAPI: EvolutionClient = new EvolutionClient();

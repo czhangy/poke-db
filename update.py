@@ -98,9 +98,9 @@ start_time = time.perf_counter()
 print(f"{Fore.YELLOW}{Style.BRIGHT}Running update...{Style.RESET_ALL}\n")
 try:
     r = requests.get(query)
-    print(f"{Fore.MAGENTA}{json.dumps(json.loads(r.text), indent=2)}")
+    print(f"{Fore.CYAN}{json.dumps(json.loads(r.text), indent=2)}{Style.RESET_ALL}\n")
     print(
-        f"Update took {round(time.perf_counter() - start_time, 1)} seconds to complete!{Style.RESET_ALL}\n"
+        f"{Fore.GREEN}Update took {Style.BRIGHT}{round(time.perf_counter() - start_time, 1)}{Style.NORMAL} seconds to complete!{Style.RESET_ALL}\n"
     )
 except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
     print(f"{Fore.RED}Update failed!{Style.RESET_ALL}\n")

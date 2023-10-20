@@ -25,7 +25,7 @@ const handleCreateBattle = async (battle: NewBattle): Promise<void> => {
 
 export const createBattles = async (clear: boolean, battles: NewBattle[]): Promise<void> => {
     logStart(BATTLES);
-    clearCollection(BATTLES, clear);
+    await clearCollection(BATTLES, clear);
 
     const promises: Promise<void>[] = [];
     let progress: number = 0;

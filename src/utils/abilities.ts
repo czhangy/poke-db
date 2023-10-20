@@ -57,7 +57,7 @@ const handleCreateAbility = async (
 
 export const createAbilities = async (clear: boolean, warnings: { [warning: string]: string[] }): Promise<void> => {
     logStart(ABILITIES);
-    clearCollection(ABILITIES, clear);
+    await clearCollection(ABILITIES, clear);
 
     const pokemonAPI: PokemonClient = new PokemonClient();
     const count: number = (await pokemonAPI.listAbilities()).count;

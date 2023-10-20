@@ -42,7 +42,7 @@ const handleCreateItem = async (
 
 export const createItems = async (clear: boolean, warnings: { [warning: string]: string[] }): Promise<void> => {
     logStart(ITEMS);
-    clearCollection(ITEMS, clear);
+    await clearCollection(ITEMS, clear);
 
     const itemAPI: ItemClient = new ItemClient();
 

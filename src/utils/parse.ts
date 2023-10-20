@@ -36,6 +36,11 @@ const toSlug = (name: string): string => {
     return name.replace(/[\s_]/g, "-").replace(/[.'~]/g, "").toLowerCase();
 };
 
+const getName = (name: string): string => {
+    const condition: number = name.indexOf("{");
+    return condition === -1 ? name : name.substring(0, condition - 1);
+};
+
 const getTeam = (group: string[][]): PokemonSet[] => {
     const sets: PokemonSet[] = [];
 
@@ -115,7 +120,7 @@ const getBattleSlug = (game: string, battle: string[]): string => {
 const getBattle = (slug: string, group: string[][]): NewBattle => {
     return {
         slug: slug,
-        name: group[0][NAME],
+        name: getName(group[0][NAME]),
         trainerSlug: toSlug(group[0][TRAINER]),
         location: group[0][LOCATION],
         team: getTeam(group),

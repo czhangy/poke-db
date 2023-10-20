@@ -149,7 +149,7 @@ const handleCreateMove = async (
 
 export const createMoves = async (clear: boolean, warnings: { [warning: string]: string[] }): Promise<void> => {
     logStart(MOVES);
-    clearCollection(MOVES, clear);
+    await clearCollection(MOVES, clear);
 
     const moveAPI: MoveClient = new MoveClient();
     const count: number = (await moveAPI.listMoves()).count;
