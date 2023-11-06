@@ -1,4 +1,4 @@
-import changedAbilities from "@/data/changed_abilities";
+import changedAbilities from "@/data/maps/changed_abilities";
 import prisma from "@/lib/prisma";
 import { ABILITIES, ENGLISH } from "@/utils/constants";
 import { clearCollection, fetchByPage, getDescriptions, getEnglishName, logFinish, logStart } from "@/utils/global";

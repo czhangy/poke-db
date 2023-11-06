@@ -10,15 +10,16 @@ SERVER_URL = "http://localhost:3000/api/data"
 OK = 200
 ABILITIES = "abilities"
 BATTLES = "battles"
+GROUPS = "groups"
 ITEMS = "items"
 MOVES = "moves"
 POKEMON = "pokemon"
 TRAINERS = "trainers"
 CLEAR = "clear"
-VALID_GAMES = ["ruby_sapphire", "emerald"]
+VALID_GROUPS = ["ruby_sapphire", "emerald"]
 
 # Lists
-COLLECTIONS = [ABILITIES, BATTLES, ITEMS, MOVES, POKEMON, TRAINERS, CLEAR]
+COLLECTIONS = [ABILITIES, BATTLES, GROUPS, ITEMS, MOVES, POKEMON, TRAINERS, CLEAR]
 
 # Check if server is reachable
 try:
@@ -27,13 +28,16 @@ except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
     print(f"{Fore.RED}The server is unreachable{Style.RESET_ALL}\n")
     sys.exit()
 
-# Gather input
+# Inputs
 selection = None
 toggled = None
 toggles = [False] * len(COLLECTIONS)
 start = None
 end = None
-game = None
+battles_group = None
+segments_group = None
+
+# Gather input
 while selection != "":
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -70,8 +74,12 @@ while selection != "":
                     if not end.isdigit():
                         break
                 if collection == BATTLES:
-                    game = input("Pick a game to parse: ")
-                    if game not in VALID_GAMES:
+                    battles_group = input("Pick a group to parse: ")
+                    if battles_group not in VALID_GROUPS:
+                        break
+                if collection == GROUPS:
+                    segments_group = input("Pick a group to update: ")
+                    if segments_group not in VALID_GROUPS:
                         break
             toggles[idx] = not toggles[idx]
             toggled = collection
@@ -87,7 +95,9 @@ for idx, collection in enumerate(COLLECTIONS):
         if collection == POKEMON:
             params.append(f"pokemon_end={end}")
         if collection == BATTLES:
-            params.append(f"game={game}")
+            params.append(f"battles_group={battles_group}")
+        if collection == GROUPS:
+            params.append(f"segments_group={segments_group}")
 
 query = SERVER_URL + "?" + "&".join(params)
 print()

@@ -1,4 +1,4 @@
-import usedItems from "@/data/used_items";
+import usedItems from "@/data/lists/used_items";
 import prisma from "@/lib/prisma";
 import { ENGLISH, ITEMS } from "@/utils/constants";
 import { clearCollection, getDescriptions, getEnglishName, logFinish, logProgress, logStart } from "@/utils/global";

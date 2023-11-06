@@ -1,3 +1,4 @@
+import Battle from "@/models/Battle";
 import { BattleItems, BattleTags, Battles, PokemonSet } from "@prisma/client";
 
 const fs = require("fs");
@@ -5,8 +6,6 @@ const fs = require("fs");
 // ---------------------------------------------------------------------------------------------------------------------
 // CONSTANTS
 // ---------------------------------------------------------------------------------------------------------------------
-
-type NewBattle = Omit<Battles, "id">;
 
 const NUM_HEADERS: number = 2;
 const TRAINER: number = 0;
@@ -23,7 +22,7 @@ const MOVE_1: number = 10;
 const MOVE_4: number = 13;
 const IV: number = 14;
 
-const GAME_PREFIXES: { [game: string]: string } = {
+const GAME_PREFIXES: { [group: string]: string } = {
     ruby_sapphire: "rs",
     emerald: "emerald",
 };
@@ -41,10 +40,10 @@ const getName = (name: string): string => {
     return condition === -1 ? name : name.substring(0, condition - 1);
 };
 
-const getTeam = (group: string[][]): PokemonSet[] => {
+const getTeam = (battle: string[][]): PokemonSet[] => {
     const sets: PokemonSet[] = [];
 
-    group.forEach((row: string[]) => {
+    battle.forEach((row: string[]) => {
         sets.push({
             pokemon: toSlug(row[POKEMON]),
             level: parseInt(row[LEVEL]),
@@ -59,13 +58,13 @@ const getTeam = (group: string[][]): PokemonSet[] => {
     return sets;
 };
 
-const getItems = (items: string): BattleItems | null => {
+const getItems = (items: string): BattleItems | undefined => {
     return items
         ? {
               item: toSlug(items.substring(items.indexOf(" ") + 1)),
               count: parseInt(items.substring(1, items.indexOf("]"))),
           }
-        : null;
+        : undefined;
 };
 
 const getTags = (row: string[]): BattleTags[] => {
@@ -95,9 +94,9 @@ const getNextBattle = (rows: string[], i: number): [string[][], number] => {
     return [battle, i];
 };
 
-const getBattleSlug = (game: string, battle: string[]): string => {
+const getBattleSlug = (group: string, battle: string[]): string => {
     // Extract and process components
-    const prefix: string = GAME_PREFIXES[game];
+    const prefix: string = GAME_PREFIXES[group];
 
     const trainerWords: string[] = battle[TRAINER].split("_");
     trainerWords.shift();
@@ -117,27 +116,27 @@ const getBattleSlug = (game: string, battle: string[]): string => {
     return words.join("-").replace(/[{}]/g, "");
 };
 
-const getBattle = (slug: string, group: string[][]): NewBattle => {
+const getBattle = (slug: string, battle: string[][]): Battle => {
     return {
         slug: slug,
-        name: getName(group[0][NAME]),
-        trainerSlug: toSlug(group[0][TRAINER]),
-        location: group[0][LOCATION],
-        team: getTeam(group),
-        items: getItems(group[0][ITEMS]),
-        tags: getTags(group[0]),
+        name: getName(battle[0][NAME]),
+        location: battle[0][LOCATION],
+        team: getTeam(battle),
+        items: getItems(battle[0][ITEMS]),
+        tags: getTags(battle[0]),
+        trainer: toSlug(battle[0][TRAINER]),
     };
 };
 
-const getUniqueSlugs = (battles: { [slug: string]: NewBattle[] }): NewBattle[] => {
-    const unique: NewBattle[] = [];
+const getUniqueSlugs = (battles: { [slug: string]: Battle[] }): Battle[] => {
+    const unique: Battle[] = [];
 
     for (let i = 0; i < Object.keys(battles).length; i++) {
         const slug: string = Object.keys(battles)[i];
         if (battles[slug].length === 1) {
             unique.push(battles[slug][0]);
         } else {
-            battles[slug].forEach((battle: NewBattle, j: number) => {
+            battles[slug].forEach((battle: Battle, j: number) => {
                 battle.slug += `-${j + 1}`;
                 unique.push(battle);
             });
@@ -151,25 +150,25 @@ const getUniqueSlugs = (battles: { [slug: string]: NewBattle[] }): NewBattle[] =
 // MAIN
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const parse = (game: string): NewBattle[] => {
-    const rows: string[] = fs.readFileSync(`src/data/csvs/${game}.csv`).toString().split("\r\n");
-    const battles: { [slug: string]: NewBattle[] } = {};
+export const parse = (group: string): Battle[] => {
+    const rows: string[] = fs.readFileSync(`src/data/csvs/${group}.csv`).toString().split("\r\n");
+    const battles: { [slug: string]: Battle[] } = {};
 
     let i: number = NUM_HEADERS;
     while (i < rows.length) {
         // Gather rows for next battle
         const nextBattle: [string[][], number] = getNextBattle(rows, i);
-        const group: string[][] = nextBattle[0];
+        const battle: string[][] = nextBattle[0];
         i = nextBattle[1];
 
         // Compute slug for the battle
-        const slug: string = getBattleSlug(game, group[0]);
+        const slug: string = getBattleSlug(group, battle[0]);
         if (!battles[slug]) {
             battles[slug] = [];
         }
 
         // Build battle object and add it to the master object
-        battles[slug].push(getBattle(slug, group));
+        battles[slug].push(getBattle(slug, battle));
     }
 
     // Number any battles with matching slugs

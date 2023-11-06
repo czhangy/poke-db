@@ -1,8 +1,8 @@
-import changedEvos from "@/data/changed_evos";
-import changedPokemonAbilities from "@/data/changed_pokemon_abilities";
-import changedStats from "@/data/changed_stats";
-import groups from "@/data/groups";
-import unusedForms from "@/data/unused_forms";
+import groups from "@/data/lists/groups";
+import unusedForms from "@/data/lists/unused_forms";
+import changedEvos from "@/data/maps/changed_evos";
+import changedPokemonAbilities from "@/data/maps/changed_pokemon_abilities";
+import changedStats from "@/data/maps/changed_stats";
 import prisma from "@/lib/prisma";
 import { DEFAULT, POKEMON } from "@/utils/constants";
 import { clearCollection, getEnglishName, logFinish, logProgress, logStart, removeDuplicates } from "@/utils/global";

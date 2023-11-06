@@ -25,6 +25,11 @@ enum MoveCategory {
     status
 }
 
+enum SegmentType {
+    battle
+    location
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // TYPES
 // ---------------------------------------------------------------------------------------------------------------------
@@ -84,6 +89,12 @@ type PokemonType {
     group Int
 }
 
+type SegmentConditions {
+    character String?
+    game      String?
+    starter   String?
+}
+
 type Stats {
     stats Int[]
     group Int
@@ -102,23 +113,33 @@ model Abilities {
 }
 
 model Battles {
-    id          String       @id @default(auto()) @map("_id") @db.ObjectId
-    slug        String       @unique
-    name        String
-    trainer     Trainers     @relation(fields: [trainerSlug], references: [slug])
-    trainerSlug String
-    location    String
-    team        PokemonSet[]
-    items       BattleItems?
-    tags        BattleTags[]
+    id        String       @id @default(auto()) @map("_id") @db.ObjectId
+    slug      String       @unique
+    name      String
+    location  String
+    team      PokemonSet[]
+    items     BattleItems?
+    tags      BattleTags[]
+    trainer   Trainers     @relation(fields: [trainerID], references: [id])
+    trainerID String       @db.ObjectId
+    segment   Segments?    @relation(fields: [segmentID], references: [id])
+    segmentID String?      @db.ObjectId
+}
+
+model Groups {
+    id     String   @id @default(auto()) @map("_id") @db.ObjectId
+    slug   String   @unique
+    splits Splits[]
 }
 
 model Items {
-    id     String        @id @default(auto()) @map("_id") @db.ObjectId
-    slug   String        @unique
-    name   String
-    sprite String
-    desc   Description[]
+    id         String        @id @default(auto()) @map("_id") @db.ObjectId
+    slug       String        @unique
+    name       String
+    sprite     String
+    desc       Description[]
+    segments   Segments[]    @relation(fields: [segmentIDs], references: [id])
+    segmentIDs String[]      @db.ObjectId
 }
 
 model Moves {
@@ -144,6 +165,28 @@ model Pokemon {
     abilities      PokemonAbilities[]
     learnsets      Learnset[]
     formChangeable Boolean
+}
+
+model Segments {
+    id         String            @id @default(auto()) @map("_id") @db.ObjectId
+    slug       String
+    name       String
+    type       SegmentType
+    areas      String[]
+    battles    Battles[]
+    items      Items[]           @relation(fields: [itemIDs], references: [id])
+    itemIDs    String[]          @db.ObjectId
+    conditions SegmentConditions
+    split      Splits            @relation(fields: [splitID], references: [id], onDelete: Cascade)
+    splitID    String            @db.ObjectId
+}
+
+model Splits {
+    id       String     @id @default(auto()) @map("_id") @db.ObjectId
+    name     String
+    group    Groups     @relation(fields: [groupID], references: [id], onDelete: Cascade)
+    groupID  String     @db.ObjectId
+    segments Segments[]
 }
 
 model Trainers {

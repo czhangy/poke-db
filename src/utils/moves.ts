@@ -1,4 +1,4 @@
-import groups from "@/data/groups";
+import groups from "@/data/lists/groups";
 import prisma from "@/lib/prisma";
 import { DEFAULT, ENGLISH, MOVES } from "@/utils/constants";
 import { clearCollection, fetchByPage, getDescriptions, getEnglishName, logFinish, logStart } from "@/utils/global";

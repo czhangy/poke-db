@@ -1,4 +1,4 @@
-import trainers from "@/data/trainers";
+import trainers from "@/data/lists/trainers";
 import prisma from "@/lib/prisma";
 import Trainer from "@/models/Trainer";
 import { TRAINERS } from "@/utils/constants";

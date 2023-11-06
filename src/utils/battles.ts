@@ -1,21 +1,27 @@
 import prisma from "@/lib/prisma";
+import Battle from "@/models/Battle";
 import { BATTLES } from "@/utils/constants";
 import { clearCollection, logFinish, logProgress, logStart } from "@/utils/global";
-import { Battles } from "@prisma/client";
+import { parse } from "@/utils/parse";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // API CALLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-type NewBattle = Omit<Battles, "id">;
-
-const handleCreateBattle = async (battle: NewBattle): Promise<void> => {
+const handleCreateBattle = async (battle: Battle): Promise<void> => {
     const slug: string = battle.slug;
+
+    const newBattle = {
+        ...battle,
+        trainer: {
+            connect: { slug: battle.trainer },
+        },
+    };
 
     await prisma.battles.upsert({
         where: { slug: slug },
-        update: battle,
-        create: battle,
+        update: newBattle,
+        create: newBattle,
     });
 };
 
@@ -23,9 +29,11 @@ const handleCreateBattle = async (battle: NewBattle): Promise<void> => {
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createBattles = async (clear: boolean, battles: NewBattle[]): Promise<void> => {
+export const createBattles = async (clear: boolean, group: string): Promise<void> => {
     logStart(BATTLES);
     await clearCollection(BATTLES, clear);
+
+    const battles: Battle[] = parse(group);
 
     const promises: Promise<void>[] = [];
     let progress: number = 0;

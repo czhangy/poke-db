@@ -1,4 +1,4 @@
-import groups from "@/data/groups";
+import groups from "@/data/lists/groups";
 import prisma from "@/lib/prisma";
 import { DEFAULT, ENGLISH } from "@/utils/constants";
 import { Description } from "@prisma/client";
