@@ -10,6 +10,7 @@ export const ABILITIES: string = "abilities";
 export const BATTLES: string = "battles";
 export const GROUPS: string = "groups";
 export const ITEMS: string = "items";
+export const LOCATIONS: string = "locations";
 export const MOVES: string = "moves";
 export const POKEMON: string = "pokemon";
 export const TRAINERS: string = "trainers";

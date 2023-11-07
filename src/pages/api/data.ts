@@ -1,9 +1,10 @@
 import { createAbilities } from "@/utils/abilities";
 import { createBattles } from "@/utils/battles";
-import { ABILITIES, BATTLES, GROUPS, ITEMS, MOVES, POKEMON, TRAINERS } from "@/utils/constants";
+import { ABILITIES, BATTLES, GROUPS, ITEMS, LOCATIONS, MOVES, POKEMON, TRAINERS } from "@/utils/constants";
 import { logComplete } from "@/utils/global";
 import { createGroup } from "@/utils/groups";
 import { createItems } from "@/utils/items";
+import { createLocations } from "@/utils/locations";
 import { createMoves } from "@/utils/moves";
 import { createPokemon } from "@/utils/pokemon";
 import { createTrainers } from "@/utils/trainers";
@@ -37,13 +38,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     if (GROUPS in req.query) {
-        await createGroup(clear, req.query.segments_group as string, warnings);
+        await createGroup(clear, req.query.groups_group as string, warnings);
         modified.push(GROUPS);
     }
 
     if (ITEMS in req.query) {
         await createItems(clear, warnings);
         modified.push(ITEMS);
+    }
+
+    if (LOCATIONS in req.query) {
+        await createLocations(clear, req.query.locations_group as string, warnings);
+        modified.push(LOCATIONS);
     }
 
     if (MOVES in req.query) {

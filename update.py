@@ -14,44 +14,52 @@ ABILITIES = "abilities"
 BATTLES = "battles"
 GROUPS = "groups"
 ITEMS = "items"
+LOCATIONS = "locations"
 MOVES = "moves"
 POKEMON = "pokemon"
 TRAINERS = "trainers"
 CLEAR = "clear"
 RESET = "r"
+
 COLLECTIONS = [
     ABILITIES,
     BATTLES,
     GROUPS,
     ITEMS,
+    LOCATIONS,
     MOVES,
     POKEMON,
     TRAINERS,
     CLEAR,
 ]
+GROUP_COLLECTIONS = [BATTLES, GROUPS, LOCATIONS]
 
 
 # ------------------------------------------------------------------------------
 # Utility Functions
 # ------------------------------------------------------------------------------
 def color_red(str):
-    return f"{Fore.RED}{str}{Style.RESET_ALL}"
+    return f"{Fore.RED}{str}{Fore.RESET}"
 
 
 def color_blue(str):
-    return f"{Fore.BLUE}{str}{Style.RESET_ALL}"
+    return f"{Fore.BLUE}{str}{Fore.RESET}"
 
 
 def color_green(str):
-    return f"{Fore.GREEN}{str}{Style.RESET_ALL}"
+    return f"{Fore.GREEN}{str}{Fore.RESET}"
 
 
 def color_yellow(str):
-    return f"{Fore.YELLOW}{str}{Style.RESET_ALL}"
+    return f"{Fore.YELLOW}{str}{Fore.RESET}"
 
 
 def color_cyan(str):
-    return f"{Fore.CYAN}{str}{Style.RESET_ALL}"
+    return f"{Fore.CYAN}{str}{Fore.RESET}"
+
+
+def color_pink(str):
+    return f"{Fore.MAGENTA}{str}{Fore.RESET}"
 
 
 def bold(str):
@@ -92,8 +100,8 @@ def check_connection():
 # ------------------------------------------------------------------------------
 # Gather Input
 # ------------------------------------------------------------------------------
-def print_options(toggles, start, end, battles_group, groups_group):
-    groups = get_group_map()
+def print_options(toggles, start, end, groups):
+    group_map = get_group_map()
     for idx, collection in enumerate(COLLECTIONS):
         option = f"({collection[0].capitalize()}) {collection.capitalize()}\t"
         subset = None
@@ -101,10 +109,8 @@ def print_options(toggles, start, end, battles_group, groups_group):
             option += "[✓]"
             if collection == POKEMON:
                 subset = f"{start}-{end}"
-            elif collection == BATTLES:
-                subset = groups[battles_group]
-            elif collection == GROUPS:
-                subset = groups[groups_group]
+            elif collection in GROUP_COLLECTIONS:
+                subset = group_map[groups[GROUP_COLLECTIONS.index(collection)]]
             print(
                 color_green(option)
                 + (f"  {color_green(f'[{subset}]')}" if subset else "")
@@ -160,8 +166,7 @@ def get_group():
 def toggle_selection(selection, toggles):
     start = None
     end = None
-    battles_group = None
-    groups_group = None
+    groups = [None] * len(GROUP_COLLECTIONS)
 
     if selection == RESET:
         return None, [False] * len(COLLECTIONS), None, None, None, None
@@ -177,15 +182,13 @@ def toggle_selection(selection, toggles):
                     end = input("End at #: ")
                     if not end.isdigit():
                         break
-                elif collection == BATTLES:
-                    battles_group = get_group()
-                elif collection == GROUPS:
-                    groups_group = get_group()
-            return collection, toggles, start, end, battles_group, groups_group
+                elif collection in GROUP_COLLECTIONS:
+                    groups[GROUP_COLLECTIONS.index(collection)] = get_group()
+            return collection, toggles, start, end, groups
     return None
 
 
-def construct_query(toggles, start, end, battles_group, groups_group):
+def construct_query(toggles, start, end, groups):
     params = []
     for idx, collection in enumerate(COLLECTIONS):
         if toggles[idx]:
@@ -194,10 +197,10 @@ def construct_query(toggles, start, end, battles_group, groups_group):
                 params.append(f"pokemon_start={start}")
             if collection == POKEMON:
                 params.append(f"pokemon_end={end}")
-            if collection == BATTLES:
-                params.append(f"battles_group={battles_group}")
-            if collection == GROUPS:
-                params.append(f"groups_group={groups_group}")
+            if collection in GROUP_COLLECTIONS:
+                params.append(
+                    f"{collection}_group={groups[GROUP_COLLECTIONS.index(collection)]}"
+                )
 
     return SERVER_URL + "?" + "&".join(params)
 
@@ -207,11 +210,11 @@ def gather_input():
     toggled = None
     toggles = [False] * len(COLLECTIONS)
     start, end = None, None
-    battles_group, groups_group = None, None
+    groups = [None] * len(GROUP_COLLECTIONS)
 
     while selection != "":
         clear_console()
-        print_options(toggles, start, end, battles_group, groups_group)
+        print_options(toggles, start, end, groups)
         print_status(selection, toggled, toggles)
         selection = get_selection()
         res = toggle_selection(selection, toggles)
@@ -221,13 +224,12 @@ def gather_input():
             if res[2] and res[3]:
                 start = res[2]
                 end = res[3]
-            elif res[4]:
-                battles_group = res[4]
-            elif res[5]:
-                groups_group = res[5]
+            for idx, group in enumerate(res[4]):
+                if group:
+                    groups[idx] = group
 
     print()
-    return construct_query(toggles, start, end, battles_group, groups_group)
+    return construct_query(toggles, start, end, groups)
 
 
 # ------------------------------------------------------------------------------
@@ -236,7 +238,8 @@ def gather_input():
 def make_request(query):
     clear_console()
     start_time = time.perf_counter()
-    print(color_yellow(bold("Running update...")))
+    print(color_pink(query + "\n"))
+    print(color_yellow(bold("Running update...\n")))
     try:
         r = requests.get(query)
         print(color_cyan(json.dumps(json.loads(r.text), indent=2) + "\n"))
@@ -256,4 +259,3 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     if check_connection():
         make_request(gather_input())
-    signal.pause()

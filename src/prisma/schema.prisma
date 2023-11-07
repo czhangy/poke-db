@@ -142,6 +142,12 @@ model Items {
     segmentIDs String[]      @db.ObjectId
 }
 
+model Locations {
+    id   String @id @default(auto()) @map("_id") @db.ObjectId
+    slug String @unique
+    name String
+}
+
 model Moves {
     id    String        @id @default(auto()) @map("_id") @db.ObjectId
     slug  String        @unique
