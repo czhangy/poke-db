@@ -115,13 +115,17 @@ def print_options(toggles, start, end, battles_group, groups_group):
     print(color_red("(R) Reset\n"))
 
 
-def print_status(selection, toggled):
+def print_status(selection, toggled, toggles):
     if selection == RESET:
         print(color_yellow("Selections reset"))
     elif selection != None and toggled == None:
         print(color_red("Invalid input"))
     elif toggled != None:
-        print(color_yellow(toggled.capitalize() + " was toggled"))
+        print(
+            color_yellow(
+                f"{toggled.capitalize()} was toggled {'on' if toggles[COLLECTIONS.index(toggled)] else 'off'}"
+            )
+        )
 
 
 def get_selection():
@@ -208,7 +212,7 @@ def gather_input():
     while selection != "":
         clear_console()
         print_options(toggles, start, end, battles_group, groups_group)
-        print_status(selection, toggled)
+        print_status(selection, toggled, toggles)
         selection = get_selection()
         res = toggle_selection(selection, toggles)
         if res:
