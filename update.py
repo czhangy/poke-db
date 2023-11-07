@@ -4,9 +4,10 @@ import os
 import requests
 import time
 
+# ------------------------------------------------------------------------------
 # Constants
+# ------------------------------------------------------------------------------
 SERVER_URL = "http://localhost:3000/api/data"
-OK = 200
 ABILITIES = "abilities"
 BATTLES = "battles"
 GROUPS = "groups"
@@ -15,37 +16,75 @@ MOVES = "moves"
 POKEMON = "pokemon"
 TRAINERS = "trainers"
 CLEAR = "clear"
-VALID_GROUPS = ["ruby_sapphire", "emerald"]
-COLLECTIONS = [ABILITIES, BATTLES, GROUPS, ITEMS, MOVES, POKEMON, TRAINERS, CLEAR]
+RESET = "r"
+COLLECTIONS = [
+    ABILITIES,
+    BATTLES,
+    GROUPS,
+    ITEMS,
+    MOVES,
+    POKEMON,
+    TRAINERS,
+    CLEAR,
+]
 
 
-# Functions
+# ------------------------------------------------------------------------------
+# Utility Functions
+# ------------------------------------------------------------------------------
+def print_green(str):
+    print(f"{Fore.GREEN}{str}{Style.RESET_ALL}")
+
+
+def print_red(str):
+    print(f"{Fore.RED}{str}{Style.RESET_ALL}")
+
+
+def print_yellow(str):
+    print(f"{Fore.YELLOW}{str}{Style.RESET_ALL}")
+
+
+def print_cyan(str):
+    print(f"{Fore.CYAN}{str}{Style.RESET_ALL}")
+
+
+def bold(str):
+    return f"{Style.BRIGHT}{str}{Style.NORMAL}"
+
+
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
 
 
+# ------------------------------------------------------------------------------
+# Check Connection
+# ------------------------------------------------------------------------------
 def check_connection():
     try:
         requests.get(SERVER_URL)
         return True
     except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
-        print(f"{Fore.RED}The server is unreachable{Style.RESET_ALL}\n")
+        print_red("The server is unreachable\n")
         return False
 
 
+# ------------------------------------------------------------------------------
+# Gather Input
+# ------------------------------------------------------------------------------
 def print_options(toggles):
     for idx, collection in enumerate(COLLECTIONS):
-        print(
-            f"{Fore.GREEN if toggles[idx] else Fore.RED}({collection[0].capitalize()}) {collection.capitalize()}\t[{'✓' if toggles[idx] else ' '}]{Style.RESET_ALL}"
-        )
-    print()
+        option = f"({collection[0].capitalize()}) {collection.capitalize()}\t"
+        print_green(option + "[✓]") if toggles[idx] else print_red(option + "[ ]")
+    print_red("(R) Reset\n")
 
 
 def print_status(selection, toggled):
-    if selection != None and toggled == None:
-        print(f"{Fore.RED}Invalid input{Style.RESET_ALL}")
+    if selection == RESET:
+        print_yellow("Selections reset")
+    elif selection != None and toggled == None:
+        print_red("Invalid input")
     elif toggled != None:
-        print(f"{Fore.YELLOW}{toggled.capitalize()} was toggled{Style.RESET_ALL}")
+        print_yellow(toggled.capitalize() + " was toggled")
 
 
 def get_selection():
@@ -56,8 +95,18 @@ def get_selection():
     )
 
 
+def print_groups(groups):
+    for idx, group in enumerate(groups):
+        print_red(f"({idx + 1}) {group}")
+    print()
+
+
 def get_group():
-    return input("Pick a group to update: ")
+    groups = ["ruby_sapphire", "emerald"]
+    clear_console()
+    print_groups(groups)
+    idx = int(input("Select a group #: "))
+    return groups[idx - 1]
 
 
 def toggle_selection(selection, toggles):
@@ -66,9 +115,13 @@ def toggle_selection(selection, toggles):
     battles_group = None
     segments_group = None
 
+    if selection == RESET:
+        return None, [False] * len(COLLECTIONS), None, None, None, None
+
     for idx, collection in enumerate(COLLECTIONS):
         if collection[0] == selection:
-            if not toggles[idx]:
+            toggles[idx] = not toggles[idx]
+            if toggles[idx]:
                 if collection == POKEMON:
                     start = input("Start at #: ")
                     if not start.isdigit():
@@ -76,12 +129,11 @@ def toggle_selection(selection, toggles):
                     end = input("End at #: ")
                     if not end.isdigit():
                         break
-                if collection == BATTLES:
+                elif collection == BATTLES:
                     battles_group = get_group()
-                if collection == GROUPS:
+                elif collection == GROUPS:
                     segments_group = get_group()
-            toggles[idx] = not toggles[idx]
-            return collection, start, end, battles_group, segments_group
+            return collection, toggles, start, end, battles_group, segments_group
     return None
 
 
@@ -99,7 +151,6 @@ def construct_query(toggles, start, end, battles_group, segments_group):
             if collection == GROUPS:
                 params.append(f"segments_group={segments_group}")
 
-    print()
     return SERVER_URL + "?" + "&".join(params)
 
 
@@ -115,28 +166,32 @@ def gather_input():
         selection = get_selection()
         res = toggle_selection(selection, toggles)
         if res:
-            toggled, start, end, battles_group, segments_group = res
+            toggled, toggles, start, end, battles_group, segments_group = res
 
+    print()
     return construct_query(toggles, start, end, battles_group, segments_group)
 
 
+# ------------------------------------------------------------------------------
+# Make Request
+# ------------------------------------------------------------------------------
 def make_request(query):
     clear_console()
     start_time = time.perf_counter()
-    print(f"{Fore.YELLOW}{Style.BRIGHT}Running update...{Style.RESET_ALL}\n")
+    print_yellow(bold("Running update..."))
     try:
         r = requests.get(query)
-        print(
-            f"{Fore.CYAN}{json.dumps(json.loads(r.text), indent=2)}{Style.RESET_ALL}\n"
-        )
-        print(
-            f"{Fore.GREEN}Update took {Style.BRIGHT}{round(time.perf_counter() - start_time, 1)}{Style.NORMAL} seconds to complete!{Style.RESET_ALL}\n"
+        print_cyan(json.dumps(json.loads(r.text), indent=2) + "\n")
+        print_green(
+            f"Update took {bold(round(time.perf_counter() - start_time, 1))} seconds to complete!\n"
         )
     except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
-        print(f"{Fore.RED}Update failed!{Style.RESET_ALL}\n")
+        print_red("Update failed!\n")
 
 
+# ------------------------------------------------------------------------------
 # Main
+# ------------------------------------------------------------------------------
 if __name__ == "__main__":
     if check_connection():
         make_request(gather_input())
