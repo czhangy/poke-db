@@ -3,7 +3,7 @@ import prisma from "@/lib/prisma";
 import Segment from "@/models/Segment";
 import Split from "@/models/Split";
 import { GROUPS } from "@/utils/constants";
-import { clearCollection, getEnglishName, logFinish, logProgress, logStart } from "@/utils/global";
+import { clearCollection, getEnglishName, getError, logFinish, logProgress, logStart } from "@/utils/global";
 import { Location, LocationClient } from "pokenode-ts";
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -14,29 +14,22 @@ const handleCreateSegment = async (
     segment: Segment,
     splitID: string,
     api: LocationClient,
-    used: string[],
-    warnings: { [warning: string]: string[] }
+    used: string[]
 ): Promise<void> => {
     let name: string;
     if (segment.name) {
         name = segment.name;
     } else if (segment.apiSlug) {
         const location: Location = await api.getLocationByName(segment.apiSlug);
-        name = getEnglishName(location.names, segment.slug, warnings);
+        name = getEnglishName(location.names, segment.slug);
     } else {
-        if (!warnings.missing_name) {
-            warnings.missing_name = [];
-        }
-        warnings.missing_name.push(segment.slug);
-        return;
+        throw new Error(getError(segment.slug, "Missing name"));
     }
 
     if (used.includes(segment.slug)) {
-        if (!warnings.duplicate_slug) {
-            warnings.duplicate_slug = [];
-        }
-        warnings.duplicate_slug.push(segment.slug);
-        return;
+        throw new Error(getError(segment.slug, "Duplicate slug"));
+    } else {
+        used.push(segment.slug);
     }
 
     await prisma.segments.create({
@@ -71,47 +64,40 @@ const handleCreateSplit = async (
     groupID: string,
     api: LocationClient,
     progress: { [count: string]: number },
-    used: string[],
-    warnings: { [warning: string]: string[] }
+    used: string[]
 ): Promise<void> => {
     const id: string = (await prisma.splits.create({ data: { name: split.name, groupID: groupID } })).id;
 
-    const promises: Promise<void>[] = [];
     for (const segment of split.segments) {
-        promises.push(
-            handleCreateSegment(segment, id, api, used, warnings).then(() => {
-                progress.count++;
-                logProgress(progress.count, progress.total);
-            })
-        );
+        await handleCreateSegment(segment, id, api, used);
+        progress.count++;
+        logProgress(progress.count, progress.total);
     }
-    await Promise.all(promises);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createGroup = async (
-    clear: boolean,
-    group: string,
-    warnings: { [warning: string]: string[] }
-): Promise<void> => {
+export const createGroup = async (clear: boolean, group: string): Promise<void> => {
     logStart(GROUPS);
     await clearCollection(GROUPS, clear);
 
     await prisma.groups.delete({ where: { slug: group } });
-    await prisma.segments.deleteMany({});
 
     const id: string = (await prisma.groups.create({ data: { slug: group } })).id;
     const api: LocationClient = new LocationClient();
     const progress: { [key: string]: number } = {
         count: 0,
-        total: splits[group].map((split: Split) => split.segments).flat().length,
+        total: splits[group].length + splits[group].map((split: Split) => split.segments).flat().length,
     };
     const used: string[] = [];
 
-    await Promise.all(splits[group].map((split: Split) => handleCreateSplit(split, id, api, progress, used, warnings)));
+    for (const split of splits[group]) {
+        await handleCreateSplit(split, id, api, progress, used);
+        progress.count++;
+        logProgress(progress.count, progress.total);
+    }
 
     logFinish(GROUPS);
 };

@@ -1,5 +1,5 @@
 import Battle from "@/models/Battle";
-import { BattleItems, BattleTags, Battles, PokemonSet } from "@prisma/client";
+import { BattleTags, PokemonSet } from "@prisma/client";
 
 const fs = require("fs");
 
@@ -58,13 +58,10 @@ const getTeam = (battle: string[][]): PokemonSet[] => {
     return sets;
 };
 
-const getItems = (items: string): BattleItems | undefined => {
+const getItems = (items: string): [string | undefined, number] => {
     return items
-        ? {
-              item: toSlug(items.substring(items.indexOf(" ") + 1)),
-              count: parseInt(items.substring(1, items.indexOf("]"))),
-          }
-        : undefined;
+        ? [toSlug(items.substring(items.indexOf(" ") + 1)), parseInt(items.substring(1, items.indexOf("]")))]
+        : [undefined, 0];
 };
 
 const getTags = (row: string[]): BattleTags[] => {
@@ -117,12 +114,15 @@ const getBattleSlug = (group: string, battle: string[]): string => {
 };
 
 const getBattle = (slug: string, battle: string[][]): Battle => {
+    const [item, itemCount]: [string | undefined, number] = getItems(battle[0][ITEMS]);
+
     return {
         slug: slug,
         name: getName(battle[0][NAME]),
         location: battle[0][LOCATION],
         team: getTeam(battle),
-        items: getItems(battle[0][ITEMS]),
+        item: item ? item : undefined,
+        itemCount: itemCount,
         tags: getTags(battle[0]),
         trainer: toSlug(battle[0][TRAINER]),
     };

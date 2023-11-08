@@ -20,13 +20,14 @@ const handleCreateItem = async (
 
     const newItem: NewItem = {
         slug: slug,
-        name: getEnglishName(item.names, slug, warnings),
+        name: getEnglishName(item.names, slug),
         sprite: item.sprites.default,
         desc: getDescriptions(
             item.flavor_text_entries.filter((vgft: VersionGroupFlavorText) => vgft.language.name === ENGLISH),
             item.name,
             warnings
         ),
+        segmentIDs: [],
     };
 
     await prisma.items.upsert({

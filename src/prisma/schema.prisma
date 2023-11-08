@@ -34,11 +34,6 @@ enum SegmentType {
 // TYPES
 // ---------------------------------------------------------------------------------------------------------------------
 
-type BattleItems {
-    item  String
-    count Int
-}
-
 type Description {
     desc  String
     group Int
@@ -118,7 +113,9 @@ model Battles {
     name      String
     location  String
     team      PokemonSet[]
-    items     BattleItems?
+    item      Items?       @relation(fields: [itemID], references: [id])
+    itemID    String?      @db.ObjectId
+    itemCount Int
     tags      BattleTags[]
     trainer   Trainers     @relation(fields: [trainerID], references: [id])
     trainerID String       @db.ObjectId
@@ -138,6 +135,7 @@ model Items {
     name       String
     sprite     String
     desc       Description[]
+    battles    Battles[]
     segments   Segments[]    @relation(fields: [segmentIDs], references: [id])
     segmentIDs String[]      @db.ObjectId
 }

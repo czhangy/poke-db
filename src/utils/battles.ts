@@ -13,6 +13,7 @@ const handleCreateBattle = async (battle: Battle): Promise<void> => {
 
     const newBattle = {
         ...battle,
+        item: battle.item ? { connect: { slug: battle.item } } : undefined,
         trainer: {
             connect: { slug: battle.trainer },
         },

@@ -35,7 +35,7 @@ const handleCreateAbility = async (
 
     const newAbility: NewAbility = {
         slug: slug,
-        name: slug in changedAbilities ? changedAbilities[slug] : getEnglishName(ability.names, slug, warnings),
+        name: slug in changedAbilities ? changedAbilities[slug] : getEnglishName(ability.names, slug),
         desc: getDescriptions(
             ability.flavor_text_entries.filter((aft: AbilityFlavorText) => aft.language.name === ENGLISH),
             slug,

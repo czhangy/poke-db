@@ -5,7 +5,15 @@ import changedPokemonAbilities from "@/data/maps/changed_pokemon_abilities";
 import changedStats from "@/data/maps/changed_stats";
 import prisma from "@/lib/prisma";
 import { DEFAULT, POKEMON } from "@/utils/constants";
-import { clearCollection, getEnglishName, logFinish, logProgress, logStart, removeDuplicates } from "@/utils/global";
+import {
+    clearCollection,
+    getEnglishName,
+    getError,
+    logFinish,
+    logProgress,
+    logStart,
+    removeDuplicates,
+} from "@/utils/global";
 import { Learnset, LearnsetMove, PokemonAbilities, Pokemon as PokemonModel, PokemonType, Stats } from "@prisma/client";
 import {
     ChainLink,
@@ -173,88 +181,77 @@ type NewPokemon = Omit<PokemonModel, "id">;
 const handleCreatePokemon = async (
     evolutionAPI: EvolutionClient,
     species: PokemonSpecies,
-    pokemon: Pokemon,
-    warnings: { [warning: string]: string[] }
+    pokemon: Pokemon
 ): Promise<void> => {
+    const slug: string = pokemon.name;
+
     if (!pokemon.sprites.front_default) {
-        if (!warnings.missing_sprite) {
-            warnings.missing_sprite = [];
-        }
-        warnings.missing_sprite.push(pokemon.name);
-    } else {
-        const slug: string = pokemon.name;
-        const evos: (string[] | undefined)[] =
-            slug in changedEvos ? changedEvos[slug] : await getEvos(evolutionAPI, species);
-
-        const newPokemon: NewPokemon = {
-            slug: slug,
-            name: getEnglishName(species.names, slug, warnings),
-            types: getTypes(pokemon),
-            sprite: pokemon.sprites.front_default,
-            prevEvolutions: evos[0] ? evos[0] : [],
-            nextEvolutions: evos[1] ? evos[1] : [],
-            stats: getStats(pokemon),
-            abilities: getAbilities(pokemon),
-            learnsets: getLearnsets(pokemon),
-            formChangeable: species.forms_switchable,
-        };
-
-        await prisma.pokemon.upsert({
-            where: { slug: slug },
-            update: newPokemon,
-            create: newPokemon,
-        });
+        throw new Error(getError(slug, "Missing sprite"));
     }
+
+    const evos: (string[] | undefined)[] =
+        slug in changedEvos ? changedEvos[slug] : await getEvos(evolutionAPI, species);
+
+    const newPokemon: NewPokemon = {
+        slug: slug,
+        name: getEnglishName(species.names, slug),
+        types: getTypes(pokemon),
+        sprite: pokemon.sprites.front_default,
+        prevEvolutions: evos[0] ? evos[0] : [],
+        nextEvolutions: evos[1] ? evos[1] : [],
+        stats: getStats(pokemon),
+        abilities: getAbilities(pokemon),
+        learnsets: getLearnsets(pokemon),
+        formChangeable: species.forms_switchable,
+    };
+
+    await prisma.pokemon.upsert({
+        where: { slug: slug },
+        update: newPokemon,
+        create: newPokemon,
+    });
 };
 
 const handleCreateForm = async (
     evolutionAPI: EvolutionClient,
     species: PokemonSpecies,
     form: PokemonForm,
-    pokemon: Pokemon,
-    warnings: { [warning: string]: string[] }
+    pokemon: Pokemon
 ): Promise<void> => {
+    const slug: string = form.name;
+
     if (!form.sprites.front_default) {
-        if (!warnings.missing_sprite) {
-            warnings.missing_sprite = [];
-        }
-        warnings.missing_sprite.push(form.name);
-    } else {
-        const slug: string = form.name;
-        const evos: [string[] | undefined, string[] | undefined] =
-            slug in changedEvos ? changedEvos[slug] : await getEvos(evolutionAPI, species);
-
-        const newPokemon: NewPokemon = {
-            slug: slug,
-            name: getEnglishName(species.names, slug, warnings),
-            types: getTypes(form),
-            sprite: form.sprites.front_default,
-            prevEvolutions: evos[0] ? evos[0] : [],
-            nextEvolutions: evos[1] ? evos[1] : [],
-            stats: getStats(pokemon),
-            abilities: getAbilities(pokemon),
-            learnsets: getLearnsets(pokemon),
-            formChangeable: species.forms_switchable,
-        };
-
-        await prisma.pokemon.upsert({
-            where: { slug: slug },
-            update: newPokemon,
-            create: newPokemon,
-        });
+        throw new Error(getError(slug, "Missing sprite"));
     }
+
+    const evos: [string[] | undefined, string[] | undefined] =
+        slug in changedEvos ? changedEvos[slug] : await getEvos(evolutionAPI, species);
+
+    const newPokemon: NewPokemon = {
+        slug: slug,
+        name: getEnglishName(species.names, slug),
+        types: getTypes(form),
+        sprite: form.sprites.front_default,
+        prevEvolutions: evos[0] ? evos[0] : [],
+        nextEvolutions: evos[1] ? evos[1] : [],
+        stats: getStats(pokemon),
+        abilities: getAbilities(pokemon),
+        learnsets: getLearnsets(pokemon),
+        formChangeable: species.forms_switchable,
+    };
+
+    await prisma.pokemon.upsert({
+        where: { slug: slug },
+        update: newPokemon,
+        create: newPokemon,
+    });
 };
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createPokemon = async (
-    clear: boolean,
-    start: number,
-    end: number,
-    warnings: { [warning: string]: string[] }
-): Promise<void> => {
+export const createPokemon = async (clear: boolean, start: number, end: number): Promise<void> => {
     logStart(POKEMON, start, end);
     await clearCollection(POKEMON, clear);
 
@@ -274,7 +271,7 @@ export const createPokemon = async (
                             varietyPromises.push(
                                 pokemonAPI.getPokemonByName(variety.pokemon.name).then(async (pokemon: Pokemon) => {
                                     if (pokemon.forms.length === 1) {
-                                        await handleCreatePokemon(evolutionAPI, species, pokemon, warnings);
+                                        await handleCreatePokemon(evolutionAPI, species, pokemon);
                                     } else {
                                         const formPromises: Promise<void>[] = [];
                                         for (const form of pokemon.forms) {
@@ -290,8 +287,7 @@ export const createPokemon = async (
                                                                 evolutionAPI,
                                                                 species,
                                                                 form,
-                                                                pokemon,
-                                                                warnings
+                                                                pokemon
                                                             );
                                                         })
                                                 );

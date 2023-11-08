@@ -10,6 +10,7 @@ import { AbilityFlavorText, MoveFlavorText, Name, NamedAPIResource, VersionGroup
 
 const RESET: string = "\x1b[0m";
 const SUCCESS: string = "\x1b[32m";
+const ERROR: string = "\x1b[31m";
 const BEGIN: string = "\x1b[33m";
 const FOCUS: string = "\x1b[35m";
 const FETCH_LIMIT: number = 100;
@@ -37,16 +38,12 @@ export const removeDuplicates = (arr: { [key: string]: any }[], property: string
 };
 
 // Extracts the English name out of a names array
-export const getEnglishName = (names: Name[], slug: string, warnings: { [warning: string]: string[] }): string => {
+export const getEnglishName = (names: Name[], slug: string): string => {
     const name: Name | undefined = names.find((name: Name) => name.language.name === ENGLISH);
     if (name) {
         return name.name;
     } else {
-        if (!warnings.missing_name) {
-            warnings.missing_name = [];
-        }
-        warnings.missing_name.push(slug);
-        return slug;
+        throw new Error(getError(slug, "Missing name"));
     }
 };
 
@@ -142,6 +139,15 @@ export const logProgress = (done: number, total: number): void => {
     process.stdout.moveCursor(0, -1);
     process.stdout.clearLine(1);
     console.log(`${FOCUS}${percentage}[${"=".repeat(segments)}${" ".repeat(MAX_SEGMENTS - segments)}]${RESET}`);
+};
+
+// Consistent error formatting
+export const getError = (slug: string, msg: string): string => {
+    const error: string = `${slug}: ${msg}`;
+    process.stdout.moveCursor(0, -1);
+    process.stdout.clearLine(1);
+    console.log(`${ERROR}${error}${RESET}`);
+    return error;
 };
 
 // Clears a specified collection of all data if requested

@@ -1,7 +1,15 @@
 import groups from "@/data/lists/groups";
 import prisma from "@/lib/prisma";
 import { DEFAULT, ENGLISH, MOVES } from "@/utils/constants";
-import { clearCollection, fetchByPage, getDescriptions, getEnglishName, logFinish, logStart } from "@/utils/global";
+import {
+    clearCollection,
+    fetchByPage,
+    getDescriptions,
+    getEnglishName,
+    getError,
+    logFinish,
+    logStart,
+} from "@/utils/global";
 import { MoveClass, MoveNum, MoveType, Moves } from "@prisma/client";
 import { Move, MoveClient, MoveFlavorText } from "pokenode-ts";
 
@@ -37,16 +45,12 @@ const getTypes = (move: Move): MoveType[] => {
     return types;
 };
 
-const getClass = (move: Move, warnings: { [warning: string]: string[] }): MoveClass[] => {
+const getClass = (move: Move): MoveClass[] => {
     const classes: MoveClass[] = [];
     let currentGroup = DEFAULT;
 
     if (!move.damage_class) {
-        if (!warnings.missing_damage_class) {
-            warnings.missing_damage_class = [];
-        }
-        warnings.missing_damage_class.push(move.name);
-        return [];
+        throw new Error(getError(move.name, "Missing damage class"));
     }
 
     // Add pre-split class if the move is Gen III or earlier
@@ -61,7 +65,7 @@ const getClass = (move: Move, warnings: { [warning: string]: string[] }): MoveCl
     }
 
     classes.push({
-        class: move.damage_class!.name as "physical" | "special" | "status",
+        class: move.damage_class.name as "physical" | "special" | "status",
         group: currentGroup,
     });
 
@@ -84,16 +88,12 @@ const getBP = (move: Move): MoveNum[] => {
     return bp;
 };
 
-const getPP = (move: Move, warnings: { [warning: string]: string[] }): MoveNum[] => {
+const getPP = (move: Move): MoveNum[] => {
     const pp: MoveNum[] = [];
     let currentGroup: number = DEFAULT;
 
     if (!move.pp) {
-        if (!warnings.missing_pp) {
-            warnings.missing_pp = [];
-        }
-        warnings.missing_pp.push(move.name);
-        return [];
+        throw new Error(getError(move.name, "Missing PP value"));
     }
 
     for (const pastValue of move.past_values) {
@@ -124,11 +124,11 @@ const handleCreateMove = async (
 
     const newMove: NewMove = {
         slug: slug,
-        name: getEnglishName(move.names, slug, warnings),
+        name: getEnglishName(move.names, slug),
         type: getTypes(move),
-        class: getClass(move, warnings),
+        class: getClass(move),
         bp: getBP(move),
-        pp: getPP(move, warnings),
+        pp: getPP(move),
         desc: getDescriptions(
             move.flavor_text_entries.filter((mft: MoveFlavorText) => mft.language.name === ENGLISH),
             move.name,
