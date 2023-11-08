@@ -1,5 +1,6 @@
 import Battle from "@/models/Battle";
-import { BattleTags, PokemonSet } from "@prisma/client";
+import { DOUBLE as DOUBLE_TAG, REQUIRED as REQUIRED_TAG } from "@/utils/constants";
+import { PokemonSet } from "@prisma/client";
 
 const fs = require("fs");
 
@@ -64,13 +65,13 @@ const getItems = (items: string): [string | undefined, number] => {
         : [undefined, 0];
 };
 
-const getTags = (row: string[]): BattleTags[] => {
-    const tags: BattleTags[] = [];
-    if (row[REQUIRED]) {
-        tags.push("required");
-    }
+const getTags = (row: string[]): string[] => {
+    const tags: string[] = [];
     if (row[DOUBLE]) {
-        tags.push("double");
+        tags.push(DOUBLE_TAG);
+    }
+    if (row[REQUIRED]) {
+        tags.push(REQUIRED_TAG);
     }
 
     return tags;

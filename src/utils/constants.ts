@@ -1,6 +1,8 @@
 // DB constants
 export const DEFAULT: number = -1;
 export const ID: string = "id";
+export const REQUIRED: string = "required";
+export const DOUBLE: string = "double";
 
 // API constants
 export const ENGLISH: string = "en";

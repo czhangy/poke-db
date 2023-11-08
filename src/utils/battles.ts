@@ -9,20 +9,19 @@ import { parse } from "@/utils/parse";
 // ---------------------------------------------------------------------------------------------------------------------
 
 const handleCreateBattle = async (battle: Battle): Promise<void> => {
-    const slug: string = battle.slug;
-
-    const newBattle = {
-        ...battle,
-        item: battle.item ? { connect: { slug: battle.item } } : undefined,
-        trainer: {
-            connect: { slug: battle.trainer },
+    await prisma.battles.create({
+        data: {
+            ...battle,
+            item: battle.item ? { connect: { slug: battle.item } } : undefined,
+            tags: {
+                connect: battle.tags.map((tag: string) => {
+                    return { slug: tag };
+                }),
+            },
+            trainer: {
+                connect: { slug: battle.trainer },
+            },
         },
-    };
-
-    await prisma.battles.upsert({
-        where: { slug: slug },
-        update: newBattle,
-        create: newBattle,
     });
 };
 
@@ -35,17 +34,25 @@ export const createBattles = async (clear: boolean, group: string): Promise<void
     await clearCollection(BATTLES, clear);
 
     const battles: Battle[] = parse(group);
-
     const promises: Promise<void>[] = [];
     let progress: number = 0;
+    const total = battles.length;
+
     for (const battle of battles) {
-        promises.push(
-            handleCreateBattle(battle).then(() => {
-                progress++;
-                logProgress(progress, battles.length);
-            })
-        );
+        if (battle.tags.length > 0) {
+            await handleCreateBattle(battle);
+            progress++;
+            logProgress(progress, total);
+        } else {
+            promises.push(
+                handleCreateBattle(battle).then(() => {
+                    progress++;
+                    logProgress(progress, total);
+                })
+            );
+        }
     }
+
     await Promise.all(promises);
 
     logFinish(BATTLES);

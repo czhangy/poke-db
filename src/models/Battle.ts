@@ -1,4 +1,4 @@
-import { BattleTags, PokemonSet } from "@prisma/client";
+import { PokemonSet } from "@prisma/client";
 
 export default interface Battle {
     slug: string;
@@ -7,6 +7,6 @@ export default interface Battle {
     team: PokemonSet[];
     item: string | undefined;
     itemCount: number;
-    tags: BattleTags[];
+    tags: string[];
     trainer: string;
 }

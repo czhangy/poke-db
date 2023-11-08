@@ -10,6 +10,8 @@ import time
 # Constants
 # ------------------------------------------------------------------------------
 SERVER_URL = "http://localhost:3000/api/data"
+JSON_INDENT = 2
+
 ABILITIES = "abilities"
 BATTLES = "battles"
 GROUPS = "groups"
@@ -242,18 +244,16 @@ def make_request(query):
     print(color_yellow(bold("Running update...\n")))
     try:
         r = requests.get(query)
-        assert r.status_code == 200
-        print(color_cyan(json.dumps(json.loads(r.text), indent=2) + "\n"))
-        print(
-            color_green(
-                f"Update took {bold(round(time.perf_counter() - start_time, 1))} seconds to complete!\n"
+        if r.status_code == 200:
+            print(color_cyan(json.dumps(json.loads(r.text), indent=JSON_INDENT) + "\n"))
+            print(
+                color_green(
+                    f"Update took {bold(round(time.perf_counter() - start_time, 1))} seconds to complete!\n"
+                )
             )
-        )
-    except (
-        AssertionError,
-        requests.exceptions.HTTPError,
-        requests.exceptions.ConnectionError,
-    ):
+        else:
+            print(color_red(json.dumps(json.loads(r.text), indent=JSON_INDENT) + "\n"))
+    except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
         print(color_red("Update failed!\n"))
 
 

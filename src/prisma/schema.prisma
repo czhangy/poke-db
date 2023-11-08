@@ -116,7 +116,8 @@ model Battles {
     item      Items?       @relation(fields: [itemID], references: [id])
     itemID    String?      @db.ObjectId
     itemCount Int
-    tags      BattleTags[]
+    tags      Tags[]       @relation(fields: [tagIDs], references: [id])
+    tagIDs    String[]     @db.ObjectId
     trainer   Trainers     @relation(fields: [trainerID], references: [id])
     trainerID String       @db.ObjectId
     segment   Segments?    @relation(fields: [segmentID], references: [id])
@@ -191,6 +192,16 @@ model Splits {
     group    Groups     @relation(fields: [groupID], references: [id], onDelete: Cascade)
     groupID  String     @db.ObjectId
     segments Segments[]
+}
+
+model Tags {
+    id        String    @id @default(auto()) @map("_id") @db.ObjectId
+    slug      String    @unique
+    name      String
+    title     String
+    color     String
+    battles   Battles[] @relation(fields: [battleIDs], references: [id])
+    battleIDs String[]  @db.ObjectId
 }
 
 model Trainers {
