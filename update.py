@@ -17,7 +17,7 @@ ITEMS = "items"
 LOCATIONS = "locations"
 MOVES = "moves"
 POKEMON = "pokemon"
-TRAINERS = "trainers"
+STATIC = "static"
 CLEAR = "clear"
 RESET = "r"
 
@@ -29,7 +29,7 @@ COLLECTIONS = [
     LOCATIONS,
     MOVES,
     POKEMON,
-    TRAINERS,
+    STATIC,
     CLEAR,
 ]
 GROUP_COLLECTIONS = [BATTLES, GROUPS, LOCATIONS]

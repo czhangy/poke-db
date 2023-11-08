@@ -1,7 +1,7 @@
 import trainers from "@/data/lists/trainers";
 import prisma from "@/lib/prisma";
 import Trainer from "@/models/Trainer";
-import { TRAINERS } from "@/utils/constants";
+import { STATIC } from "@/utils/constants";
 import { clearCollection, logFinish, logProgress, logStart } from "@/utils/global";
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -22,9 +22,9 @@ const handleCreateTrainer = async (trainer: Trainer): Promise<void> => {
 // CONTROLLER
 // ---------------------------------------------------------------------------------------------------------------------
 
-export const createTrainers = async (clear: boolean): Promise<void> => {
-    logStart(TRAINERS);
-    await clearCollection(TRAINERS, clear);
+export const createStaticInfo = async (clear: boolean): Promise<void> => {
+    logStart(STATIC);
+    await clearCollection(STATIC, clear);
 
     const promises: Promise<void>[] = [];
     let progress: number = 0;
@@ -38,5 +38,5 @@ export const createTrainers = async (clear: boolean): Promise<void> => {
     }
     await Promise.all(promises);
 
-    logFinish(TRAINERS);
+    logFinish(STATIC);
 };

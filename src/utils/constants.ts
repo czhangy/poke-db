@@ -13,4 +13,4 @@ export const ITEMS: string = "items";
 export const LOCATIONS: string = "locations";
 export const MOVES: string = "moves";
 export const POKEMON: string = "pokemon";
-export const TRAINERS: string = "trainers";
+export const STATIC: string = "static";

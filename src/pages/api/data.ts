@@ -1,13 +1,13 @@
 import { createAbilities } from "@/utils/abilities";
 import { createBattles } from "@/utils/battles";
-import { ABILITIES, BATTLES, GROUPS, ITEMS, LOCATIONS, MOVES, POKEMON, TRAINERS } from "@/utils/constants";
+import { ABILITIES, BATTLES, GROUPS, ITEMS, LOCATIONS, MOVES, POKEMON, STATIC } from "@/utils/constants";
 import { logComplete } from "@/utils/global";
 import { createGroup } from "@/utils/groups";
 import { createItems } from "@/utils/items";
 import { createLocations } from "@/utils/locations";
 import { createMoves } from "@/utils/moves";
 import { createPokemon } from "@/utils/pokemon";
-import { createTrainers } from "@/utils/trainers";
+import { createStaticInfo } from "@/utils/static";
 import { NextApiRequest, NextApiResponse } from "next";
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -68,9 +68,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             modified.push(POKEMON);
         }
 
-        if (TRAINERS in req.query) {
-            await createTrainers(clear);
-            modified.push(TRAINERS);
+        if (STATIC in req.query) {
+            await createStaticInfo(clear);
+            modified.push(STATIC);
         }
 
         if (modified.length > 0) {
